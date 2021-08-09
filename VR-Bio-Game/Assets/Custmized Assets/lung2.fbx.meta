@@ -1,0 +1,264 @@
+fileFormatVersion: 2
+guid: a4d9370d59c5e974e94d23fb1c623065
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -8888542373972838116
+    second: windpipe|left_lung|left_lung|Object008.001|Base stack|Layer0|left_lung|O
+  - first:
+      74: 1824410392445876413
+    second: windpipe|left_lung|left_lung|Object008|Base stack|Layer0.001|left_lung|O
+  - first:
+      74: -4707283283120100008
+    second: windpipe|left_lung|left_lung|Object008|Base stack|Layer0.002|left_lung|O
+  - first:
+      74: 6959753498474742510
+    second: windpipe|left_lung|left_lung|Object008|Base stack|Layer0.003|left_lung|O
+  - first:
+      74: -682328435233004068
+    second: windpipe|left_lung|left_lung|Object008|Base stack|Layer0.004|left_lung|O
+  - first:
+      74: -1833682530861784282
+    second: windpipe|left_lung|left_lung|Object008|Base stack|Layer0|left_lung|Objec
+  - first:
+      74: 387093674815354796
+    second: windpipe|right_lung|right_lung|Object008.001|Base stack|Layer0|right_lun
+  - first:
+      74: 1726748243253473580
+    second: windpipe|right_lung|right_lung|Object008|Base stack|Layer0.001|right_lun
+  - first:
+      74: 6156489680281078384
+    second: windpipe|right_lung|right_lung|Object008|Base stack|Layer0.002|right_lun
+  - first:
+      74: -5865233712190973716
+    second: windpipe|right_lung|right_lung|Object008|Base stack|Layer0.003|right_lun
+  - first:
+      74: -8434331215482520963
+    second: windpipe|right_lung|right_lung|Object008|Base stack|Layer0.004|right_lun
+  - first:
+      74: 6379587814348865477
+    second: windpipe|right_lung|right_lung|Object008|Base stack|Layer0|right_lung|Ob
+  - first:
+      74: -4316328372645962575
+    second: windpipe|windpipe|windpipe|Object008.001|Base stack|Layer0|windpipe|Obje
+  - first:
+      74: -3422810249601810682
+    second: windpipe|windpipe|windpipe|Object008|Base stack|Layer0.001|windpipe|Obje
+  - first:
+      74: -7318964641044980076
+    second: windpipe|windpipe|windpipe|Object008|Base stack|Layer0.002|windpipe|Obje
+  - first:
+      74: -170247034415209558
+    second: windpipe|windpipe|windpipe|Object008|Base stack|Layer0.003|windpipe|Obje
+  - first:
+      74: -5901404401180838442
+    second: windpipe|windpipe|windpipe|Object008|Base stack|Layer0.004|windpipe|Obje
+  - first:
+      74: -5519416730500931789
+    second: windpipe|windpipe|windpipe|Object008|Base stack|Layer0|windpipe|Object00
+  - first:
+      74: 183655955361279763
+    second: right_lung|left_lung|left_lung|Object008.001|Base stack|Layer0|left_lung|O
+  - first:
+      74: -2163747051308187802
+    second: right_lung|left_lung|left_lung|Object008|Base stack|Layer0.001|left_lung|O
+  - first:
+      74: 5955445432227529223
+    second: right_lung|left_lung|left_lung|Object008|Base stack|Layer0.002|left_lung|O
+  - first:
+      74: -1943912463136464359
+    second: right_lung|left_lung|left_lung|Object008|Base stack|Layer0.003|left_lung|O
+  - first:
+      74: -1513684233450874250
+    second: right_lung|left_lung|left_lung|Object008|Base stack|Layer0.004|left_lung|O
+  - first:
+      74: -2630162656637265511
+    second: right_lung|left_lung|left_lung|Object008|Base stack|Layer0|left_lung|Objec
+  - first:
+      74: -9152045342946244170
+    second: right_lung|right_lung|right_lung|Object008.001|Base stack|Layer0|right_lun
+  - first:
+      74: 573258688608786283
+    second: right_lung|right_lung|right_lung|Object008|Base stack|Layer0.001|right_lun
+  - first:
+      74: 5787408875188465771
+    second: right_lung|right_lung|right_lung|Object008|Base stack|Layer0.002|right_lun
+  - first:
+      74: -7894476835924826215
+    second: right_lung|right_lung|right_lung|Object008|Base stack|Layer0.003|right_lun
+  - first:
+      74: -3955542738166195305
+    second: right_lung|right_lung|right_lung|Object008|Base stack|Layer0.004|right_lun
+  - first:
+      74: 7862263899768254609
+    second: right_lung|right_lung|right_lung|Object008|Base stack|Layer0|right_lung|Ob
+  - first:
+      74: -7854100622852795225
+    second: right_lung|windpipe|windpipe|Object008.001|Base stack|Layer0|windpipe|Obje
+  - first:
+      74: -7373434601335279481
+    second: right_lung|windpipe|windpipe|Object008|Base stack|Layer0.001|windpipe|Obje
+  - first:
+      74: -8810177442156751198
+    second: right_lung|windpipe|windpipe|Object008|Base stack|Layer0.002|windpipe|Obje
+  - first:
+      74: -6553927598239234958
+    second: right_lung|windpipe|windpipe|Object008|Base stack|Layer0.003|windpipe|Obje
+  - first:
+      74: 2104094955237474560
+    second: right_lung|windpipe|windpipe|Object008|Base stack|Layer0.004|windpipe|Obje
+  - first:
+      74: -3201513577383246975
+    second: right_lung|windpipe|windpipe|Object008|Base stack|Layer0|windpipe|Object00
+  - first:
+      74: 2881641470530747635
+    second: left_lung|left_lung|left_lung|Object008.001|Base stack|Layer0|left_lung|O
+  - first:
+      74: 6781048461569091546
+    second: left_lung|left_lung|left_lung|Object008|Base stack|Layer0.001|left_lung|O
+  - first:
+      74: 8573668298312569423
+    second: left_lung|left_lung|left_lung|Object008|Base stack|Layer0.002|left_lung|O
+  - first:
+      74: -5262997288146647714
+    second: left_lung|left_lung|left_lung|Object008|Base stack|Layer0.003|left_lung|O
+  - first:
+      74: -2100146558524319186
+    second: left_lung|left_lung|left_lung|Object008|Base stack|Layer0.004|left_lung|O
+  - first:
+      74: 5013728028482763121
+    second: left_lung|left_lung|left_lung|Object008|Base stack|Layer0|left_lung|Objec
+  - first:
+      74: 7198359877800222605
+    second: left_lung|right_lung|right_lung|Object008.001|Base stack|Layer0|right_lun
+  - first:
+      74: 6904573968938811961
+    second: left_lung|right_lung|right_lung|Object008|Base stack|Layer0.001|right_lun
+  - first:
+      74: 743324283547374698
+    second: left_lung|right_lung|right_lung|Object008|Base stack|Layer0.002|right_lun
+  - first:
+      74: 3523654001159773397
+    second: left_lung|right_lung|right_lung|Object008|Base stack|Layer0.003|right_lun
+  - first:
+      74: -1300889766880651271
+    second: left_lung|right_lung|right_lung|Object008|Base stack|Layer0.004|right_lun
+  - first:
+      74: -1287373142668458289
+    second: left_lung|right_lung|right_lung|Object008|Base stack|Layer0|right_lung|Ob
+  - first:
+      74: 5302586625236271160
+    second: left_lung|windpipe|windpipe|Object008.001|Base stack|Layer0|windpipe|Obje
+  - first:
+      74: -499063815557624563
+    second: left_lung|windpipe|windpipe|Object008|Base stack|Layer0.001|windpipe|Obje
+  - first:
+      74: -2410883235280173866
+    second: left_lung|windpipe|windpipe|Object008|Base stack|Layer0.002|windpipe|Obje
+  - first:
+      74: -4360382785875215288
+    second: left_lung|windpipe|windpipe|Object008|Base stack|Layer0.003|windpipe|Obje
+  - first:
+      74: 7333987892773232619
+    second: left_lung|windpipe|windpipe|Object008|Base stack|Layer0.004|windpipe|Obje
+  - first:
+      74: 855128735505504471
+    second: left_lung|windpipe|windpipe|Object008|Base stack|Layer0|windpipe|Object00
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
