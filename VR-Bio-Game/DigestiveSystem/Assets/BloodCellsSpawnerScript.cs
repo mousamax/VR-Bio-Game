@@ -11,6 +11,7 @@ public class BloodCellsSpawnerScript : MonoBehaviour
 
     public GameObject RedBloodCell;
     public GameObject LookAt;
+    public GameObject StartAt;
     
     private void Start()
     {
@@ -29,8 +30,12 @@ public class BloodCellsSpawnerScript : MonoBehaviour
             int rand = Random.Range(1, 4);
             for (int i = 0; i < rand; i++)
             {
+                Vector3 position = StartAt.gameObject.transform.position;
+                position.x += (i / 2);
+                position.y += (i / 2);
+                position.z += (i * 2);
                 GameObject rbc = Instantiate(RedBloodCell);
-                rbc.transform.position = new Vector3(5.18f + (i/2f), 6.5f + (i/2f ), -6.69f + (i * 2));
+                rbc.transform.position = position;
                 rbc.transform.LookAt(LookAt.transform);
             }
         
