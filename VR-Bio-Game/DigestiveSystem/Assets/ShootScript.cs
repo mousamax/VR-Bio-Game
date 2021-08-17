@@ -1,9 +1,18 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class ShootScript : MonoBehaviour
 {
+
+    public static Controller Instance { get; protected set; }
+
+    public Weapon startingWeapons;
+
+
     public GameObject Bullet;
     private List<GameObject> _gObjList = new List<GameObject>();
 
@@ -27,6 +36,7 @@ public class ShootScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
     }
