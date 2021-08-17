@@ -583,6 +583,74 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &830195012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 830195014}
+  - component: {fileID: 830195013}
+  - component: {fileID: 830195015}
+  m_Layer: 0
+  m_Name: HCL Fluid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &830195013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830195012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c98aa481050edb4ca1850cb5c2953ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_container: {fileID: 11400000, guid: 6bee1aaac964649419fd19dee0099551, type: 2}
+  m_particleGroup: -1
+  m_selfCollide: 1
+  m_selfCollideFilter: 0
+  m_fluid: 1
+  m_massScale: 1
+  m_drawParticles: 0
+  m_recreateActor: 0
+  m_asset: {fileID: 11400000, guid: 23e67ea2aa6ab9c419996a41e3f76fae, type: 2}
+  m_lifeTime: 5
+  m_startSpeed: 1
+  m_isActive: 1
+--- !u!4 &830195014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830195012}
+  m_LocalRotation: {x: -0, y: -0.5665621, z: -0, w: 0.824019}
+  m_LocalPosition: {x: 9.96, y: 10.04, z: -0.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: -69.022, z: 0}
+--- !u!114 &830195015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830195012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50727fb552f09d84fbbb274bb86a2e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &854702900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -661,6 +729,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 877928413}
+  - component: {fileID: 877928414}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -683,6 +752,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &877928414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877928412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9305c66102687664a9fc64787beae807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RedBloodCell: {fileID: 4566534915814024195, guid: 3318f9bd6f3908742a8bf648d532ad2f,
+    type: 3}
+  LookAt: {fileID: 1599470367}
+  StartAt: {fileID: 94369606}
 --- !u!1 &923071091
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,8 +809,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
-  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -798,38 +881,6 @@ Transform:
   m_Father: {fileID: 877928413}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 271.286, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9305c66102687664a9fc64787beae807, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RedBloodCell: {fileID: 4566534915814024195, guid: 3318f9bd6f3908742a8bf648d532ad2f,
-    type: 3}
-  LookAt: {fileID: 1599470367}
-  StartAt: {fileID: 94369606}
---- !u!114 &963194230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c20564318093af43b705e98c83a98ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingWeapons: {fileID: 0}
-  Bullet: {fileID: 2743602245999451762, guid: 920293a6579a3e14cb871b49bb14918f, type: 3}
-  can: {fileID: 502886816}
-  gun: {fileID: 0}
 --- !u!1 &1038157396
 GameObject:
   m_ObjectHideFlags: 0
