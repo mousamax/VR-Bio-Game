@@ -7,13 +7,13 @@ using UnityEngine.Events;
 using TMPro;
 public class ButtonLogic : MonoBehaviour
 {
-    public TextMeshProUGUI simpleText;
+    // public TextMeshProUGUI simpleText;
     [SerializeField] private float threshold = 0.1f;
     [SerializeField] private float deadzone = 0.025f;
     private bool _isPressed;
     private Vector3 _startPos;
     private ConfigurableJoint _joint;
-    // public UnityEvent onPressed, onReleased;
+    public UnityEvent onPressed, onReleased;
 
     // Start is called before the first frame update
     void Start()
@@ -44,15 +44,15 @@ public class ButtonLogic : MonoBehaviour
     private void Pressed()
     {
         _isPressed = true;
-        simpleText.text = "Pressed";
-        // onPressed.Invoke();
+        // simpleText.text = "Pressed";
+        onPressed.Invoke();
         Debug.Log("Pressed");
     }
     private void Released()
     {
         _isPressed = false;
-        simpleText.text = "Released";
-        // onReleased.Invoke();
+        // simpleText.text = "Released";
+        onReleased.Invoke();
         Debug.Log("Released");
     }
 }
