@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Brain/Scenes/BrainRoom 1.unity
+    guid: c50edb4fd58a0204e80e93fed05f39ae
+  - enabled: 1
     path: Assets/Brain/Scenes/BrainRoom.unity
     guid: 82b50d9831d2fbc4f95e05f92f5066a7
   m_configObjects:
