@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -297,15 +297,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.24
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.96
+      value: 1.22
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -71.12
+      value: -69.81
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -985,6 +985,26 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1925770481}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472123203, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472123203, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5064207411678035789, guid: 47737e76edda29845a844848cbb122ac, type: 3}
       propertyPath: m_Name
       value: CostumeBrainRoom
@@ -995,11 +1015,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5064207411678520173, guid: 47737e76edda29845a844848cbb122ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5064207411678520173, guid: 47737e76edda29845a844848cbb122ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5064207411678520173, guid: 47737e76edda29845a844848cbb122ac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1032,6 +1052,10 @@ PrefabInstance:
     - target: {fileID: 5064207411678520173, guid: 47737e76edda29845a844848cbb122ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597944657423770944, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47737e76edda29845a844848cbb122ac, type: 3}
