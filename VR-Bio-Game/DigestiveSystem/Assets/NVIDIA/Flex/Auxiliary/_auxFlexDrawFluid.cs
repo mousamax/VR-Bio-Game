@@ -244,7 +244,7 @@ namespace NVIDIA.Flex
                 }
                 if (m_indexBuffer != null)
                 {
-                    Debug.Log(indices.Length);
+                  
                     m_indexBuffer.SetData(indices);
                 }
                 Vector3 boundsMin = Vector3.one * 1e10f, boundsMax = Vector3.one * 1e10f;
