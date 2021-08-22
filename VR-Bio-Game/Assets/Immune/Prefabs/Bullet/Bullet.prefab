@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4780613126747401452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.05}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 0.1}
   m_Children:
   - {fileID: 4780613127054615678}
   m_Father: {fileID: 0}
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61308f4bc21a7f64ba98eb82e114c524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 32.82
   collisionPrefabBlue: {fileID: 8608183087981362250, guid: bb4e6b12de56c2a4f8db55c47797b43c, type: 3}
 --- !u!1 &4780613127018210637
 GameObject:

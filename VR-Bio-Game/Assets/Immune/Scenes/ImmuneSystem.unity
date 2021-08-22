@@ -980,11 +980,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461316, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_TagString
+      value: Corridor
+      objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461318, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_Name
       value: CorridorLong
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461318, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_TagString
+      value: Corridor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461320, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_TagString
+      value: Corridor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461322, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_TagString
+      value: Corridor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461324, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_TagString
+      value: Corridor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461326, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_TagString
+      value: Corridor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461338, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
       value: Corridor
       objectReference: {fileID: 0}
@@ -1505,7 +1529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee47bf915ef7fcf44b695c53650a53dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4780613126747401452, guid: 5fe6ddd978f98334db23e9de98e4766c, type: 3}
+  bulletPrefab: {fileID: 1187105899079028836, guid: 3c95d22e993654e429d8de5aa01ec18a, type: 3}
   nozzle: {fileID: 917217159}
   weaponPlace: {fileID: 1679615326}
   Gun: {fileID: 552725259}
@@ -1950,6 +1974,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 451059305}
     m_Modifications:
+    - target: {fileID: 4494892430499674540, guid: cc836208ace1ec04aa8c58026206c586, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 89f4004baeeda324dbb31922facd2999, type: 3}
     - target: {fileID: 4494892430502541708, guid: cc836208ace1ec04aa8c58026206c586, type: 3}
       propertyPath: m_RootOrder
       value: 3
