@@ -8,7 +8,7 @@ public class TabletVisibilty : MonoBehaviour
     private bool visibilty = false;
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") || OVRInput.GetDown(OVRInput.RawButton.X))
         {
             activePoint.position = this.transform.position;
             activePoint.rotation = this.transform.rotation;
