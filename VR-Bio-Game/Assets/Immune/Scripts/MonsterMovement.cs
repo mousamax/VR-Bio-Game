@@ -5,7 +5,7 @@ using UnityEngine;
 public class MonsterMovement : MonoBehaviour
 {
     Rigidbody m_Rigidbody;
-    [SerializeField] public float m_Thurst = -5f;
+    public float m_Thurst = -1.5f;
     float health;
     public GameObject collisionPrefabGreen;
     public GameObject collisionPrefabRed;
