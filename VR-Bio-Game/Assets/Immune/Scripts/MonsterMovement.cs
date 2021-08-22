@@ -68,26 +68,23 @@ public class MonsterMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Entered collision");
-        if (collision.gameObject.tag == "Bullet")
-            reduceHealth(20);
         if (collision.gameObject.tag == "External")
         {
-            Debug.Log("What the fuck");
             this.transform.position = new Vector3(-70, -70, -70);
             this.gameObject.SetActive(false);
+        }
+        if (collision.gameObject.tag == "Bullet")
+            reduceHealth(20);
+        else if(collision.gameObject.tag == "sword")
+        {
+            reduceHealth(100);
+        }
+        else if (collision.gameObject.tag == "Pill")
+        {
+            reduceHealth(150);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag=="External")
-        {
-            Debug.Log("What the fuck");
-            this.transform.position = new Vector3(-70, -70, -70);
-            this.gameObject.SetActive(false);
-        }
-    }
 
     private void playImpact(string s)
     {
