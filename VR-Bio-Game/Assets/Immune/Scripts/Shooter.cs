@@ -34,7 +34,8 @@ public class Shooter : MonoBehaviour
     {
         Debug.Log("We are shooting!");
         GameObject bulletGameObject = Instantiate(bulletPrefab, nozzle.transform.position, nozzle.transform.rotation);
-        Debug.Log("Instantiation of bullet is done ");
+        Debug.Log("The location of the bullet is ");
+        Debug.Log(bulletGameObject.transform);
         //bulletGameObject.transform.forward = nozzle.transform.forward;
     }
 }

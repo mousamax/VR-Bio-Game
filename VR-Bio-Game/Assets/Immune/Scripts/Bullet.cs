@@ -5,9 +5,9 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    [SerializeField] public float speed = 1.5f;
+    [SerializeField] public float speed = 10f;
     Rigidbody rb;
-    [SerializeField] public GameObject collisionPrefabBlue;
+     public GameObject collisionPrefabBlue;
     // Start is called before the first frame update
     void Start()
     {
