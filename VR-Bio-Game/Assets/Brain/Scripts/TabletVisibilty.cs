@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class TabletVisibilty : MonoBehaviour
 {
-    public Transform activePoint;
-    private bool visibilty = false;
+    public Transform tablet;
+    private bool isPicked = false;
+    private bool visibility = false;
     void Update()
     {
         if (Input.GetButtonDown("Jump") || OVRInput.GetDown(OVRInput.RawButton.X))
         {
-            activePoint.position = this.transform.position;
-            activePoint.rotation = this.transform.rotation;
-            activePoint.gameObject.SetActive(!visibilty);
-            visibilty = !visibilty;
+            // tablet.position = this.transform.position;
+            // tablet.rotation = this.transform.rotation;
+            tablet.gameObject.SetActive(!visibility);
+            visibility = !visibility;
         }
+    }
+
+    public void isGrabbed(bool val)
+    {
+        isPicked = false;
     }
 }

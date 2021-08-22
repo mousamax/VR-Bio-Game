@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class TeleportButtonLogic : MonoBehaviour
 {
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
-        Debug.Log("here");
-        // if (this.gameObject.name == "BrainButton")
-        // {
-        //     SceneManager.LoadScene("BrainRoom");
-        // }
+        if (this.gameObject.name == "BrainButton")
+        {
+            SceneManager.LoadScene("BrainRoom");
+        }
+
     }
 }
