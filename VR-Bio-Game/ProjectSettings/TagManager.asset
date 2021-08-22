@@ -15,6 +15,7 @@ TagManager:
   - Spike
   - FatBlob
   - RedCell
+  - Pill
   layers:
   - Default
   - TransparentFX

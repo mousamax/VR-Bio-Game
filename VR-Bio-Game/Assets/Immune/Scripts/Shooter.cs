@@ -32,10 +32,7 @@ public class Shooter : MonoBehaviour
     }
 
     private void Shoot()
-    {
-
-
-        //GameObject bulletGameObject = Instantiate(bulletParent, nozzle.transform.position, nozzle.transform.rotation);
+    {        //GameObject bulletGameObject = Instantiate(bulletParent, nozzle.transform.position, nozzle.transform.rotation);
 
         GameObject bullet;
         for (int i = 0; i < 10; i++)
