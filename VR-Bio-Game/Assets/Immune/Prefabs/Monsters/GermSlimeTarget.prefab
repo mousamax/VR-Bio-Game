@@ -288,7 +288,6 @@ GameObject:
   - component: {fileID: 1407279479756981044}
   - component: {fileID: 5949802199157995707}
   - component: {fileID: 6742054449658681156}
-  - component: {fileID: 4103128890675285811}
   m_Layer: 10
   m_Name: GermSlimeTarget
   m_TagString: Untagged
@@ -359,19 +358,6 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1240250018707908, guid: 5656e7ea1f1a75d4c895547ec2b824b3, type: 3}
   collisionPrefabRed: {fileID: 8608183087981362250, guid: 8295112e583865641840c18d2a36dae2, type: 3}
   collisoinPrefabGold: {fileID: 8608183087981362250, guid: 9fddb7673b9192c488ca357dd2374ee8, type: 3}
---- !u!65 &4103128890675285811
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8070109232193553997}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2834995659269953124
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -38,8 +38,6 @@ public class MonsterMovement : MonoBehaviour
         //Vector3 forceapplied = new Vector3(0, 0, 1) * m_Thurst * Time.deltaTime;
         //m_Rigidbody.AddForce(0, 0, m_Thurst, ForceMode.Acceleration);
         this.transform.position += this.transform.forward * m_Thurst * Time.deltaTime;
-        if (transform.position.z <= -100)
-            Destroy(this.gameObject);
     }
 
     public void reduceHealth(int amount)
@@ -71,6 +69,8 @@ public class MonsterMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
             reduceHealth(20);
+        //if (collision.gameObject.tag == "Corridor")
+        //    Destroy(gameObject);
     }
 
 }
