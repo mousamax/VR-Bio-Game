@@ -9,7 +9,7 @@ public class MonsterMovement : MonoBehaviour
     float health;
     public GameObject collisionPrefabGreen;
     public GameObject collisionPrefabRed;
-    public GameObject collisoinPrefabGold;
+    public GameObject collisionPrefabGold;
 
     // Start is called before the first frame update
     void Start()
@@ -45,24 +45,24 @@ public class MonsterMovement : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
             switch (this.tag)
             {
                 case "Slime":
-                    Instantiate(collisionPrefabGreen, this.transform.position, this.transform.rotation);
+                    playImpact("green");
                     break;
                 case "Spike":
-                    Instantiate(collisionPrefabGreen, this.transform.position, this.transform.rotation);
+                    playImpact("green");
                     break;
                 case "Fatblob":
-                    Instantiate(collisoinPrefabGold, this.transform.position, this.transform.rotation);
+                    playImpact("gold");
                     break;
                 case "RedCell":
-                    Instantiate(collisionPrefabRed, this.transform.position, this.transform.rotation);
+                    playImpact("red");
                     break;
             }
         }
-       
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -71,6 +71,38 @@ public class MonsterMovement : MonoBehaviour
             reduceHealth(20);
         //if (collision.gameObject.tag == "Corridor")
         //    Destroy(gameObject);
+    }
+
+    private void playImpact(string s)
+    {
+        GameObject x = null;
+        for (int i = 0; i < 5; i++)
+        {
+            switch (s)
+            {
+                case "red":
+                    x = collisionPrefabRed.transform.GetChild(i).gameObject;
+                    break;
+                case "green":
+                    x = collisionPrefabGreen.transform.GetChild(i).gameObject;
+
+                    break;
+                case "gold":
+                    x = collisionPrefabGold.transform.GetChild(i).gameObject;
+                    break;
+            }
+            if (!x.activeSelf)
+            {
+                // randomly choose a spawning point and instantiate one of the monsters
+                Vector3 position = transform.position;
+                Quaternion rotation = transform.rotation;
+                x.SetActive(true);
+                x.transform.position = position;
+                x.transform.rotation = rotation;
+                break;
+            }
+        }
+
     }
 
 }

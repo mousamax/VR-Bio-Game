@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
 
     [SerializeField] public float speed = 10f;
     Rigidbody rb;
-     public GameObject collisionPrefabBlue;
+    public GameObject collisionPrefabBlue;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +28,25 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        GameObject blue;
         if (collision.gameObject.tag == "Corridor")
         {
-            Instantiate(collisionPrefabBlue, this.transform.position, this.transform.rotation);
+            for (int i = 0; i < 5; i++)
+            {
+                blue = collisionPrefabBlue.transform.GetChild(i).gameObject;
+                if (!blue.activeSelf)
+                {
+                    // randomly choose a spawning point and instantiate one of the monsters
+                    Vector3 position = transform.position;
+                    Quaternion rotation = transform.rotation;
+
+                    blue.SetActive(true);
+                    blue.transform.position = position;
+                    blue.transform.rotation = rotation;
+                    break;
+                }
+            }
         }
-        Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
     }
 }

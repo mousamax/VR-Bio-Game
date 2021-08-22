@@ -4894,6 +4894,7 @@ GameObject:
   - component: {fileID: 8608183087981362249}
   - component: {fileID: 8608183087981362248}
   - component: {fileID: 8608183087981362251}
+  - component: {fileID: 428063395578126863}
   m_Layer: 0
   m_Name: Gold
   m_TagString: Untagged
@@ -9786,3 +9787,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &428063395578126863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8608183087981362250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531a81e1cb9369b469a035d100896499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

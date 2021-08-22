@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    public GameObject bulletPrefab;
+    public GameObject bulletParent;
     public GameObject nozzle;
     public GameObject weaponPlace;
     public GameObject Gun;
@@ -18,6 +18,7 @@ public class Shooter : MonoBehaviour
     void Start()
     {
         Gun.transform.position = weaponPlace.transform.position;
+        Gun.transform.rotation = weaponPlace.transform.rotation;
     }
 
     // Update is called once per frame
@@ -32,10 +33,26 @@ public class Shooter : MonoBehaviour
 
     private void Shoot()
     {
-        Debug.Log("We are shooting!");
-        GameObject bulletGameObject = Instantiate(bulletPrefab, nozzle.transform.position, nozzle.transform.rotation);
-        Debug.Log("The location of the bullet is ");
-        Debug.Log(bulletGameObject.transform);
-        //bulletGameObject.transform.forward = nozzle.transform.forward;
+
+
+        //GameObject bulletGameObject = Instantiate(bulletParent, nozzle.transform.position, nozzle.transform.rotation);
+
+        GameObject bullet;
+        for (int i = 0; i < 10; i++)
+        {
+            bullet = bulletParent.transform.GetChild(i).gameObject;
+            if (!bullet.activeSelf)
+            {
+                // randomly choose a spawning point and instantiate one of the monsters
+                Vector3 position = nozzle.transform.position;
+                Quaternion rotation = nozzle.transform.rotation;
+
+                bullet.SetActive(true);
+                bullet.transform.position = position;
+                bullet.transform.rotation = rotation;
+                break;
+            }
+
+        }
     }
 }
