@@ -45,6 +45,7 @@ public class MonsterMovement : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
+            this.transform.position = new Vector3(-70, -70, -70);
             this.gameObject.SetActive(false);
             switch (this.tag)
             {
@@ -67,10 +68,25 @@ public class MonsterMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Entered collision");
         if (collision.gameObject.tag == "Bullet")
             reduceHealth(20);
-        //if (collision.gameObject.tag == "Corridor")
-        //    Destroy(gameObject);
+        if (collision.gameObject.tag == "External")
+        {
+            Debug.Log("What the fuck");
+            this.transform.position = new Vector3(-70, -70, -70);
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag=="External")
+        {
+            Debug.Log("What the fuck");
+            this.transform.position = new Vector3(-70, -70, -70);
+            this.gameObject.SetActive(false);
+        }
     }
 
     private void playImpact(string s)
@@ -85,7 +101,6 @@ public class MonsterMovement : MonoBehaviour
                     break;
                 case "green":
                     x = collisionPrefabGreen.transform.GetChild(i).gameObject;
-
                     break;
                 case "gold":
                     x = collisionPrefabGold.transform.GetChild(i).gameObject;
@@ -94,6 +109,7 @@ public class MonsterMovement : MonoBehaviour
             if (!x.activeSelf)
             {
                 // randomly choose a spawning point and instantiate one of the monsters
+                Debug.Log("using particles");
                 Vector3 position = transform.position;
                 Quaternion rotation = transform.rotation;
                 x.SetActive(true);

@@ -19,6 +19,7 @@ public class Impacts : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > 2)
             {
+                this.transform.position = new Vector3(-70, -70, -70);
                 this.gameObject.SetActive(false);
                 timer = 0;
             }

@@ -324,9 +324,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 118
   m_CollisionDetection: 0
 --- !u!136 &5949802199157995707
 CapsuleCollider:
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Thurst: 20
   collisionPrefabGreen: {fileID: 1240250018707908, guid: 5656e7ea1f1a75d4c895547ec2b824b3, type: 3}
   collisionPrefabRed: {fileID: 8608183087981362250, guid: 8295112e583865641840c18d2a36dae2, type: 3}
-  collisoinPrefabGold: {fileID: 8608183087981362250, guid: 9fddb7673b9192c488ca357dd2374ee8, type: 3}
+  collisionPrefabGold: {fileID: 0}
 --- !u!1001 &2834995659269953124
 PrefabInstance:
   m_ObjectHideFlags: 0

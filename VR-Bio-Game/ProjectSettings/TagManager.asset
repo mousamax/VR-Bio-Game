@@ -10,6 +10,11 @@ TagManager:
   - Gun
   - Corridor
   - Bullet
+  - External
+  - Slime
+  - Spike
+  - FatBlob
+  - RedCell
   layers:
   - Default
   - TransparentFX
