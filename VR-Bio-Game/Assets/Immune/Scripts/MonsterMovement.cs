@@ -14,21 +14,7 @@ public class MonsterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        switch (this.tag)
-        {
-            case "Slime":
-                health = 50;
-                break;
-            case "Spike":
-                health = 70;
-                break;
-            case "Fatblob":
-                health = 150;
-                break;
-            case "RedCell":
-                health = 0;
-                break;
-        }
+        resetHealth();
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -45,25 +31,8 @@ public class MonsterMovement : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
-            this.transform.position = new Vector3(-70, -70, -70);
-            this.gameObject.SetActive(false);
-            switch (this.tag)
-            {
-                case "Slime":
-                    playImpact("green");
-                    break;
-                case "Spike":
-                    playImpact("green");
-                    break;
-                case "Fatblob":
-                    playImpact("gold");
-                    break;
-                case "RedCell":
-                    playImpact("red");
-                    break;
-            }
+            killMonster();
         }
-
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -71,11 +40,17 @@ public class MonsterMovement : MonoBehaviour
         if (collision.gameObject.tag == "External")
         {
             this.transform.position = new Vector3(-70, -70, -70);
+            resetHealth();
             this.gameObject.SetActive(false);
+        }
+        else if (collision.gameObject.tag == "Player")
+        {
+            resetHealth();
+            killMonster();
         }
         if (collision.gameObject.tag == "Bullet")
             reduceHealth(20);
-        else if(collision.gameObject.tag == "sword")
+        else if (collision.gameObject.tag == "sword")
         {
             reduceHealth(100);
         }
@@ -85,37 +60,78 @@ public class MonsterMovement : MonoBehaviour
         }
     }
 
-
+    
     private void playImpact(string s)
     {
-        GameObject x = null;
+        GameObject collision = null;
         for (int i = 0; i < 5; i++)
         {
             switch (s)
             {
                 case "red":
-                    x = collisionPrefabRed.transform.GetChild(i).gameObject;
+                    collision = collisionPrefabRed.transform.GetChild(i).gameObject;
                     break;
                 case "green":
-                    x = collisionPrefabGreen.transform.GetChild(i).gameObject;
+                    collision = collisionPrefabGreen.transform.GetChild(i).gameObject;
                     break;
                 case "gold":
-                    x = collisionPrefabGold.transform.GetChild(i).gameObject;
+                    collision = collisionPrefabGold.transform.GetChild(i).gameObject;
                     break;
             }
-            if (!x.activeSelf)
+            if (!collision.activeSelf)
             {
                 // randomly choose a spawning point and instantiate one of the monsters
                 Debug.Log("using particles");
                 Vector3 position = transform.position;
                 Quaternion rotation = transform.rotation;
-                x.SetActive(true);
-                x.transform.position = position;
-                x.transform.rotation = rotation;
+                collision.SetActive(true);
+                collision.transform.position = position;
+                collision.transform.rotation = rotation;
                 break;
             }
         }
 
     }
 
+    private void killMonster()
+    {
+        
+        
+        switch (this.tag)
+        {
+            case "Slime":
+                playImpact("green");
+                break;
+            case "Spike":
+                playImpact("green");
+                break;
+            case "FatBlob":
+                playImpact("gold");
+                break;
+            case "RedCell":
+                playImpact("red");
+                break;
+        }
+        this.transform.position = new Vector3(-70, -70, -70);
+        resetHealth();
+        this.gameObject.SetActive(false);
+    }
+    private void resetHealth() 
+    {
+        switch (gameObject.tag)
+        {
+            case "Slime":
+                health = 50;
+                break;
+            case "Spike":
+                health = 70;
+                break;
+            case "FatBlob":
+                health = 150;
+                break;
+            case "RedCell":
+                health = 20;
+                break;
+        }
+    }
 }

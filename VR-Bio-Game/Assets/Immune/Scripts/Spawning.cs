@@ -39,7 +39,6 @@ public class Spawning : MonoBehaviour
                     index = Random.Range(0, arrSpawningPoint.Length); // random spawning point
                     Vector3 position = arrSpawningPoint[index].transform.position;
                     Quaternion rotation = arrSpawningPoint[index].transform.rotation * Quaternion.Euler(0,180,0);
-
                     monster.SetActive(true);
                     monster.transform.position = position;
                     monster.transform.rotation = rotation;
@@ -47,8 +46,6 @@ public class Spawning : MonoBehaviour
                 }
 
             }
-
-
             timer = 0;
         }
     }
