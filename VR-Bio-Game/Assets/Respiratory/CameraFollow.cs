@@ -19,7 +19,9 @@ public class CameraFollow : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            Instantiate(O2, this.transform.position, this.transform.rotation);
+            Vector3 rot = new Vector3(0, 90, 0);
+            //Instantiate(O2, this.transform.position, this.transform.rotation);
+            Instantiate(O2, this.transform.position, Quaternion.LookRotation(rot));
         }
     }
 }
