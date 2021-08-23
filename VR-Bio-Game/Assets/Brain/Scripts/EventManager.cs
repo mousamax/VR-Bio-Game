@@ -20,6 +20,20 @@ public class EventManager : MonoBehaviour
     private DateTime _nextEventStart;
     public int _eventDuration = 10;
     public bool finishedjob = true;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
+
+        if (_eventManager == null)
+        {
+            _eventManager = this;
+        }
+        else
+        {
+            DestroyObject(gameObject);
+        }
+    }
     void Start()
     {
         _eventManager = this;
@@ -32,10 +46,8 @@ public class EventManager : MonoBehaviour
     {
         events = (int)_currentEvent;
         _isDone = finishedjob;
-        Debug.Log(DateTime.Now.CompareTo(_nextEventStart));
         if (DateTime.Now.CompareTo(_nextEventStart) >= 0)
         {
-            Debug.Log("now " + DateTime.Now);
             _isDone = true; ;
         }
         if (_isDone || _currentEvent == Events.None)
@@ -43,7 +55,6 @@ public class EventManager : MonoBehaviour
             ActiveteAnotherEvent();
             _isDone = false;
             _nextEventStart = DateTime.Now.AddSeconds(_eventDuration);
-            Debug.Log("next " + _nextEventStart);
         }
         finishedjob = _isDone;
     }
@@ -64,7 +75,6 @@ public class EventManager : MonoBehaviour
             default:
                 break;
         }
-        Debug.Log(_currentEvent);
     }
 
     public void setIsDone(bool val)

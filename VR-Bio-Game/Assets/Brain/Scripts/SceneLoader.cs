@@ -10,7 +10,16 @@ public class SceneLoader : MonoBehaviour
     public OVROverlay overlay_LoadingText;
     void Awake()
     {
-        _sceneLoader = this;
+        DontDestroyOnLoad(this);
+
+        if (_sceneLoader == null)
+        {
+            _sceneLoader = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     public void LoadScene(string sceneName)
     {

@@ -13,10 +13,24 @@ public class GameManager : MonoBehaviour
     private int _ImmuneStatus = 100;
     public int state1, state2, state3;
 
-    public int RespirationStatus { get => _respirationStatus; set => _respirationStatus = value; }
-    public int DigestionStatus { get => _digestionStatus; set => _digestionStatus = value; }
-    public int ImmuneStatus { get => _ImmuneStatus; set => _ImmuneStatus = value; }
+    public int RespirationStatus { get => _respirationStatus; }
+    public int DigestionStatus { get => _digestionStatus; }
+    public int ImmuneStatus { get => _ImmuneStatus; }
 
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
+
+        if (_gameManager == null)
+        {
+            _gameManager = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         _gameManager = this;
@@ -41,11 +55,11 @@ public class GameManager : MonoBehaviour
     private void DecreaseStatus()
     {
         if (RespirationStatus > 0)
-            RespirationStatus -= 1;
+            _respirationStatus -= 1;
         if (DigestionStatus > 0)
-            DigestionStatus -= 1;
+            _digestionStatus -= 1;
         if (ImmuneStatus > 0)
-            ImmuneStatus -= 1;
+            _ImmuneStatus -= 1;
 
     }
     private void DecreaseStatus(int state, int amount)
@@ -53,19 +67,19 @@ public class GameManager : MonoBehaviour
         switch (state)
         {
             case 0:
-                RespirationStatus -= amount;
+                _respirationStatus -= amount;
                 if (RespirationStatus < 0)
-                    RespirationStatus = 0;
+                    _respirationStatus = 0;
                 break;
             case 1:
-                DigestionStatus -= amount;
+                _digestionStatus -= amount;
                 if (DigestionStatus < 0)
-                    DigestionStatus = 0;
+                    _digestionStatus = 0;
                 break;
             case 2:
-                ImmuneStatus -= amount;
+                _ImmuneStatus -= amount;
                 if (ImmuneStatus < 0)
-                    ImmuneStatus = 0;
+                    _ImmuneStatus = 0;
                 break;
             default:
                 break;
