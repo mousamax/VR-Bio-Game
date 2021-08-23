@@ -5,10 +5,10 @@ using UnityEngine;
 public class O2_Froce : MonoBehaviour
 {
     // Start is called before the first frame update
-    /*[SerializeField]*/ float speed = 0.2f;
+    [SerializeField] float speed = 0.2f;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         this.transform.position += this.transform.forward * speed;
 
