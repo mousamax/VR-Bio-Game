@@ -39,9 +39,9 @@ public class MonsterHit : MonoBehaviour
         }
         if (collision.gameObject.tag == "Bullet")
             reduceHealth(20);
-        else if (collision.gameObject.tag == "sword")
+        else if (collision.gameObject.tag == "Sword")
         {
-            reduceHealth(100);
+            reduceHealth(150);
         }
         else if (collision.gameObject.tag == "Pill")
         {

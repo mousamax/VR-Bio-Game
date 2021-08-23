@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1271765535861597872}
   - component: {fileID: -9092692510977981289}
   - component: {fileID: -2454353997650134917}
+  - component: {fileID: 1619481915002538124}
   m_Layer: 11
   m_Name: PillProjectile
   m_TagString: Untagged
@@ -134,6 +135,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Thurst: 10
   explosionEffect: {fileID: 0}
+--- !u!114 &1619481915002538124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672515860094952351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddbdb06ca00e0d41967a8be2e4dbf65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 1000
 --- !u!1001 &2877432799879029818
 PrefabInstance:
   m_ObjectHideFlags: 0
