@@ -11,6 +11,18 @@ public class TeleportButtonLogic : MonoBehaviour
         {
             SceneManager.LoadScene("BrainRoom");
         }
+        else if (this.gameObject.name == "RespirationButton")
+        {
+            // SceneManager.LoadScene("BrainRoom");
+        }
+        else if (this.gameObject.name == "DigestionButton")
+        {
+            // SceneManager.LoadScene("BrainRoom");
+        }
+        else if (this.gameObject.name == "ImmuneButton")
+        {
+            // SceneManager.LoadScene("BrainRoom");
+        }
 
     }
 }

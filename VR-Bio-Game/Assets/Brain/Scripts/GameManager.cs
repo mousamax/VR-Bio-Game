@@ -11,14 +11,11 @@ public class GameManager : MonoBehaviour
     private int _respirationStatus = 100;
     private int _digestionStatus = 100;
     private int _ImmuneStatus = 100;
+    public int state1, state2, state3;
 
-    public TextMeshProUGUI RespirationText;
-    public TextMeshProUGUI DigestionText;
-    public TextMeshProUGUI ImmuneText;
-    public Slider RespirationSlider;
-    public Slider DigestionSlider;
-    public Slider ImmuneSlider;
-
+    public int RespirationStatus { get => _respirationStatus; set => _respirationStatus = value; }
+    public int DigestionStatus { get => _digestionStatus; set => _digestionStatus = value; }
+    public int ImmuneStatus { get => _ImmuneStatus; set => _ImmuneStatus = value; }
 
     void Start()
     {
@@ -28,22 +25,27 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        RespirationText.text = _respirationStatus.ToString();
-        DigestionText.text = _digestionStatus.ToString();
-        ImmuneText.text = _ImmuneStatus.ToString();
-        RespirationSlider.value = _respirationStatus;
-        DigestionSlider.value = _digestionStatus;
-        ImmuneSlider.value = _ImmuneStatus;
+        state1 = RespirationStatus;
+        state2 = DigestionStatus;
+        state3 = ImmuneStatus;
+        if (Input.GetButtonDown("Jump") && SceneManager.GetActiveScene().name == "BrainRoom")
+        {
+            SceneLoader._sceneLoader.LoadScene("BrainRoom 1");
+        }
+        else if (Input.GetButtonDown("Jump") && SceneManager.GetActiveScene().name == "BrainRoom 1")
+        {
+            SceneLoader._sceneLoader.LoadScene("BrainRoom");
+        }
     }
 
     private void DecreaseStatus()
     {
-        if (_respirationStatus > 0)
-            _respirationStatus -= 1;
-        if (_digestionStatus > 0)
-            _digestionStatus -= 1;
-        if (_ImmuneStatus > 0)
-            _ImmuneStatus -= 1;
+        if (RespirationStatus > 0)
+            RespirationStatus -= 1;
+        if (DigestionStatus > 0)
+            DigestionStatus -= 1;
+        if (ImmuneStatus > 0)
+            ImmuneStatus -= 1;
 
     }
     private void DecreaseStatus(int state, int amount)
@@ -51,23 +53,22 @@ public class GameManager : MonoBehaviour
         switch (state)
         {
             case 0:
-                _respirationStatus -= amount;
-                if (_respirationStatus < 0)
-                    _respirationStatus = 0;
+                RespirationStatus -= amount;
+                if (RespirationStatus < 0)
+                    RespirationStatus = 0;
                 break;
             case 1:
-                _digestionStatus -= amount;
-                if (_digestionStatus < 0)
-                    _digestionStatus = 0;
+                DigestionStatus -= amount;
+                if (DigestionStatus < 0)
+                    DigestionStatus = 0;
                 break;
             case 2:
-                _ImmuneStatus -= amount;
-                if (_ImmuneStatus < 0)
-                    _ImmuneStatus = 0;
+                ImmuneStatus -= amount;
+                if (ImmuneStatus < 0)
+                    ImmuneStatus = 0;
                 break;
             default:
                 break;
         }
     }
-
 }
