@@ -7,7 +7,7 @@ public class TeleportButtonLogic : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || true)
         {
             if (this.gameObject.name == "BrainButton")
             {
