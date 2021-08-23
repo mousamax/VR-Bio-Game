@@ -8,7 +8,9 @@ public class WeaponChange : MonoBehaviour
     public GameObject Sword;
     public GameObject Pill;
     public Transform weaponPlace;
-    public Transform WeaponRack;
+    public Transform SwordPlace;
+    public Transform GunPlace;
+    public Transform PillPlace;
     Rigidbody rigidbody;
     // Start is called before the first frame update
     void Start()
@@ -42,7 +44,7 @@ public class WeaponChange : MonoBehaviour
         {
             ResetPosition();
             Gun.transform.position = weaponPlace.position;
-            Gun.transform.rotation = weaponPlace.rotation;
+            Gun.transform.rotation = weaponPlace.rotation * Quaternion.Euler(0,180,0);
             Gun.GetComponent<Weapons>().Select(true);
         }
         else if (Input.GetKeyDown(KeyCode.S))
@@ -55,8 +57,8 @@ public class WeaponChange : MonoBehaviour
     }
     private void ResetPosition()
     {
-        Gun.transform.position = WeaponRack.position;
-        Sword.transform.position = WeaponRack.position;
+        Gun.transform.position = GunPlace.position;
+        Sword.transform.position = SwordPlace.position;
         Gun.GetComponent<Weapons>().Select(false);
         Sword.GetComponent<Weapons>().Select(false);
         GameObject pill;
@@ -67,7 +69,7 @@ public class WeaponChange : MonoBehaviour
             {
                 rigidbody=pill.GetComponent<Rigidbody>();
                 rigidbody.useGravity = false;
-                pill.transform.position = WeaponRack.position;
+                pill.transform.position = PillPlace.position;
                 pill.GetComponent<Weapons>().Select(true);
             }
         }

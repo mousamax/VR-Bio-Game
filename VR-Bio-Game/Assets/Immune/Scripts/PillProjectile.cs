@@ -27,29 +27,18 @@ public class PillProjectile : MonoBehaviour
             // Debug.Log("Pill is Projected");
         }
 
-        if(transform.position.y < -10)
+        if(transform.position.y < -5)
         {
+            collisionLogic(true);
             resetPill();
         }
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("pill collided with: "+collision.gameObject.tag);
-        GameObject explosion;
-        for (int i = 0; i < 5; i++)
-        {
-            explosion = explosionEffect.transform.GetChild(i).gameObject;
-            if (!explosion.activeSelf)
-            {
-                Vector3 position = transform.position;
-                Quaternion rotation = transform.rotation;
-                explosion.SetActive(true);
-                explosion.transform.position = position;
-                explosion.transform.rotation = rotation;
-                // Debug.Log("Pill is exploded");
-                break;
-            }
-        }
+        //Debug.Log("collision with: "+ collision.gameObject.tag);
+        //if (collision.gameObject.tag == "untagged")
+        //    return;
+        collisionLogic(false);  
         resetPill();
         
     }
@@ -60,5 +49,26 @@ public class PillProjectile : MonoBehaviour
         rigidbody.angularVelocity = Vector3.zero;
         // Debug.Log("Pill will disappear");
         this.gameObject.SetActive(false);
+    }
+    private void collisionLogic(bool notGround)
+    {
+        //Debug.Log("pill collided with: "+collision.gameObject.tag);
+        GameObject explosion;
+        for (int i = 0; i < 5; i++)
+        {
+            explosion = explosionEffect.transform.GetChild(i).gameObject;
+            if (!explosion.activeSelf)
+            {
+                Vector3 position = transform.position;
+                if (notGround)
+                    position.y = (float) -4;
+                Quaternion rotation = transform.rotation;
+                explosion.SetActive(true);
+                explosion.transform.position = position;
+                explosion.transform.rotation = rotation;
+                // Debug.Log("Pill is exploded");
+                break;
+            }
+        }
     }
 }

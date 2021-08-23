@@ -18,6 +18,9 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Get collided with: " + collision.gameObject.tag);
+        if (collision.gameObject.tag == "Player")
+            return;
         //impact
         GameObject blue;
         for (int i = 0; i < 10; i++)

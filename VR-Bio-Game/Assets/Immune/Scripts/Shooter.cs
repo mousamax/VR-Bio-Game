@@ -9,16 +9,11 @@ public class Shooter : MonoBehaviour
     public GameObject weaponPlace;
     public GameObject Gun;
 
-    float fireRateGun = 0.1f;
-
-    void Start()
-    {
-    }
 
     void Update()
     {
-        //Gun.GetComponent<Weapons>().isSelected()==true &&
-        if (Input.GetMouseButtonDown(0) || OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
+
+        if (Gun.GetComponent<Weapons>().isSelected() == true && (Input.GetMouseButtonDown(0) || OVRInput.Get(OVRInput.RawButton.RIndexTrigger)))
         {
             Shoot();
         }
@@ -34,6 +29,7 @@ public class Shooter : MonoBehaviour
             if (!bullet.activeSelf)
             {
                 Vector3 position = nozzle.transform.position;
+                //position.z += 4;
                 Quaternion rotation = nozzle.transform.rotation;
 
                 bullet.SetActive(true);
