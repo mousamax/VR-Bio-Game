@@ -13,12 +13,11 @@ public class Shooter : MonoBehaviour
 
     void Start()
     {
-        Gun.transform.position = weaponPlace.transform.position;
-        Gun.transform.rotation = weaponPlace.transform.rotation;
     }
 
     void Update()
     {
+        //Gun.GetComponent<weapons>().isSelected()==true && 
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
