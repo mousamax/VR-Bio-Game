@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class Impacts : MonoBehaviour
 {
-    // Start is called before the first frame update
-    float timer;
-    void Start()
-    {
-        timer = 0;
-    }
 
-    // Update is called once per frame
+    public float timer =0;
+
     void Update()
     {
         if(this.gameObject.activeSelf)

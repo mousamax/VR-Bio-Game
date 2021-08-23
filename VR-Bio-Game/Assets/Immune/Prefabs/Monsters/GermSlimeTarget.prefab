@@ -304,7 +304,7 @@ Transform:
   m_GameObject: {fileID: 8070109232193553997}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 2834995659269557476}
   - {fileID: 8581275544618992553}
@@ -355,9 +355,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Thurst: 20
-  collisionPrefabGreen: {fileID: 1240250018707908, guid: 5656e7ea1f1a75d4c895547ec2b824b3, type: 3}
-  collisionPrefabRed: {fileID: 8608183087981362250, guid: 8295112e583865641840c18d2a36dae2, type: 3}
-  collisionPrefabGold: {fileID: 0}
 --- !u!1001 &2834995659269953124
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,7 +6,6 @@ public class Bullet : MonoBehaviour
 {
 
     [SerializeField] public float speed = 10f;
-    Rigidbody rb;
     public GameObject collisionPrefabBlue;
 
     private void Update()
@@ -19,6 +18,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //impact
         GameObject blue;
         for (int i = 0; i < 10; i++)
         {

@@ -4,26 +4,12 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    int score;
-    // Start is called before the first frame update
-    void Start()
+    int score=0;
+
+    public void incrementScore (int amount)
     {
-        score = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Slime" || other.gameObject.tag == "Spike" || other.gameObject.tag == "FatBlob" || other.gameObject.tag == "RedCell")
-        {
-            score -= 10;
-            Debug.Log(score);
-        }
-
-
+        score += amount;
+        if (score < 0)
+            score = 0;
     }
 }

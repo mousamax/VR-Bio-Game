@@ -8,19 +8,16 @@ public class Spawning : MonoBehaviour
     [SerializeField] protected float spawningTime; // the time to spawn 
 
     public GameObject[] monsters;
-    //List<GameObject> monsters = new List<GameObject>();
     public GameObject[] arrSpawningPoint;
 
 
 
-    // Start is called before the first frame update
     void Start()
     {
         timer = 0;
         spawningTime = 2;
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
@@ -38,7 +35,7 @@ public class Spawning : MonoBehaviour
                     // randomly choose a spawning point and instantiate one of the monsters
                     index = Random.Range(0, arrSpawningPoint.Length); // random spawning point
                     Vector3 position = arrSpawningPoint[index].transform.position;
-                    Quaternion rotation = arrSpawningPoint[index].transform.rotation * Quaternion.Euler(0,180,0);
+                    Quaternion rotation = arrSpawningPoint[index].transform.rotation * Quaternion.Euler(0, 180, 0);
                     monster.SetActive(true);
                     monster.transform.position = position;
                     monster.transform.rotation = rotation;
