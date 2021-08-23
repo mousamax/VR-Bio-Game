@@ -19,22 +19,22 @@ public class PillProjectile : MonoBehaviour
     void Update()
     {
         //Press A to throw the pill farward and activate the gravity
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            if (gameObject.GetComponent<Weapons>().isSelected()==true )
+        if (Input.GetKeyDown(KeyCode.A) && gameObject.GetComponent<Weapons>().isSelected()==true )
         {
             Debug.Log("A is pressed");
-            rigidbody.AddForce(0, m_Thurst, m_Thurst * 3, ForceMode.Impulse);
+            rigidbody.AddForce(0, m_Thurst, m_Thurst * 2, ForceMode.Impulse);
             rigidbody.useGravity = true;
-            Debug.Log("Pill is Projected");
+            // Debug.Log("Pill is Projected");
         }
+
+        if(transform.position.y < -10)
+        {
+            resetPill();
         }
-        
     }
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("pill collided with: "+collision.gameObject.tag);
-        Debug.Log("Pill is collided");
         GameObject explosion;
         for (int i = 0; i < 5; i++)
         {
@@ -46,15 +46,19 @@ public class PillProjectile : MonoBehaviour
                 explosion.SetActive(true);
                 explosion.transform.position = position;
                 explosion.transform.rotation = rotation;
-                Debug.Log("Pill is exploded");
+                // Debug.Log("Pill is exploded");
                 break;
             }
         }
+        resetPill();
+        
+    }
+    private void resetPill()
+    {
         this.transform.position = new Vector3(-70, -70, -70);
         rigidbody.velocity = Vector3.zero;
         rigidbody.angularVelocity = Vector3.zero;
-        Debug.Log("Pill will disappear");
+        // Debug.Log("Pill will disappear");
         this.gameObject.SetActive(false);
     }
-
 }

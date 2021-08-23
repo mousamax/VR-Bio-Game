@@ -20,6 +20,7 @@ public class MonsterHit : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
+            // Debug.Log("Monster is hit and health is reduced by: " + amount);
             killMonster(false);
         }
     }
@@ -37,16 +38,17 @@ public class MonsterHit : MonoBehaviour
             resetHealth();
             killMonster(true);
         }
-        if (collision.gameObject.tag == "Bullet")
+        else if (collision.gameObject.tag == "Bullet")
             reduceHealth(20);
-        else if (collision.gameObject.tag == "sword")
+        else if (collision.gameObject.tag == "Sword")
         {
             reduceHealth(100);
         }
-        else if (collision.gameObject.tag == "Pill")
-        {
-            reduceHealth(150);
-        }
+        // else if (collision.gameObject.tag == "Pill")
+        // {
+        //     // reduceHealth(150);
+
+        // }
     }
 
 

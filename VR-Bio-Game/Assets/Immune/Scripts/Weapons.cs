@@ -19,7 +19,7 @@ public class Weapons : MonoBehaviour
     public void Select(bool isselected)
     {
         if (isselected ==true) {
-            Debug.Log("weapon is selected");
+            // Debug.Log("weapon is selected");
         }
         selected=isselected;
     }

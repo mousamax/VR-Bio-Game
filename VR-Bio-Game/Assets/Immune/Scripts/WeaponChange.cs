@@ -30,11 +30,10 @@ public class WeaponChange : MonoBehaviour
                 if (!pill.activeSelf)
                 {
                     pill.SetActive(true);
-                    rigidbody=pill.GetComponent<Rigidbody>();
                     pill.transform.position = weaponPlace.position;
                     pill.transform.rotation = weaponPlace.rotation;
                     pill.GetComponent<Weapons>().Select(true);
-                    Debug.Log("pill is in place");
+                    // Debug.Log("pill is in place");
                     break;
                 }
             }
