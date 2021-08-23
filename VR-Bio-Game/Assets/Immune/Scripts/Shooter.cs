@@ -17,7 +17,8 @@ public class Shooter : MonoBehaviour
 
     void Update()
     {
-        if (Gun.GetComponent<Weapons>().isSelected()==true && Input.GetMouseButtonDown(0))
+        //Gun.GetComponent<Weapons>().isSelected()==true &&
+        if (Input.GetMouseButtonDown(0) || OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
         {
             Shoot();
         }

@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 4494892430502541708}
   - component: {fileID: 4494892430499674540}
   - component: {fileID: 4494892430500772716}
+  - component: {fileID: 7282138243326123689}
   - component: {fileID: -7791169588715095674}
   m_Layer: 11
   m_Name: Sword
@@ -221,6 +222,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7282138243326123689
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4494892430502765996}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &-7791169588715095674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8c281d06c2ddb47a77c55a65dfaa0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selected: 0
 --- !u!1 &4494892430502765998
 GameObject:
   m_ObjectHideFlags: 0

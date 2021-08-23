@@ -42,7 +42,7 @@ public class MonsterHit : MonoBehaviour
             reduceHealth(20);
         else if (collision.gameObject.tag == "Sword")
         {
-            reduceHealth(100);
+            reduceHealth(150);
         }
         // else if (collision.gameObject.tag == "Pill")
         // {
