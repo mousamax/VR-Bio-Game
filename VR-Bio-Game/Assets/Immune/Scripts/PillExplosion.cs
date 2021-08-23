@@ -22,14 +22,4 @@ public class PillExplosion : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        timer += Time.deltaTime;
-        if (timer > 3)
-        {
-            this.transform.position = new Vector3(-70, -70, -70);
-            this.gameObject.SetActive(false);
-        }
-    }
 }

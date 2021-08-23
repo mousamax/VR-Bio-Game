@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2699925001785584995}
   - component: {fileID: 482135225489720056}
+  - component: {fileID: 6497680832811111398}
   m_Layer: 9
   m_Name: Healmatic500
   m_TagString: Gun
@@ -128,6 +129,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6497680832811111398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3234742015143470754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8c281d06c2ddb47a77c55a65dfaa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &7709945982868572226
 Animator:
   serializedVersion: 3

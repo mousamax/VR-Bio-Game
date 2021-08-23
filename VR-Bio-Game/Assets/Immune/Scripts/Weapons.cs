@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Weapons : MonoBehaviour
 {
-    bool selected;
+    [SerializeField] bool selected;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +16,14 @@ public class Weapons : MonoBehaviour
     {
         
     }
-    void Select(bool isselected)
+    public void Select(bool isselected)
     {
+        if (isselected ==true) {
+            Debug.Log("weapon is selected");
+        }
         selected=isselected;
     }
-    bool isSelected()
+    public bool isSelected()
     {
         return selected;
     }

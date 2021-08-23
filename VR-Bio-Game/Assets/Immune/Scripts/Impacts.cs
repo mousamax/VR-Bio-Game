@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Impacts : MonoBehaviour
 {
-
     public float timer =0;
-
     void Update()
     {
         if(this.gameObject.activeSelf)

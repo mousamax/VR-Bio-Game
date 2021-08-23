@@ -31,10 +31,10 @@ public class WeaponChange : MonoBehaviour
                 {
                     pill.SetActive(true);
                     rigidbody=pill.GetComponent<Rigidbody>();
-                    rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
                     pill.transform.position = weaponPlace.position;
                     pill.transform.rotation = weaponPlace.rotation;
-                    // pill.GetComponent<weapons>().Select(true);
+                    pill.GetComponent<Weapons>().Select(true);
+                    Debug.Log("pill is in place");
                     break;
                 }
             }
@@ -44,30 +44,32 @@ public class WeaponChange : MonoBehaviour
             ResetPosition();
             Gun.transform.position = weaponPlace.position;
             Gun.transform.rotation = weaponPlace.rotation;
-            // Gun.GetComponent<weapons>().Select(true);
+            Gun.GetComponent<Weapons>().Select(true);
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
             ResetPosition();
             Sword.transform.position = weaponPlace.position;
             Sword.transform.rotation = weaponPlace.rotation;
-            // Sword.GetComponent<weapons>().Select(true);
+            Sword.GetComponent<Weapons>().Select(true);
         }
     }
     private void ResetPosition()
     {
         Gun.transform.position = WeaponRack.position;
         Sword.transform.position = WeaponRack.position;
-        // Gun.GetComponent<weapons>().Select(false);
-        // Sword.GetComponent<weapons>().Select(false);
+        Gun.GetComponent<Weapons>().Select(false);
+        Sword.GetComponent<Weapons>().Select(false);
         GameObject pill;
         for (int i = 0; i < 5; i++)
         {
             pill=Pill.transform.GetChild(i).gameObject;
             if(pill.activeSelf== false)
             {
+                rigidbody=pill.GetComponent<Rigidbody>();
+                rigidbody.useGravity = false;
                 pill.transform.position = WeaponRack.position;
-                // pill.GetComponent<weapons>().Select(true);
+                pill.GetComponent<Weapons>().Select(true);
             }
         }
     }

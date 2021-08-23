@@ -17,8 +17,7 @@ public class Shooter : MonoBehaviour
 
     void Update()
     {
-        //Gun.GetComponent<weapons>().isSelected()==true && 
-        if (Input.GetMouseButtonDown(0))
+        if (Gun.GetComponent<Weapons>().isSelected()==true && Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
