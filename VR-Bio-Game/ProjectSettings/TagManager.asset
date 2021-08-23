@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Blood
+  - OxygenatedBloodCell
+  - CO2
+  - N2
+  - Door1
+  - Door2
   layers:
   - Default
   - TransparentFX

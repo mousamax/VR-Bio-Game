@@ -2,26 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class O2_Instantiation : MonoBehaviour
 {
-    [SerializeField] float _mouseSpeed = 10;
-    float _x = 0, _y = 0;
+    // Start is called before the first frame update
     public GameObject O2;
+
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
     {
-
-        _x -= _mouseSpeed * Input.GetAxis("Mouse Y");
-        _y += _mouseSpeed * Input.GetAxis("Mouse X");
-
-        this.transform.eulerAngles = new Vector3(0, _y, 0f);
-
         if (Input.GetMouseButtonDown(0))
         {
 
             Instantiate(O2, this.transform.position, this.transform.rotation);
+            O2.tag = "Moving_O2";
         }
     }
 }
-

@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6466438157231954535}
-  - component: {fileID: 3202116397870647135}
   - component: {fileID: 444867366051975928}
   - component: {fileID: 1758841674248200642}
+  - component: {fileID: 3724608245284230898}
   m_Layer: 0
   m_Name: O2
-  m_TagString: Untagged
+  m_TagString: Moving_O2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,22 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3202116397870647135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6466438157231954534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9b6df2b587e23a4690442e2d267fb24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.43
-  NewBloodColor:
-    serializedVersion: 2
-    rgba: 4279244704
 --- !u!54 &444867366051975928
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -80,6 +64,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3724608245284230898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6466438157231954534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68c3257a797a194aae4d44b4ab894e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  NewBloodColor:
+    serializedVersion: 2
+    rgba: 4278979686
 --- !u!1 &6466438157955266646
 GameObject:
   m_ObjectHideFlags: 0
