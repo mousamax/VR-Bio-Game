@@ -11,11 +11,6 @@ public class Weapons : MonoBehaviour
         selected=false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void Select(bool isselected)
     {
         if (isselected ==true) {
