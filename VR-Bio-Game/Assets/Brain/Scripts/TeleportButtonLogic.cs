@@ -9,11 +9,11 @@ public class TeleportButtonLogic : MonoBehaviour
     {
         if (this.gameObject.name == "BrainButton")
         {
-            SceneManager.LoadScene("BrainRoom");
+            SceneLoader._sceneLoader.LoadScene("BrainRoom");
         }
         else if (this.gameObject.name == "RespirationButton")
         {
-            // SceneManager.LoadScene("BrainRoom");
+            SceneLoader._sceneLoader.LoadScene("BrainRoom 1");
         }
         else if (this.gameObject.name == "DigestionButton")
         {
@@ -23,6 +23,5 @@ public class TeleportButtonLogic : MonoBehaviour
         {
             // SceneManager.LoadScene("BrainRoom");
         }
-
     }
 }

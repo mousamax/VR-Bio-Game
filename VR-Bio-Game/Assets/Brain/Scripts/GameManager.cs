@@ -28,14 +28,14 @@ public class GameManager : MonoBehaviour
         state1 = RespirationStatus;
         state2 = DigestionStatus;
         state3 = ImmuneStatus;
-        if (Input.GetButtonDown("Jump") && SceneManager.GetActiveScene().name == "BrainRoom")
-        {
-            SceneLoader._sceneLoader.LoadScene("BrainRoom 1");
-        }
-        else if (Input.GetButtonDown("Jump") && SceneManager.GetActiveScene().name == "BrainRoom 1")
-        {
-            SceneLoader._sceneLoader.LoadScene("BrainRoom");
-        }
+        //if (Input.GetButtonDown("Jump") && SceneManager.GetActiveScene().name == "BrainRoom")
+        //{
+        //    SceneLoader._sceneLoader.LoadScene("BrainRoom 1");
+        //}
+        //else if (Input.GetButtonDown("Jump") && SceneManager.GetActiveScene().name == "BrainRoom 1")
+        //{
+        //    SceneLoader._sceneLoader.LoadScene("BrainRoom");
+        //}
     }
 
     private void DecreaseStatus()
