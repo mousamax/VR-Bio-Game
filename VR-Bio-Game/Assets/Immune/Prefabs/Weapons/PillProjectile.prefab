@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 672515860094952320}
   - component: {fileID: 3089532698898589659}
   - component: {fileID: 2035918634463830822}
-  - component: {fileID: 6269817682580196489}
   - component: {fileID: 1271765535861597872}
   - component: {fileID: -9092692510977981289}
+  - component: {fileID: -2454353997650134917}
   m_Layer: 11
   m_Name: PillProjectile
   m_TagString: Untagged
@@ -66,19 +66,6 @@ CapsuleCollider:
   m_Height: 0.15
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6269817682580196489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672515860094952351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dddbdb06ca00e0d41967a8be2e4dbf65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 6
 --- !u!114 &1271765535861597872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8c281d06c2ddb47a77c55a65dfaa0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selected: 0
 --- !u!23 &-9092692510977981289
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -132,6 +120,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-2454353997650134917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672515860094952351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd86ee1da1fff449935e5474be0a83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Thurst: 10
+  explosionEffect: {fileID: 0}
 --- !u!1001 &2877432799879029818
 PrefabInstance:
   m_ObjectHideFlags: 0
