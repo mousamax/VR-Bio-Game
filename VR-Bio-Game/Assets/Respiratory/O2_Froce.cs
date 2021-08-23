@@ -6,7 +6,7 @@ public class O2_Froce : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] float speed = 0.2f;
-
+    [SerializeField] Color32 NewBloodColor = new Color32(0x66, 0x0c, 0x0c, 255);
     // Update is called once per frame
     void Update()
     {
@@ -19,7 +19,7 @@ public class O2_Froce : MonoBehaviour
         Destroy(this.gameObject);
         if (collision.gameObject.tag == "Blood")
         {
-            collision.gameObject.GetComponent<Renderer>().material.color = new Color32(0x66, 0x0c, 0x0c, 255);
+            collision.gameObject.GetComponent<Renderer>().material.color = NewBloodColor;
         }
     }
 }
