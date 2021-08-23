@@ -1,0 +1,74 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class WeaponChange : MonoBehaviour
+{
+    public GameObject Gun;
+    public GameObject Sword;
+    public GameObject Pill;
+    public Transform weaponPlace;
+    public Transform WeaponRack;
+    Rigidbody rigidbody;
+    // Start is called before the first frame update
+    void Start()
+    {
+      ResetPosition();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Press P to summon the pill at the weapon place
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            ResetPosition();
+            GameObject pill;
+            for (int i = 0; i < 5; i++)
+            {
+                pill = Pill.transform.GetChild(i).gameObject;
+                if (!pill.activeSelf)
+                {
+                    pill.SetActive(true);
+                    rigidbody=pill.GetComponent<Rigidbody>();
+                    rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+                    pill.transform.position = weaponPlace.position;
+                    pill.transform.rotation = weaponPlace.rotation;
+                    // pill.GetComponent<weapons>().Select(true);
+                    break;
+                }
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.G))
+        {
+            ResetPosition();
+            Gun.transform.position = weaponPlace.position;
+            Gun.transform.rotation = weaponPlace.rotation;
+            // Gun.GetComponent<weapons>().Select(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            ResetPosition();
+            Sword.transform.position = weaponPlace.position;
+            Sword.transform.rotation = weaponPlace.rotation;
+            // Sword.GetComponent<weapons>().Select(true);
+        }
+    }
+    private void ResetPosition()
+    {
+        Gun.transform.position = WeaponRack.position;
+        Sword.transform.position = WeaponRack.position;
+        // Gun.GetComponent<weapons>().Select(false);
+        // Sword.GetComponent<weapons>().Select(false);
+        GameObject pill;
+        for (int i = 0; i < 5; i++)
+        {
+            pill=Pill.transform.GetChild(i).gameObject;
+            if(pill.activeSelf== false)
+            {
+                pill.transform.position = WeaponRack.position;
+                // pill.GetComponent<weapons>().Select(true);
+            }
+        }
+    }
+}
