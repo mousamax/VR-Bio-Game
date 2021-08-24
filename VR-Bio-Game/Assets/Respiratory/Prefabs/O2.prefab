@@ -79,7 +79,7 @@ MonoBehaviour:
   speed: 15
   NewBloodColor:
     serializedVersion: 2
-    rgba: 4278979686
+    rgba: 4284440532
 --- !u!1 &6466438157955266646
 GameObject:
   m_ObjectHideFlags: 0

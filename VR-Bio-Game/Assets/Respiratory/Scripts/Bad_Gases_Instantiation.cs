@@ -12,39 +12,40 @@ public class Bad_Gases_Instantiation : MonoBehaviour
     public GameObject N2;
     public int differenceTime;
     public int counter = 0;
+    public int maxGases = 50;
     void Start()
     {
-        previousTime = Time.time;
-        Random.InitState(System.Environment.TickCount);
-        Vector3 position = new Vector3((float) -15.5, 2, 62);
-        GameObject g = Instantiate(N2);
-        g.transform.position = position;
+        //previousTime = Time.time;
+        //Random.InitState(System.Environment.TickCount);
+        //Vector3 position = new Vector3((float) -15.5, 2, 62);
+        //GameObject g = Instantiate(N2);
+        //g.transform.position = position;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         currentTime = Time.time;
-        if (currentTime - previousTime >= differenceTime && counter < 50)
+        if (currentTime - previousTime >= differenceTime && counter < maxGases)
         {
 
-            
-            //previousTime = Time.time;
-            //int x = Random.Range(minX, maxX);
-            //int y = Random.Range(minY, maxY);
-            //int z = Random.Range(minZ, maxZ);
-            //Vector3 position = new Vector3(x, y, z);
-            //if (counter % 2 == 0)
-            //{
-            //    GameObject instantCO2 = Instantiate(CO2);
-            //    instantCO2.transform.position = position;
-            //}
-            //else
-            //{
-            //    GameObject instantN2 = Instantiate(N2);
-            //    instantN2.transform.position = position;
-            //}
-            //counter++;
+
+            previousTime = Time.time;
+            int x = Random.Range(minX, maxX);
+            int y = Random.Range(minY, maxY);
+            int z = Random.Range(minZ, maxZ);
+            Vector3 position = new Vector3(x, y, z);
+            if (counter % 2 == 0)
+            {
+                GameObject instantCO2 = Instantiate(CO2);
+                instantCO2.transform.position = position;
+            }
+            else
+            {
+                GameObject instantN2 = Instantiate(N2);
+                instantN2.transform.position = position;
+            }
+            counter++;
         }
     }
 }

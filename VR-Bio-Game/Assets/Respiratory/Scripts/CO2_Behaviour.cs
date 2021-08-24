@@ -9,8 +9,10 @@ public class CO2_Behaviour : MonoBehaviour
     // Start is called before the first frame update
     private float previousTime;
     private float currentTime;
-    public int differenceTime;
-    public int speed;
+    int differenceTime;
+    int speed;
+    [SerializeField] Color32 NewBloodColor = new Color32(0x66, 0x0c, 0x0c, 255);
+
     void Start()
     {
         previousTime = Time.time;
@@ -20,22 +22,29 @@ public class CO2_Behaviour : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
-        currentTime = Time.time;
-        if (currentTime - previousTime >= differenceTime)
-        {
-            Vector3 pos = this.transform.position;
-            pos.z-=speed*Time.deltaTime;
-            this.transform.position = pos;
-        //    int x = Random.Range(0, 180);
-        //    int y = Random.Range(0, 180);
-        //    int z = Random.Range(0, 180);
-        //    Vector3 r = new Vector3(x, y, z);
+        //FOR CO2 MOVEMENT
+        //currenttime = time.time;
+        //if (currenttime - previoustime >= differencetime)
+        //{
+
+        //    int x = random.range(0, 180);
+        //    int y = random.range(0, 180);
+        //    int z = random.range(0, 180);
+        //    vector3 r = new vector3(x, y, z);
         //    this.transform.forward = r;
-        //    this.transform.position += this.transform.forward * speed * Time.deltaTime;
-        //    previousTime = Time.time;
-        }
+        //    this.transform.position += this.transform.forward * speed * time.deltatime;
+        //    previoustime = time.time;
+        //}
+       
 
     }
-   
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(this.gameObject);
+        if (collision.gameObject.tag == "Blood")
+        {
+            collision.gameObject.GetComponent<Renderer>().material.color = NewBloodColor;
+        }
+    }
+
 }
