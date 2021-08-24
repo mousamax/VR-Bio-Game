@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameManager
   - EventManager
+  - SceneLoader
   layers:
   - Default
   - TransparentFX
