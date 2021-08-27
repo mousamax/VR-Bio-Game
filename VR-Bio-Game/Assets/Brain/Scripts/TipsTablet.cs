@@ -34,5 +34,6 @@ public class TipsTablet : MonoBehaviour
     public void ScreenOff()
     {
         isOn = false;
+        Screen.color = Color.black;
     }
 }

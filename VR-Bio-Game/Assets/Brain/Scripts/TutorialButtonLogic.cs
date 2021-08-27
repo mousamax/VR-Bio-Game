@@ -6,12 +6,13 @@ public class TutorialButtonLogic : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        if (this.gameObject.name == "NextButton")
+        Debug.Log(other.name);
+        if (this.gameObject.name == "NextButton" && other.tag == "Player")
         {
             Debug.Log("next");
             GameManager._gameManager.TutorialNext();
         }
-        else if (this.gameObject.name == "SkipButton")
+        else if (this.gameObject.name == "SkipButton" && other.tag == "Player")
         {
             Debug.Log("skip");
             GameManager._gameManager.TutorialSkip();

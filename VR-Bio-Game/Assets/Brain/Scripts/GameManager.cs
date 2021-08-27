@@ -55,6 +55,11 @@ public class GameManager : MonoBehaviour
         {
             Tutorial();
         }
+        else
+        {
+            if (LeftHand != null && LeftHand.GetComponent<TabletVisibilty>() != null)
+                LeftHand.GetComponent<TabletVisibilty>().enabled = true;
+        }
     }
 
     private void Tutorial()
@@ -69,7 +74,7 @@ public class GameManager : MonoBehaviour
                 EventManager._eventManager.setCurrentEvent(0);
                 break;
             case 2:
-                TutorialScript.text = "Press X to display control Tablet";
+                TutorialScript.text = "Leave this tablet and Press X to display control Tablet";
                 LeftHand.GetComponent<TabletVisibilty>().enabled = true;
                 break;
             default:

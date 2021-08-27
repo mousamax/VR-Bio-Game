@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Brain/Scenes/BrainRoom.unity
     guid: 82b50d9831d2fbc4f95e05f92f5066a7
   - enabled: 1
