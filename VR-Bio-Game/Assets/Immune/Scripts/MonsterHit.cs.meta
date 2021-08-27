@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4361dd56901a6794e99561235573431c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - collisionPrefabGreen: {instanceID: 0}
+  - collisionPrefabRed: {instanceID: 0}
+  - collisionPrefabGold: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
