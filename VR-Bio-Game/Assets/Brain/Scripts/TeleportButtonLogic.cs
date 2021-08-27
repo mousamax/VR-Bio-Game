@@ -15,15 +15,15 @@ public class TeleportButtonLogic : MonoBehaviour
             }
             else if (this.gameObject.name == "RespirationButton")
             {
-                SceneLoader._sceneLoader.LoadScene("BrainRoom 1");
+                SceneLoader._sceneLoader.LoadScene("LungsScene");
             }
             else if (this.gameObject.name == "DigestionButton")
             {
-                SceneLoader._sceneLoader.LoadScene("BrainRoom 1");
+                // SceneLoader._sceneLoader.LoadScene("BrainRoom 1");
             }
             else if (this.gameObject.name == "ImmuneButton")
             {
-                SceneLoader._sceneLoader.LoadScene("BrainRoom 1");
+                // SceneLoader._sceneLoader.LoadScene("BrainRoom 1");
             }
         }
     }

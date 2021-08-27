@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Sword
+  - Rifle
+  - Nozzle
+  - Gun
+  - Corridor
+  - Bullet
+  - External
+  - Slime
+  - Spike
+  - FatBlob
+  - RedCell
+  - Pill
+  - Blood
+  - OxygenatedBloodCell
+  - CO2
+  - N2
+  - Door1
+  - Door2
+  - GameManager
+  - EventManager
+  - SceneLoader
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Weapon
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
