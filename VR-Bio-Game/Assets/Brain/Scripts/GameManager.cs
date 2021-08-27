@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
         {
             TipsTablet.GetComponent<TipsTablet>().ScreenOff();
         }
+        OnTutorialMode = false;
     }
 
     public void SendNotification()
