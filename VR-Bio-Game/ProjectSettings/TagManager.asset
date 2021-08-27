@@ -4,6 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Blood
+  - OxygenatedBloodCell
+  - CO2
+  - N2
+  - Door1
+  - Door2
   - GameManager
   - EventManager
   - SceneLoader
