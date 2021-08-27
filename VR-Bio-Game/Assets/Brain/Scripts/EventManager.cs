@@ -31,7 +31,7 @@ public class EventManager : MonoBehaviour
         }
         else
         {
-            DestroyObject(gameObject);
+            Destroy(gameObject);
         }
     }
     void Start()
@@ -44,19 +44,22 @@ public class EventManager : MonoBehaviour
 
     void Update()
     {
-        events = (int)_currentEvent;
-        _isDone = finishedjob;
-        if (DateTime.Now.CompareTo(_nextEventStart) >= 0)
+        if (!GameManager._gameManager.OnTutorialMode)
         {
-            _isDone = true; ;
+            events = (int)_currentEvent;
+            _isDone = finishedjob;
+            if (DateTime.Now.CompareTo(_nextEventStart) >= 0)
+            {
+                _isDone = true; ;
+            }
+            if (_isDone || _currentEvent == Events.None)
+            {
+                ActiveteAnotherEvent();
+                _isDone = false;
+                _nextEventStart = DateTime.Now.AddSeconds(_eventDuration);
+            }
+            finishedjob = _isDone;
         }
-        if (_isDone || _currentEvent == Events.None)
-        {
-            ActiveteAnotherEvent();
-            _isDone = false;
-            _nextEventStart = DateTime.Now.AddSeconds(_eventDuration);
-        }
-        finishedjob = _isDone;
     }
 
     void ActiveteAnotherEvent()
@@ -89,6 +92,10 @@ public class EventManager : MonoBehaviour
     public int getCurrentEvent()
     {
         return (int)_currentEvent;
+    }
+    public void setCurrentEvent(int ev)
+    {
+        _currentEvent = (Events)ev;
     }
     public int getNoneEvent()
     {

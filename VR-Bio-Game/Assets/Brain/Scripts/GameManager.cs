@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     private int _respirationStatus = 100;
     private int _digestionStatus = 100;
     private int _ImmuneStatus = 100;
+    public GameObject TipsTablet;
+    public GameObject LeftHand;
+    public TextMeshProUGUI TutorialScript;
+    public bool OnTutorialMode = true;
+    public int TutorialIndex = 0;
     public int state1, state2, state3;
 
     public int RespirationStatus { get => _respirationStatus; }
@@ -35,6 +40,10 @@ public class GameManager : MonoBehaviour
     {
         _gameManager = this;
         InvokeRepeating("DecreaseStatus", 0f, 2f);
+        if (OnTutorialMode && TipsTablet != null)
+        {
+            Invoke("SendNotification", 3.0f);
+        }
     }
 
     void Update()
@@ -42,16 +51,57 @@ public class GameManager : MonoBehaviour
         state1 = RespirationStatus;
         state2 = DigestionStatus;
         state3 = ImmuneStatus;
-        //if (Input.GetButtonDown("Jump") && SceneManager.GetActiveScene().name == "BrainRoom")
-        //{
-        //    SceneLoader._sceneLoader.LoadScene("BrainRoom 1");
-        //}
-        //else if (Input.GetButtonDown("Jump") && SceneManager.GetActiveScene().name == "BrainRoom 1")
-        //{
-        //    SceneLoader._sceneLoader.LoadScene("BrainRoom");
-        //}
+        if (OnTutorialMode)
+        {
+            Tutorial();
+        }
     }
 
+    private void Tutorial()
+    {
+        switch (TutorialIndex)
+        {
+            case 0:
+                TutorialScript.text = "Hi Player";
+                break;
+            case 1:
+                TutorialScript.text = "You can Watch Activities on screen";
+                EventManager._eventManager.setCurrentEvent(0);
+                break;
+            case 2:
+                TutorialScript.text = "Press X to display control Tablet";
+                LeftHand.GetComponent<TabletVisibilty>().enabled = true;
+                break;
+            default:
+                OnTutorialMode = false;
+                if (TipsTablet != null)
+                {
+                    TipsTablet.GetComponent<TipsTablet>().ScreenOff();
+                }
+                break;
+        }
+    }
+
+    public void TutorialNext()
+    {
+        TutorialIndex++;
+    }
+    public void TutorialSkip()
+    {
+        LeftHand.GetComponent<TabletVisibilty>().enabled = true;
+        if (TipsTablet != null)
+        {
+            TipsTablet.GetComponent<TipsTablet>().ScreenOff();
+        }
+    }
+
+    public void SendNotification()
+    {
+        if (TipsTablet != null)
+        {
+            TipsTablet.GetComponent<TipsTablet>().newNotification();
+        }
+    }
     private void DecreaseStatus()
     {
         if (RespirationStatus > 0)
