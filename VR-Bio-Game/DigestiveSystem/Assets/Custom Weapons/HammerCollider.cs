@@ -14,8 +14,10 @@ public class HammerCollider : MonoBehaviour
             {
                 createCube(collision);
             }
+
+            //Destroy(collision.gameObject);
             
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 
