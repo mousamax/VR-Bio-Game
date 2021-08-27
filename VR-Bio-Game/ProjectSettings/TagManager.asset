@@ -4,6 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Sword
+  - Rifle
+  - Nozzle
+  - Gun
+  - Corridor
+  - Bullet
+  - External
+  - Slime
+  - Spike
+  - FatBlob
+  - RedCell
+  - Pill
   - Blood
   - OxygenatedBloodCell
   - CO2
@@ -17,7 +29,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Weapon
   - Water
   - UI
   - 
