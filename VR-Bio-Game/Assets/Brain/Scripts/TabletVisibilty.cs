@@ -12,17 +12,17 @@ public class TabletVisibilty : MonoBehaviour
     public TextMeshProUGUI RespirationText;
     public TextMeshProUGUI DigestionText;
     public TextMeshProUGUI ImmuneText;
-    public Slider RespirationSlider;
-    public Slider DigestionSlider;
-    public Slider ImmuneSlider;
+    public Image RespirationSlider;
+    public Image DigestionSlider;
+    public Image ImmuneSlider;
     void Update()
     {
         RespirationText.text = GameManager._gameManager.RespirationStatus.ToString();
         DigestionText.text = GameManager._gameManager.DigestionStatus.ToString();
         ImmuneText.text = GameManager._gameManager.ImmuneStatus.ToString();
-        RespirationSlider.value = GameManager._gameManager.RespirationStatus;
-        DigestionSlider.value = GameManager._gameManager.RespirationStatus;
-        ImmuneSlider.value = GameManager._gameManager.RespirationStatus;
+        RespirationSlider.fillAmount = GameManager._gameManager.RespirationStatus / 100.0f;
+        DigestionSlider.fillAmount = GameManager._gameManager.RespirationStatus / 100.0f;
+        ImmuneSlider.fillAmount = GameManager._gameManager.RespirationStatus / 100.0f;
 
         if (Input.GetButtonDown("Fire1") || OVRInput.GetDown(OVRInput.RawButton.X))
         {
