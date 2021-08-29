@@ -44,6 +44,11 @@ public class EventManager : MonoBehaviour
 
     void Update()
     {
+        if (_eventManager == null)
+        {
+            Debug.Log("Renew EventManager");
+            _eventManager = this;
+        }
         if (!GameManager._gameManager.OnTutorialMode)
         {
             events = (int)_currentEvent;

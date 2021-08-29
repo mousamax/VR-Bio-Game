@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TabletVisibilty : MonoBehaviour
 {
     public Transform tablet;
+    public Transform CameraRotation;
     public GameObject ActivePoint;
     private bool isPicked = false;
     private bool visibility = false;
@@ -22,14 +23,14 @@ public class TabletVisibilty : MonoBehaviour
         DigestionText.text = GameManager._gameManager.DigestionStatus.ToString();
         ImmuneText.text = GameManager._gameManager.ImmuneStatus.ToString();
         RespirationSlider.fillAmount = GameManager._gameManager.RespirationStatus / 100.0f;
-        DigestionSlider.fillAmount = GameManager._gameManager.RespirationStatus / 100.0f;
-        ImmuneSlider.fillAmount = GameManager._gameManager.RespirationStatus / 100.0f;
+        DigestionSlider.fillAmount = GameManager._gameManager.DigestionStatus / 100.0f;
+        ImmuneSlider.fillAmount = GameManager._gameManager.ImmuneStatus / 100.0f;
 
         if (Input.GetButtonDown("Fire1") || OVRInput.GetDown(OVRInput.RawButton.X))
         {
+            tablet.rotation = CameraRotation.rotation;
             tablet.position = ActivePoint.transform.position;
             tablet.GetComponent<TabletFloater>().posOffset = tablet.position;
-            tablet.rotation = ActivePoint.transform.rotation;
             tablet.gameObject.SetActive(!visibility);
             visibility = !visibility;
         }

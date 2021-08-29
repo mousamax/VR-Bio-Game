@@ -1,36 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TabletFloater : MonoBehaviour
 {
-    // User Inputs
-    public float degreesPerSecond = 15.0f;
-    public float amplitude = 0.5f;
-    public float frequency = 1f;
+    public float amplitude = 0.05f;
+    public float frequency = 0.8f;
     public bool isPicked = false;
 
     // Position Storage Variables
     public Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
-
-    // Update is called once per frame
+    void Start()
+    {
+        posOffset = transform.position;
+    }
     void Update()
     {
-        if (isPicked || gameObject.GetComponent<OVRGrabbable>().isGrabbed)
+        if (transform.rotation.x < 0)
         {
-            gameObject.GetComponent<TabletFloater>().enabled = false;
+            Debug.Log("flip");
+            Debug.Log(transform.rotation.x);
+            // transform.rotation = new Quaternion(-transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
         }
-        else
-        {
-            // Spin object around Y-Axis
-            transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
+        tempPos = posOffset;
+        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude * Convert.ToInt32(!isPicked /*|| !gameObject.GetComponent<OVRGrabbable>().isGrabbed*/);
 
-            // Float up/down with a Sin()
-            tempPos = posOffset;
-            tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+        transform.position = tempPos;
 
-            transform.position = tempPos;
-        }
     }
 }

@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI TutorialScript;
     public bool OnTutorialMode = true;
     public int TutorialIndex = 0;
-    public int state1, state2, state3;
+    public int respo, digestive, immune;
 
     public int RespirationStatus { get => _respirationStatus; }
     public int DigestionStatus { get => _digestionStatus; }
@@ -48,9 +48,14 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        state1 = RespirationStatus;
-        state2 = DigestionStatus;
-        state3 = ImmuneStatus;
+        if (_gameManager == null)
+        {
+            Debug.Log("Renew GameManager");
+            _gameManager = this;
+        }
+        respo = RespirationStatus;
+        digestive = DigestionStatus;
+        immune = ImmuneStatus;
         if (OnTutorialMode)
         {
             Tutorial();
@@ -110,32 +115,44 @@ public class GameManager : MonoBehaviour
     }
     private void DecreaseStatus()
     {
-        if (RespirationStatus > 0)
+        if (RespirationStatus - 2 < 0)
+            _respirationStatus = 0;
+        else
             _respirationStatus -= 2;
-        if (DigestionStatus > 0)
+
+        if (DigestionStatus - 3 < 0)
+            _digestionStatus = 0;
+        else
             _digestionStatus -= 3;
-        if (ImmuneStatus > 0)
+
+        if (ImmuneStatus - 1 < 0)
+            _ImmuneStatus = 0;
+        else
             _ImmuneStatus -= 1;
 
     }
-    private void DecreaseStatus(int state, int amount)
+    private void ChangeStatus(int state, int amount)
     {
         switch (state)
         {
             case 0:
-                _respirationStatus -= amount;
+                _respirationStatus += amount;
                 if (RespirationStatus < 0)
                     _respirationStatus = 0;
+                if (RespirationStatus > 100)
+                    _respirationStatus = 100;
                 break;
             case 1:
-                _digestionStatus -= amount;
+                _digestionStatus += amount;
                 if (DigestionStatus < 0)
                     _digestionStatus = 0;
+                if (DigestionStatus > 100)
+                    _digestionStatus = 100;
                 break;
             case 2:
-                _ImmuneStatus -= amount;
-                if (ImmuneStatus < 0)
-                    _ImmuneStatus = 0;
+                _ImmuneStatus += amount;
+                if (ImmuneStatus > 100)
+                    _ImmuneStatus = 100;
                 break;
             default:
                 break;
