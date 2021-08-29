@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TabletVisibilty : MonoBehaviour
 {
     public Transform tablet;
+    public GameObject ActivePoint;
     private bool isPicked = false;
     private bool visibility = false;
 
@@ -26,8 +27,9 @@ public class TabletVisibilty : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") || OVRInput.GetDown(OVRInput.RawButton.X))
         {
-            // tablet.position = this.transform.position;
-            // tablet.rotation = this.transform.rotation;
+            tablet.position = ActivePoint.transform.position;
+            tablet.GetComponent<TabletFloater>().posOffset = tablet.position;
+            tablet.rotation = ActivePoint.transform.rotation;
             tablet.gameObject.SetActive(!visibility);
             visibility = !visibility;
         }
