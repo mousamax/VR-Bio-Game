@@ -17,7 +17,16 @@ public class TipsTablet : MonoBehaviour
         {
             CancelInvoke("ScreenColorChange");
             ringtone.enabled = false;
-            Screen.color = Color.white;
+            Color tempcolor;
+            if (ColorUtility.TryParseHtmlString("#FF4848", out tempcolor))
+            {
+                Screen.color = tempcolor;
+            }
+            else
+            {
+                Screen.color = Color.white;
+            }
+
             isOn = true;
         }
     }

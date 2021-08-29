@@ -111,9 +111,9 @@ public class GameManager : MonoBehaviour
     private void DecreaseStatus()
     {
         if (RespirationStatus > 0)
-            _respirationStatus -= 1;
+            _respirationStatus -= 2;
         if (DigestionStatus > 0)
-            _digestionStatus -= 1;
+            _digestionStatus -= 3;
         if (ImmuneStatus > 0)
             _ImmuneStatus -= 1;
 
