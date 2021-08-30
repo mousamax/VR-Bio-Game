@@ -6,27 +6,35 @@ public class HammerCollider : MonoBehaviour
 {
     private int _noOfFoodComponents = 2;
     public Vector3 FoodComponentScale;
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Food") )
+        Debug.Log(collision.transform.tag);
+        if(collision.transform.gameObject != null && collision.gameObject.CompareTag("Food"))
         {
+
             for (int i = 0; i < _noOfFoodComponents; i++)
             {
                 createCube(collision);
             }
 
+            //Debug.Log("food = " + collision.gameObject.name);
+            //if(collision.GetComponent<Move_food>() != null)
             //Destroy(collision.gameObject);
-            
-            collision.gameObject.SetActive(false);
+
+            //collision.GetComponent<Move_food>().isDestroy = true;
+                //collision.gameObject.SetActive(false);
+         
         }
     }
 
-    private void createCube(Collision collision)
+    
+
+    private void createCube(Collider collision)
     {
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.transform.position = collision.transform.position;
         cube.transform.localScale = FoodComponentScale;
-        cube.AddComponent<Rigidbody>();
+        //cube.AddComponent<Rigidbody>();
         cube.AddComponent<BoxCollider>();
     }
 }

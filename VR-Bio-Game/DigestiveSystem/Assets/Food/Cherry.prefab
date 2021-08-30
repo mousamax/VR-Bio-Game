@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 865739463927225855}
   - component: {fileID: -2416930493717347409}
   - component: {fileID: 3328746055196023040}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cherry
   m_TagString: Food
   m_Icon: {fileID: 0}

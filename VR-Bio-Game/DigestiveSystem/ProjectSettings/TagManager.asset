@@ -8,6 +8,7 @@ TagManager:
   - Pepsin
   - Amino
   - Food
+  - Hammer
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Projectile
   - Player
   - PlayerCollisionOnly
-  - 
+  - Food
   - 
   - 
   - 

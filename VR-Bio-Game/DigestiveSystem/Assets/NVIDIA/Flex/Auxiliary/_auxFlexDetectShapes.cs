@@ -113,7 +113,10 @@ namespace NVIDIA.Flex
 
                     if (!(collider is SphereCollider) && !(collider is CapsuleCollider) && !(collider is BoxCollider) && !(collider is MeshCollider))
                         continue;
-
+                    if(collider.gameObject != null)
+                    {
+                        Debug.Log("ana null");
+                    }
                     m_geometryBuffer.Set(shapeIndex, shapeData.geometry);
                     m_shapeFlagsBuffer.Set(shapeIndex, shapeData.flags);
                     m_shapePositionBuffer.Set(shapeIndex, (Vector4)(collider.transform.position + collider.transform.rotation * shapeData.shapeCenter));
