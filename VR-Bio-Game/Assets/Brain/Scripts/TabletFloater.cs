@@ -19,7 +19,7 @@ public class TabletFloater : MonoBehaviour
     void Update()
     {
         tempPos = posOffset;
-        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude * Convert.ToInt32(/*!isPicked || */ !gameObject.GetComponent<OVRGrabbable>().isGrabbed);
+        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
 
         transform.position = tempPos;
 
