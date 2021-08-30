@@ -18,14 +18,8 @@ public class TabletFloater : MonoBehaviour
     }
     void Update()
     {
-        if (transform.rotation.x < 0)
-        {
-            Debug.Log("flip");
-            Debug.Log(transform.rotation.x);
-            // transform.rotation = new Quaternion(-transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
-        }
         tempPos = posOffset;
-        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude * Convert.ToInt32(!isPicked /*|| !gameObject.GetComponent<OVRGrabbable>().isGrabbed*/);
+        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude * Convert.ToInt32(/*!isPicked || */ !gameObject.GetComponent<OVRGrabbable>().isGrabbed);
 
         transform.position = tempPos;
 
