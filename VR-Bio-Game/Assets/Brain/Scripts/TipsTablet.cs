@@ -15,6 +15,7 @@ public class TipsTablet : MonoBehaviour
         ScreenContent.SetActive(isOn);
         if (isPicked || gameObject.GetComponent<OVRGrabbable>().isGrabbed)
         {
+            gameObject.GetComponent<TabletFloater>().enabled = false;
             CancelInvoke("ScreenColorChange");
             ringtone.enabled = false;
             Color tempcolor;
@@ -28,6 +29,10 @@ public class TipsTablet : MonoBehaviour
             }
 
             isOn = true;
+        }
+        else
+        {
+            gameObject.GetComponent<TabletFloater>().enabled = true;
         }
     }
     public void newNotification()

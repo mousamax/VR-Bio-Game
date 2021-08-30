@@ -8,7 +8,7 @@ public class TabletVisibilty : MonoBehaviour
     public Transform tablet;
     public Transform CameraRotation;
     public GameObject ActivePoint;
-    private bool isPicked = false;
+    public bool isPicked = false;
     private bool visibility = false;
 
     public TextMeshProUGUI RespirationText;
@@ -33,6 +33,16 @@ public class TabletVisibilty : MonoBehaviour
             tablet.GetComponent<TabletFloater>().posOffset = tablet.position;
             tablet.gameObject.SetActive(!visibility);
             visibility = !visibility;
+        }
+        Debug.Log("isPicked: " + isPicked);
+        Debug.Log("isGrabbed: " + isPicked);
+        if (isPicked || tablet.GetComponent<OVRGrabbable>().isGrabbed)
+        {
+            tablet.GetComponent<TabletFloater>().enabled = false;
+        }
+        else
+        {
+            tablet.GetComponent<TabletFloater>().enabled = true;
         }
     }
 

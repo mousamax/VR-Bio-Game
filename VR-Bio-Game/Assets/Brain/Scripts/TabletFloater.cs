@@ -12,20 +12,10 @@ public class TabletFloater : MonoBehaviour
     // Position Storage Variables
     public Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
-    void Start()
-    {
-        posOffset = transform.position;
-    }
     void Update()
     {
-        if (transform.rotation.x < 0)
-        {
-            Debug.Log("flip");
-            Debug.Log(transform.rotation.x);
-            // transform.rotation = new Quaternion(-transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
-        }
-        tempPos = posOffset;
-        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude * Convert.ToInt32(!isPicked /*|| !gameObject.GetComponent<OVRGrabbable>().isGrabbed*/);
+        tempPos = transform.position;
+        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
 
         transform.position = tempPos;
 
