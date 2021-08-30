@@ -6,24 +6,24 @@ public class O2_Behaviour : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] float speed = 15f;
-    [SerializeField] Color32 NewBloodColor = new Color32(0x66, 0x0c, 0x0c, 255);
+    [SerializeField] Color32 LightRed = new Color32(0xe2, 0x69, 0x69, 255); 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (this.tag == "Moving_O2")
-        {
-            this.transform.position += this.transform.forward * speed * Time.deltaTime;
+        //FOR O2 MOVEMENT
+        //this.transform.position += this.transform.forward * speed * Time.deltaTime;
 
-        }
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider collider)
     {
-        Destroy(this.gameObject);
-        if (collision.gameObject.tag == "Blood")
+        if (collider.gameObject.tag == "Blood")
         {
-            collision.gameObject.GetComponent<Renderer>().material.color = NewBloodColor;
-            collision.gameObject.tag = "OxygenatedBloodCell";
+            //Destroy(this.gameObject);
+            collider.gameObject.GetComponent<Renderer>().material.color = LightRed;
+            collider.gameObject.tag = "OxygenatedBlood";
         }
+
     }
 }
