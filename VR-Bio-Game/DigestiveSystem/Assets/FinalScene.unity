@@ -1032,7 +1032,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 5
+      scalar: 3
       minScalar: 2
       maxCurve:
         serializedVersion: 2
@@ -4474,15 +4474,16 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes: []
+    m_Planes:
+    - {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -4647,11 +4648,11 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 512
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -5882,6 +5883,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Magazine
       objectReference: {fileID: 0}
+    - target: {fileID: 4935792349764791029, guid: c9ba83401f8d7cf40a284ace1445ce9a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Magazine
+      objectReference: {fileID: 0}
     - target: {fileID: 4935792349765023445, guid: c9ba83401f8d7cf40a284ace1445ce9a,
         type: 3}
       propertyPath: m_RootOrder
@@ -5890,7 +5896,7 @@ PrefabInstance:
     - target: {fileID: 4935792349765023445, guid: c9ba83401f8d7cf40a284ace1445ce9a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.871
+      value: 7.654
       objectReference: {fileID: 0}
     - target: {fileID: 4935792349765023445, guid: c9ba83401f8d7cf40a284ace1445ce9a,
         type: 3}
