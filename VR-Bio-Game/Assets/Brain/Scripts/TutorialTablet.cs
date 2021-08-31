@@ -3,15 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TipsTablet : MonoBehaviour
+public class TutorialTablet : MonoBehaviour
 {
+    public static GameObject _TutorialTablet;
     public bool isPicked = false;
     public bool isOn = false;
     public AudioSource ringtone;
     public Image Screen;
     public GameObject ScreenContent;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
+
+        if (_TutorialTablet == null)
+        {
+            _TutorialTablet = this.gameObject;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Update()
     {
+        if (_TutorialTablet == null)
+        {
+            Debug.Log("Renew TutorialTablet");
+            _TutorialTablet = this.gameObject;
+        }
         ScreenContent.SetActive(isOn);
         if (isPicked || gameObject.GetComponent<OVRGrabbable>().isGrabbed)
         {
@@ -19,7 +39,7 @@ public class TipsTablet : MonoBehaviour
             CancelInvoke("ScreenColorChange");
             ringtone.enabled = false;
             Color tempcolor;
-            if (ColorUtility.TryParseHtmlString("#FF4848", out tempcolor))
+            if (ColorUtility.TryParseHtmlString("#FFE194", out tempcolor))
             {
                 Screen.color = tempcolor;
             }

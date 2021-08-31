@@ -170,8 +170,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282927359
-  m_fontColor: {r: 1, g: 0.28235295, b: 0.28235295, a: 1}
+    rgba: 4279874559
+  m_fontColor: {r: 1, g: 0.7019608, b: 0.09803922, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3c7097b8570e2ef4eb5903a8e86e9588, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5af28e7ab2280e949988b173b8b1551e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 4635442706586713459}
   - component: {fileID: 5300397785370552521}
   m_Layer: 0
-  m_Name: LowerLayer
+  m_Name: DigestionLowerLayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 49d4fcbb079cb2841b90bfce8bcb807c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1ebc79a5e65b0a48aff3bcf5aa33a15, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -617,7 +617,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3c7097b8570e2ef4eb5903a8e86e9588, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5af28e7ab2280e949988b173b8b1551e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -709,7 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca258a816f335d842985d3738057740a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.05
+  amplitude: 0.005
   frequency: 0.8
   isPicked: 0
   posOffset: {x: 0, y: 0, z: 0}
@@ -935,7 +935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.28235295, b: 0.28235295, a: 1}
+  m_Color: {r: 1, g: 0.88235295, b: 0.5803922, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1561,8 +1561,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4279874559
+  m_fontColor: {r: 1, g: 0.7019608, b: 0.09803922, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1633,7 +1633,7 @@ GameObject:
   - component: {fileID: 517322372282814010}
   - component: {fileID: 1266755717450094084}
   m_Layer: 0
-  m_Name: LowerLayer
+  m_Name: RespirationLowerLayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1686,7 +1686,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 49d4fcbb079cb2841b90bfce8bcb807c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1ebc79a5e65b0a48aff3bcf5aa33a15, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1770,8 +1770,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4279874559
+  m_fontColor: {r: 1, g: 0.7019608, b: 0.09803922, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1842,7 +1842,7 @@ GameObject:
   - component: {fileID: 4882855369195838970}
   - component: {fileID: 8633299474011664665}
   m_Layer: 0
-  m_Name: LowerLayer
+  m_Name: ImmuneLowerLayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1895,7 +1895,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 49d4fcbb079cb2841b90bfce8bcb807c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1ebc79a5e65b0a48aff3bcf5aa33a15, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1979,8 +1979,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282927359
-  m_fontColor: {r: 1, g: 0.28235295, b: 0.28235295, a: 1}
+    rgba: 4279874559
+  m_fontColor: {r: 1, g: 0.7019608, b: 0.09803922, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2104,7 +2104,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3c7097b8570e2ef4eb5903a8e86e9588, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5af28e7ab2280e949988b173b8b1551e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2226,8 +2226,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282927359
-  m_fontColor: {r: 1, g: 0.28235295, b: 0.28235295, a: 1}
+    rgba: 4279874559
+  m_fontColor: {r: 1, g: 0.7019608, b: 0.09803922, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2298,7 +2298,7 @@ GameObject:
   - component: {fileID: 8752033337904297793}
   - component: {fileID: 7854295004746152751}
   m_Layer: 0
-  m_Name: Heart (1)
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2441,8 +2441,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4279874559
+  m_fontColor: {r: 1, g: 0.7019608, b: 0.09803922, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

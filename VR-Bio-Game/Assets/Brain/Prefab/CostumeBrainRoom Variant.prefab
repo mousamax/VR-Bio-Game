@@ -408,7 +408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2288753979273324611, guid: b79abcb9ee326264694320b336aa66c6, type: 3}
       propertyPath: m_Name
-      value: CostumeBrainRoom
+      value: CostumeBrainRoom Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2288753979273324613, guid: b79abcb9ee326264694320b336aa66c6, type: 3}
       propertyPath: m_IsActive
