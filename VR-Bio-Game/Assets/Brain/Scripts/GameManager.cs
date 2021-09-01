@@ -53,6 +53,10 @@ public class GameManager : MonoBehaviour
             Debug.Log("Renew GameManager");
             _gameManager = this;
         }
+        if (LeftHand == null)
+        {
+            LeftHand = GameObject.Find("LeftHandAnchor");
+        }
         respo = RespirationStatus;
         digestive = DigestionStatus;
         immune = ImmuneStatus;

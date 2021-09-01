@@ -7,7 +7,7 @@ public class TutorialButtonLogic : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.name);
-        if (this.gameObject.name == "NextButton" && other.tag == "Player")
+        if (this.gameObject.name == "NextButton" && other.tag == "PlayerFingers")
         {
             Debug.Log("next");
             GameManager._gameManager.TutorialNext();
