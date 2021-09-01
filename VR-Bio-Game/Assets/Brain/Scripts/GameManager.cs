@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private int _respirationStatus = 100;
     private int _digestionStatus = 100;
     private int _ImmuneStatus = 100;
-    public GameObject TipsTablet;
+    public GameObject TutorialTablet;
     public GameObject LeftHand;
     public TextMeshProUGUI TutorialScript;
     public bool OnTutorialMode = true;
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     {
         _gameManager = this;
         InvokeRepeating("DecreaseStatus", 0f, 2f);
-        if (OnTutorialMode && TipsTablet != null)
+        if (OnTutorialMode && TutorialTablet != null)
         {
             Invoke("SendNotification", 3.0f);
         }
@@ -52,6 +52,10 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Renew GameManager");
             _gameManager = this;
+        }
+        if (LeftHand == null)
+        {
+            LeftHand = GameObject.Find("LeftHandAnchor");
         }
         respo = RespirationStatus;
         digestive = DigestionStatus;
@@ -84,9 +88,9 @@ public class GameManager : MonoBehaviour
                 break;
             default:
                 OnTutorialMode = false;
-                if (TipsTablet != null)
+                if (TutorialTablet != null)
                 {
-                    TipsTablet.GetComponent<TipsTablet>().ScreenOff();
+                    TutorialTablet.GetComponent<TutorialTablet>().ScreenOff();
                 }
                 break;
         }
@@ -99,18 +103,18 @@ public class GameManager : MonoBehaviour
     public void TutorialSkip()
     {
         LeftHand.GetComponent<TabletVisibilty>().enabled = true;
-        if (TipsTablet != null)
+        if (TutorialTablet != null)
         {
-            TipsTablet.GetComponent<TipsTablet>().ScreenOff();
+            TutorialTablet.GetComponent<TutorialTablet>().ScreenOff();
         }
         OnTutorialMode = false;
     }
 
     public void SendNotification()
     {
-        if (TipsTablet != null)
+        if (TutorialTablet != null)
         {
-            TipsTablet.GetComponent<TipsTablet>().newNotification();
+            TutorialTablet.GetComponent<TutorialTablet>().newNotification();
         }
     }
     private void DecreaseStatus()
@@ -131,7 +135,7 @@ public class GameManager : MonoBehaviour
             _ImmuneStatus -= 1;
 
     }
-    private void ChangeStatus(int state, int amount)
+    public void ChangeStatus(int state, int amount)
     {
         switch (state)
         {

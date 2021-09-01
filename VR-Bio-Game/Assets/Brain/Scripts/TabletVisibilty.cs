@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class TabletVisibilty : MonoBehaviour
 {
     public Transform tablet;
@@ -19,6 +20,20 @@ public class TabletVisibilty : MonoBehaviour
     public Image ImmuneSlider;
     void Update()
     {
+        if (tablet == null)
+        {
+            if (SceneManager.GetActiveScene().name == "BrainRoom")
+                tablet = GameObject.Find("BrainControlTablet").transform;
+            else
+                tablet = GameObject.Find("SystemControlTablet").transform;
+            RespirationText = GameObject.Find("RespirationStatus").GetComponent<TextMeshProUGUI>();
+            DigestionText = GameObject.Find("DigestionStatus").GetComponent<TextMeshProUGUI>();
+            ImmuneText = GameObject.Find("ImmuneStatus").GetComponent<TextMeshProUGUI>();
+            RespirationSlider = GameObject.Find("RespirationLowerLayer").GetComponent<Image>();
+            DigestionSlider = GameObject.Find("DigestionLowerLayer").GetComponent<Image>();
+            ImmuneSlider = GameObject.Find("ImmuneLowerLayer").GetComponent<Image>();
+            tablet.gameObject.SetActive(false);
+        }
         RespirationText.text = GameManager._gameManager.RespirationStatus.ToString();
         DigestionText.text = GameManager._gameManager.DigestionStatus.ToString();
         ImmuneText.text = GameManager._gameManager.ImmuneStatus.ToString();
@@ -34,8 +49,6 @@ public class TabletVisibilty : MonoBehaviour
             tablet.gameObject.SetActive(!visibility);
             visibility = !visibility;
         }
-        Debug.Log("isPicked: " + isPicked);
-        Debug.Log("isGrabbed: " + isPicked);
         if (isPicked || tablet.GetComponent<OVRGrabbable>().isGrabbed)
         {
             tablet.GetComponent<TabletFloater>().enabled = false;

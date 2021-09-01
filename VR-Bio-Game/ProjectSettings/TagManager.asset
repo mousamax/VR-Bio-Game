@@ -25,6 +25,7 @@ TagManager:
   - GameManager
   - EventManager
   - SceneLoader
+  - PlayerFingers
   layers:
   - Default
   - TransparentFX
