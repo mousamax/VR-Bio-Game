@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TabletFloater : MonoBehaviour
 {
-    public float amplitude = 0.005f;
+    public float amplitude = 0.0005f;
     public float frequency = 0.8f;
     public bool isPicked = false;
 

@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca258a816f335d842985d3738057740a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.005
+  amplitude: 0.0005
   frequency: 0.8
   isPicked: 0
   posOffset: {x: 0, y: 0, z: 0}

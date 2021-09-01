@@ -1322,6 +1322,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5616087159942377768, guid: 9ffaadaec757d3d488b3bfb5661f85b0, type: 3}
+      propertyPath: amplitude
+      value: 0.0005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ffaadaec757d3d488b3bfb5661f85b0, type: 3}
 --- !u!4 &1603646814 stripped
@@ -1439,13 +1443,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialTablet
       objectReference: {fileID: 0}
+    - target: {fileID: 1511044938459372820, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+      propertyPath: amplitude
+      value: 0.0005
+      objectReference: {fileID: 0}
     - target: {fileID: 1511044938459372822, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1511044938459372822, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.379
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1511044938459372822, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1500,6 +1508,50 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1925770481}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7530486
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8283535
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0081438
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.2002332
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.13786349
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.8800019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9967115
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.081032924
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461868241, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -9.296
+      objectReference: {fileID: 0}
     - target: {fileID: 5064207411678035789, guid: 47737e76edda29845a844848cbb122ac, type: 3}
       propertyPath: m_Name
       value: CostumeBrainRoom
