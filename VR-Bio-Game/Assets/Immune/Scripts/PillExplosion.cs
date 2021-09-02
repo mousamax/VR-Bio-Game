@@ -6,13 +6,13 @@ public class PillExplosion : MonoBehaviour
 {
 
     // public GameObject explosionEffect;
-    [SerializeField] float radius = 20;
+    float radius = 60;
     void Start()
     {
         // returns an array of all the colliders with the sphere
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radius); 
-        // Debug.Log("number of colliders is: "+ colliders.Length );
-        
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+        Debug.Log("number of colliders is: " + colliders.Length);
+
         foreach (Collider nearbyObject in colliders)
         {
             
@@ -20,14 +20,7 @@ public class PillExplosion : MonoBehaviour
             if(monster != null)
             {
                 monster.reduceHealth(200);
-                // Debug.Log("Found a monster");
             }
-            // if(nearbyObject.GetComponent<MonsterHit>())
-            // {
-            //     nearbyObject.GetComponent<MonsterHit>().reduceHealth(200);
-            // }
-            //Destroy(nearbyObject.gameObject);
-            
         }
     }
 

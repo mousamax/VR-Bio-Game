@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    [SerializeField] AudioClip shootClip;
+
     public GameObject bulletParent;
     public GameObject nozzle;
     public GameObject weaponPlace;
     public GameObject Gun;
+
+    AudioSource gunAudioSource;
+
+    private void Start()
+    {
+        gunAudioSource = Gun.GetComponent<AudioSource>();
+    }
 
 
     void Update()
@@ -20,7 +29,7 @@ public class Shooter : MonoBehaviour
     }
 
     private void Shoot()
-    {        
+    {
 
         GameObject bullet;
         for (int i = 0; i < 10; i++)
@@ -29,8 +38,8 @@ public class Shooter : MonoBehaviour
             if (!bullet.activeSelf)
             {
                 Vector3 position = nozzle.transform.position;
-                //position.z += 4;
                 Quaternion rotation = nozzle.transform.rotation;
+                gunAudioSource.PlayOneShot(shootClip);
 
                 bullet.SetActive(true);
                 bullet.transform.position = position;

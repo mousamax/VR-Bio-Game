@@ -11,7 +11,6 @@ public class WeaponChange : MonoBehaviour
     public Transform SwordPlace;
     public Transform GunPlace;
     public Transform PillPlace;
-    Rigidbody rigidbody;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,26 +24,16 @@ public class WeaponChange : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             ResetPosition();
-            GameObject pill;
-            for (int i = 0; i < 5; i++)
-            {
-                pill = Pill.transform.GetChild(i).gameObject;
-                if (!pill.activeSelf)
-                {
-                    pill.SetActive(true);
-                    pill.transform.position = weaponPlace.position;
-                    pill.transform.rotation = weaponPlace.rotation;
-                    pill.GetComponent<Weapons>().Select(true);
-                    // Debug.Log("pill is in place");
-                    break;
-                }
-            }
+            Pill.transform.position = weaponPlace.position;
+            Pill.transform.rotation = weaponPlace.rotation;
+            Pill.GetComponent<Weapons>().Select(true);
+
         }
         else if (Input.GetKeyDown(KeyCode.G))
         {
             ResetPosition();
             Gun.transform.position = weaponPlace.position;
-            Gun.transform.rotation = weaponPlace.rotation * Quaternion.Euler(0,180,0);
+            Gun.transform.rotation = weaponPlace.rotation * Quaternion.Euler(0, 180, 0);
             Gun.GetComponent<Weapons>().Select(true);
         }
         else if (Input.GetKeyDown(KeyCode.S))
@@ -54,24 +43,36 @@ public class WeaponChange : MonoBehaviour
             Sword.transform.rotation = weaponPlace.rotation;
             Sword.GetComponent<Weapons>().Select(true);
         }
+        //FOR VR PLAYING MODE
+        if (Pill.GetComponent<OVRGrabbable>().isGrabbed)
+        {
+            Pill.GetComponent<Weapons>().Select(true);
+            Pill.GetComponent<Rigidbody>().useGravity = true;
+        }
+        else if (Gun.GetComponent<OVRGrabbable>().isGrabbed)
+        {
+            Gun.GetComponent<Weapons>().Select(true);
+            Gun.GetComponent<Rigidbody>().useGravity = true;
+
+        }
+        else if (Sword.GetComponent<OVRGrabbable>().isGrabbed)
+        {
+            Sword.GetComponent<Weapons>().Select(true);
+            Sword.GetComponent<Rigidbody>().useGravity = true;
+
+        }
     }
     private void ResetPosition()
     {
         Gun.transform.position = GunPlace.position;
         Sword.transform.position = SwordPlace.position;
+        Pill.transform.position = PillPlace.position;
+
         Gun.GetComponent<Weapons>().Select(false);
         Sword.GetComponent<Weapons>().Select(false);
-        GameObject pill;
-        for (int i = 0; i < 5; i++)
-        {
-            pill=Pill.transform.GetChild(i).gameObject;
-            if(pill.activeSelf== false)
-            {
-                rigidbody=pill.GetComponent<Rigidbody>();
-                rigidbody.useGravity = false;
-                pill.transform.position = PillPlace.position;
-                pill.GetComponent<Weapons>().Select(true);
-            }
-        }
+        Pill.GetComponent<Weapons>().Select(false);
+        Pill.GetComponent<Rigidbody>().useGravity = false;
+        Gun.GetComponent<Rigidbody>().useGravity = false;
+        Sword.GetComponent<Rigidbody>().useGravity = false;
     }
 }
