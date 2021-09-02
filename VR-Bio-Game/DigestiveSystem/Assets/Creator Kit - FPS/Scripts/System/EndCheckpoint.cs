@@ -11,7 +11,7 @@ public class EndCheckpoint : MonoBehaviour
         
         
         GameSystem.Instance.StopTimer();
-        GameSystem.Instance.FinishRun();
+        //GameSystem.Instance.FinishRun();
         Destroy(gameObject);
     }
 }

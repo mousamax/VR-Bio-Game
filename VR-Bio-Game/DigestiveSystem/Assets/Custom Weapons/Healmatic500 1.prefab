@@ -763,7 +763,7 @@ MonoBehaviour:
   ReloadAnimationClip: {fileID: 7400004, guid: 48d0d593c4a87604d8229843efb1af29, type: 3}
   FireAudioClip: {fileID: 8300000, guid: fbc2b14268d715446890c0fcedb6bd18, type: 3}
   ReloadAudioClip: {fileID: 8300000, guid: 4fa47482629cb5e4ea45c714aee0165f, type: 3}
-  PrefabRayTrail: {fileID: 1691346627199228128, guid: bc513dca9b359aa49aac8365c74ad13d,
+  PrefabRayTrail: {fileID: 7620423725551901294, guid: f17487d315bbd6542aa767e436d9b737,
     type: 3}
   DisabledOnEmpty: 0
   AmmoDisplay: {fileID: 4426910397213573318}

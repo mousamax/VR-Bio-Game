@@ -284,7 +284,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Healmatic500 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8878921694194726425, guid: 9fd7f7eea6918b74b9dc592404f68189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2373889577163625200, guid: 9fd7f7eea6918b74b9dc592404f68189, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9fd7f7eea6918b74b9dc592404f68189, type: 3}
 --- !u!4 &44849119 stripped
 Transform:
@@ -320,7 +326,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &106112763 stripped
 GameObject:
@@ -668,7 +674,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877928412}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9305c66102687664a9fc64787beae807, type: 3}
   m_Name: 
@@ -5891,7 +5897,7 @@ PrefabInstance:
     - target: {fileID: 4935792349765023445, guid: c9ba83401f8d7cf40a284ace1445ce9a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4935792349765023445, guid: c9ba83401f8d7cf40a284ace1445ce9a,
         type: 3}

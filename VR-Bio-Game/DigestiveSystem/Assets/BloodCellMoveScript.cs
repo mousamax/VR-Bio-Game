@@ -14,7 +14,7 @@ public class BloodCellMoveScript : MonoBehaviour
         this.gameObject.transform.position += (this.gameObject.transform.forward.normalized / 10f);
         if ( this.gameObject.transform.position.z >= MaxZ )
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 

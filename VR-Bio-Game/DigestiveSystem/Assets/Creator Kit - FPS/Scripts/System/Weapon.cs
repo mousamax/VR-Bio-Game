@@ -110,10 +110,13 @@ public class Weapon : MonoBehaviour
     Queue<Projectile> m_ProjectilePool = new Queue<Projectile>();
     
     int fireNameHash = Animator.StringToHash("fire");
-    int reloadNameHash = Animator.StringToHash("reload");     
+    int reloadNameHash = Animator.StringToHash("reload");
+
 
     void Awake()
     {
+        //PoolSystem.Create();
+
         m_Animator = GetComponentInChildren<Animator>();
         m_Source = GetComponentInChildren<AudioSource>();
         m_ClipContent = clipSize;
@@ -343,6 +346,7 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        this.triggerDown = Input.GetMouseButton(0);
         UpdateControllerState();        
         
         if (m_ShotTimer > 0)
@@ -372,6 +376,7 @@ public class Weapon : MonoBehaviour
 
     void UpdateControllerState()
     {
+       
         m_Animator.SetFloat("speed", m_Owner.Speed);
         m_Animator.SetBool("grounded", m_Owner.Grounded);
         
