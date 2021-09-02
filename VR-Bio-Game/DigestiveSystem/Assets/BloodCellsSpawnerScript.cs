@@ -7,7 +7,7 @@ public class BloodCellsSpawnerScript : MonoBehaviour
     private float _previousTime;
     private float _currentTime;
 
-    private const int _differenceTime = 5;
+    private const int _differenceTime = 10;
     private GameObject[] _redBloodCells;
     public GameObject RedBloodCell;
     public GameObject LookAt;
