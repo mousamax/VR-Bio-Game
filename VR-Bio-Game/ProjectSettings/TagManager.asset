@@ -25,6 +25,8 @@ TagManager:
   - GameManager
   - EventManager
   - SceneLoader
+  - Moving_O2
+  - Ground
   - PlayerFingers
   layers:
   - Default
