@@ -8,11 +8,16 @@ public class MonsterHit : MonoBehaviour
     public GameObject collisionPrefabGreen;
     public GameObject collisionPrefabRed;
     public GameObject collisionPrefabGold;
+    public GameObject Sword;
     public Score score;
+
+    [SerializeField] AudioClip swordClip;
+    AudioSource swordAudioSource;
 
     void Start()
     {
         resetHealth();
+        swordAudioSource = Sword.GetComponent<AudioSource>();
     }
 
     public void reduceHealth(int amount)
@@ -30,11 +35,14 @@ public class MonsterHit : MonoBehaviour
         if (collision.gameObject.tag == "External")
         {
             this.transform.position = new Vector3(-70, -70, -70);
+            score.incrementScore(-5);
+            score.reduceHealth(1);
             resetHealth();
             this.gameObject.SetActive(false);
         }
         else if (collision.gameObject.tag == "Player")
         {
+            score.reduceHealth(10);
             resetHealth();
             killMonster(true);
         }
@@ -42,13 +50,9 @@ public class MonsterHit : MonoBehaviour
             reduceHealth(20);
         else if (collision.gameObject.tag == "Sword")
         {
+            swordAudioSource.PlayOneShot(swordClip);
             reduceHealth(150);
         }
-        // else if (collision.gameObject.tag == "Pill")
-        // {
-        //     // reduceHealth(150);
-
-        // }
     }
 
 
