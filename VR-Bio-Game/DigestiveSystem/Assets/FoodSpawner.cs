@@ -19,7 +19,6 @@ public class FoodSpawner : MonoBehaviour
     void SpawnFood()
     {
         int index = Random.Range(0, Food.Length-1);
-
         GameObject _spawnedFood = Instantiate(Food[index]);
         _spawnedFood.transform.position = SpawnPosition.position;
         _spawnedFood.AddComponent<Move_food>();

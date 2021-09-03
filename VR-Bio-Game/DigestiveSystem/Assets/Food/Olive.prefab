@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 49181759007642948}
   m_Layer: 14
   m_Name: Olive
-  m_TagString: Food
+  m_TagString: Olive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

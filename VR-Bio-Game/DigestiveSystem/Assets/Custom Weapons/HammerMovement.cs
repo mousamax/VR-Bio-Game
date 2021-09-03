@@ -40,7 +40,7 @@ public class HammerMovement : MonoBehaviour
 
             //Debug.Log("ButtonClick" + buttonClick);
             //rb.constraints = RigidbodyConstraints.FreezeAll;
-            Debug.Log(limitReached);
+            //Debug.Log(limitReached);
             if (limitReached > 6.212)
             {
                 

@@ -10,6 +10,15 @@ TagManager:
   - Food
   - Hammer
   - Magazine
+  - Banana
+  - Cheese
+  - Cherry
+  - Hamburger
+  - Hotdog
+  - Olive
+  - Watermelon
+  - Fats
+  - Carbs
   layers:
   - Default
   - TransparentFX

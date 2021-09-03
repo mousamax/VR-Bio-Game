@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5138335135616216690}
   m_Layer: 14
   m_Name: Hotdog
-  m_TagString: Food
+  m_TagString: Hotdog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

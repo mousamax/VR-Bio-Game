@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3328746055196023040}
   m_Layer: 14
   m_Name: Cherry
-  m_TagString: Food
+  m_TagString: Cherry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
