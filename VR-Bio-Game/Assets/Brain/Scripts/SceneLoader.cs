@@ -49,4 +49,13 @@ public class SceneLoader : MonoBehaviour
 
         yield return null;
     }
+
+    void Update()
+    {
+        if (_sceneLoader == null)
+        {
+            Debug.Log("Renew SceneLoader");
+            _sceneLoader = this;
+        }
+    }
 }

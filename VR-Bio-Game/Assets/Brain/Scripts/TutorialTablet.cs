@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TipsTablet : MonoBehaviour
+public class TutorialTablet : MonoBehaviour
 {
     public bool isPicked = false;
     public bool isOn = false;
@@ -15,10 +15,24 @@ public class TipsTablet : MonoBehaviour
         ScreenContent.SetActive(isOn);
         if (isPicked || gameObject.GetComponent<OVRGrabbable>().isGrabbed)
         {
+            gameObject.GetComponent<TabletFloater>().enabled = false;
             CancelInvoke("ScreenColorChange");
             ringtone.enabled = false;
-            Screen.color = Color.white;
+            Color tempcolor;
+            if (ColorUtility.TryParseHtmlString("#FFE194", out tempcolor))
+            {
+                Screen.color = tempcolor;
+            }
+            else
+            {
+                Screen.color = Color.white;
+            }
+
             isOn = true;
+        }
+        else
+        {
+            gameObject.GetComponent<TabletFloater>().enabled = true;
         }
     }
     public void newNotification()
@@ -34,5 +48,6 @@ public class TipsTablet : MonoBehaviour
     public void ScreenOff()
     {
         isOn = false;
+        Screen.color = Color.black;
     }
 }

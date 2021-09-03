@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Brain/Scenes/BrainRoom.unity
     guid: 82b50d9831d2fbc4f95e05f92f5066a7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Immune/Scenes/ImmuneSystem.unity
     guid: 56ba5a57973643b4b85dbb9707611ef8
+  - enabled: 0
+    path: Assets/Respiratory/Scenes/LungsScene.unity
+    guid: a079a1369a221994eb764d1b4adb987f
+  - enabled: 1
+    path: Assets/VR-Interactions/Scenes/VRTesting.unity
+    guid: 79e07b404ff2d2a488947f26f45fb3e2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8e4570c57934662488211c2576f40266, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bdac2ae25410f1845a1c71861d5b8238, type: 2}

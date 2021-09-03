@@ -44,6 +44,11 @@ public class EventManager : MonoBehaviour
 
     void Update()
     {
+        if (_eventManager == null)
+        {
+            Debug.Log("Renew EventManager");
+            _eventManager = this;
+        }
         if (!GameManager._gameManager.OnTutorialMode)
         {
             events = (int)_currentEvent;
@@ -68,12 +73,15 @@ public class EventManager : MonoBehaviour
         {
             case 0:
                 _currentEvent = Events.Exercises;
+                GameManager._gameManager.ChangeStatus(0, -30);
                 break;
             case 1:
                 _currentEvent = Events.Eat;
+                GameManager._gameManager.ChangeStatus(1, -30);
                 break;
             case 2:
                 _currentEvent = Events.Disease;
+                GameManager._gameManager.ChangeStatus(2, -30);
                 break;
             default:
                 break;

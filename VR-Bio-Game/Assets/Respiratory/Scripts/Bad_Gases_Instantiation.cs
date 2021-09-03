@@ -11,7 +11,7 @@ public class Bad_Gases_Instantiation : MonoBehaviour
     public GameObject CO2;
     public GameObject N2;
     public int differenceTime;
-    public int counter = 0;
+    public int BadGasescounter = 0;
     public int maxGases = 50;
     void Start()
     {
@@ -26,7 +26,7 @@ public class Bad_Gases_Instantiation : MonoBehaviour
     void FixedUpdate()
     {
         currentTime = Time.time;
-        if (currentTime - previousTime >= differenceTime && counter < maxGases)
+        if (currentTime - previousTime >= differenceTime && BadGasescounter < maxGases)
         {
 
 
@@ -35,7 +35,7 @@ public class Bad_Gases_Instantiation : MonoBehaviour
             int y = Random.Range(minY, maxY);
             int z = Random.Range(minZ, maxZ);
             Vector3 position = new Vector3(x, y, z);
-            if (counter % 2 == 0)
+            if (BadGasescounter % 2 == 0)
             {
                 GameObject instantCO2 = Instantiate(CO2);
                 instantCO2.transform.position = position;
@@ -45,7 +45,7 @@ public class Bad_Gases_Instantiation : MonoBehaviour
                 GameObject instantN2 = Instantiate(N2);
                 instantN2.transform.position = position;
             }
-            counter++;
+            BadGasescounter++;
         }
     }
 }

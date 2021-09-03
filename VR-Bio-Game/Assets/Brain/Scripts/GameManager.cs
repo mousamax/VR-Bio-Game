@@ -11,12 +11,12 @@ public class GameManager : MonoBehaviour
     private int _respirationStatus = 100;
     private int _digestionStatus = 100;
     private int _ImmuneStatus = 100;
-    public GameObject TipsTablet;
+    public GameObject TutorialTablet;
     public GameObject LeftHand;
     public TextMeshProUGUI TutorialScript;
     public bool OnTutorialMode = true;
     public int TutorialIndex = 0;
-    public int state1, state2, state3;
+    public int respo, digestive, immune;
 
     public int RespirationStatus { get => _respirationStatus; }
     public int DigestionStatus { get => _digestionStatus; }
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     {
         _gameManager = this;
         InvokeRepeating("DecreaseStatus", 0f, 2f);
-        if (OnTutorialMode && TipsTablet != null)
+        if (OnTutorialMode && TutorialTablet != null)
         {
             Invoke("SendNotification", 3.0f);
         }
@@ -48,12 +48,26 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        state1 = RespirationStatus;
-        state2 = DigestionStatus;
-        state3 = ImmuneStatus;
+        if (_gameManager == null)
+        {
+            Debug.Log("Renew GameManager");
+            _gameManager = this;
+        }
+        if (LeftHand == null)
+        {
+            LeftHand = GameObject.Find("LeftHandAnchor");
+        }
+        respo = RespirationStatus;
+        digestive = DigestionStatus;
+        immune = ImmuneStatus;
         if (OnTutorialMode)
         {
             Tutorial();
+        }
+        else
+        {
+            if (LeftHand != null && LeftHand.GetComponent<TabletVisibilty>() != null)
+                LeftHand.GetComponent<TabletVisibilty>().enabled = true;
         }
     }
 
@@ -69,14 +83,14 @@ public class GameManager : MonoBehaviour
                 EventManager._eventManager.setCurrentEvent(0);
                 break;
             case 2:
-                TutorialScript.text = "Press X to display control Tablet";
+                TutorialScript.text = "Leave this tablet and Press X to display control Tablet";
                 LeftHand.GetComponent<TabletVisibilty>().enabled = true;
                 break;
             default:
                 OnTutorialMode = false;
-                if (TipsTablet != null)
+                if (TutorialTablet != null)
                 {
-                    TipsTablet.GetComponent<TipsTablet>().ScreenOff();
+                    TutorialTablet.GetComponent<TutorialTablet>().ScreenOff();
                 }
                 break;
         }
@@ -89,48 +103,60 @@ public class GameManager : MonoBehaviour
     public void TutorialSkip()
     {
         LeftHand.GetComponent<TabletVisibilty>().enabled = true;
-        if (TipsTablet != null)
+        if (TutorialTablet != null)
         {
-            TipsTablet.GetComponent<TipsTablet>().ScreenOff();
+            TutorialTablet.GetComponent<TutorialTablet>().ScreenOff();
         }
         OnTutorialMode = false;
     }
 
     public void SendNotification()
     {
-        if (TipsTablet != null)
+        if (TutorialTablet != null)
         {
-            TipsTablet.GetComponent<TipsTablet>().newNotification();
+            TutorialTablet.GetComponent<TutorialTablet>().newNotification();
         }
     }
     private void DecreaseStatus()
     {
-        if (RespirationStatus > 0)
-            _respirationStatus -= 1;
-        if (DigestionStatus > 0)
-            _digestionStatus -= 1;
-        if (ImmuneStatus > 0)
+        if (RespirationStatus - 2 < 0)
+            _respirationStatus = 0;
+        else
+            _respirationStatus -= 2;
+
+        if (DigestionStatus - 3 < 0)
+            _digestionStatus = 0;
+        else
+            _digestionStatus -= 3;
+
+        if (ImmuneStatus - 1 < 0)
+            _ImmuneStatus = 0;
+        else
             _ImmuneStatus -= 1;
 
     }
-    private void DecreaseStatus(int state, int amount)
+    public void ChangeStatus(int state, int amount)
     {
         switch (state)
         {
             case 0:
-                _respirationStatus -= amount;
+                _respirationStatus += amount;
                 if (RespirationStatus < 0)
                     _respirationStatus = 0;
+                if (RespirationStatus > 100)
+                    _respirationStatus = 100;
                 break;
             case 1:
-                _digestionStatus -= amount;
+                _digestionStatus += amount;
                 if (DigestionStatus < 0)
                     _digestionStatus = 0;
+                if (DigestionStatus > 100)
+                    _digestionStatus = 100;
                 break;
             case 2:
-                _ImmuneStatus -= amount;
-                if (ImmuneStatus < 0)
-                    _ImmuneStatus = 0;
+                _ImmuneStatus += amount;
+                if (ImmuneStatus > 100)
+                    _ImmuneStatus = 100;
                 break;
             default:
                 break;

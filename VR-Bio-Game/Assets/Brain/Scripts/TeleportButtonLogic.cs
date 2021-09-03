@@ -7,7 +7,8 @@ public class TeleportButtonLogic : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" || true)
+        Debug.Log(other.name);
+        if (other.tag == "PlayerFingers" && true)
         {
             if (this.gameObject.name == "BrainButton")
             {
@@ -23,7 +24,7 @@ public class TeleportButtonLogic : MonoBehaviour
             }
             else if (this.gameObject.name == "ImmuneButton")
             {
-                // SceneLoader._sceneLoader.LoadScene("BrainRoom 1");
+                SceneLoader._sceneLoader.LoadScene("ImmuneSystem");
             }
         }
     }
