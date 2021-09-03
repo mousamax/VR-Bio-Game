@@ -634,9 +634,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1000010007103092, guid: 0f51a6c91c2722e4b992f30ef1a244f3, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010738969588, guid: 0f51a6c91c2722e4b992f30ef1a244f3, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012352549654, guid: 0f51a6c91c2722e4b992f30ef1a244f3, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1000013972948528, guid: 0f51a6c91c2722e4b992f30ef1a244f3, type: 3}
       propertyPath: m_Name
       value: DistanceGrabCubeCrosshair
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013972948528, guid: 0f51a6c91c2722e4b992f30ef1a244f3, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4000014206426448, guid: 0f51a6c91c2722e4b992f30ef1a244f3, type: 3}
       propertyPath: m_RootOrder
@@ -751,7 +767,8 @@ PrefabInstance:
       propertyPath: m_animator
       value: 
       objectReference: {fileID: 620679683}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8006047033590516926, guid: 0242aa8515b4bc947a945a5c6df83ee9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0242aa8515b4bc947a945a5c6df83ee9, type: 3}
 --- !u!1 &620679681 stripped
 GameObject:
@@ -776,9 +793,9 @@ MonoBehaviour:
   m_moveHandPosition: 0
   m_gripTransform: {fileID: 0}
   m_grabVolumes: []
-  m_controller: 0
+  m_controller: 1
   m_parentTransform: {fileID: 64109616}
-  m_player: {fileID: 0}
+  m_player: {fileID: 1872843984}
   m_spherecastRadius: 0
   m_noSnapThreshhold: 0.05
   m_useSpherecast: 1
@@ -849,6 +866,10 @@ PrefabInstance:
     - target: {fileID: 1679678405796820, guid: 7ae0bdb1708635e46a2b0bfa802bb184, type: 3}
       propertyPath: m_Name
       value: DistanceGrabBillardBall03Pf
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679678405796820, guid: 7ae0bdb1708635e46a2b0bfa802bb184, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4161033965735946, guid: 7ae0bdb1708635e46a2b0bfa802bb184, type: 3}
       propertyPath: m_RootOrder
@@ -1638,6 +1659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DistanceGrabBillardBall10Pf
       objectReference: {fileID: 0}
+    - target: {fileID: 1980543430350110, guid: 6163b6f161e808a42b2cd59a7ed32c34, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4604623172214208, guid: 6163b6f161e808a42b2cd59a7ed32c34, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1744,6 +1769,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1318695875}
     - target: {fileID: 114956354361317420, guid: 6fae51a9f4170334e8639e8dbfc0a54b, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 1872843984}
+    - target: {fileID: 114956354361317420, guid: 6fae51a9f4170334e8639e8dbfc0a54b, type: 3}
       propertyPath: m_useSpherecast
       value: 1
       objectReference: {fileID: 0}
@@ -1832,6 +1861,10 @@ PrefabInstance:
     - target: {fileID: 1760440962583096, guid: 97f4a8d19ea425a47ae392bde7e260cb, type: 3}
       propertyPath: m_Name
       value: DistanceGrabSoccerBallPf
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760440962583096, guid: 97f4a8d19ea425a47ae392bde7e260cb, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4805308755068676, guid: 97f4a8d19ea425a47ae392bde7e260cb, type: 3}
       propertyPath: m_RootOrder
@@ -1986,6 +2019,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DistanceGrabWoodBlockPf
       objectReference: {fileID: 0}
+    - target: {fileID: 1542584392503418, guid: ea7023a21c9958f439273c740ffccda8, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4515048727945810, guid: ea7023a21c9958f439273c740ffccda8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2032,6 +2069,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea7023a21c9958f439273c740ffccda8, type: 3}
+--- !u!1 &1872843984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+  m_PrefabInstance: {fileID: 64109614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2063075142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2042,6 +2084,10 @@ PrefabInstance:
     - target: {fileID: 1942124751002478, guid: 269666423cfb5994c9d52e58a9ee03d5, type: 3}
       propertyPath: m_Name
       value: DistanceGrabOculusWaterBottlePf
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942124751002478, guid: 269666423cfb5994c9d52e58a9ee03d5, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4168626105638504, guid: 269666423cfb5994c9d52e58a9ee03d5, type: 3}
       propertyPath: m_RootOrder
