@@ -54,7 +54,7 @@ public class WeaponChange : MonoBehaviour
             //GunResetPosition();
             //SwordResetPosition();
             Pill.GetComponent<Weapons>().Select(true);
-            Pill.GetComponent<Rigidbody>().useGravity = true;
+            Pill.GetComponent<Rigidbody>().useGravity = false;
             Pill.GetComponent<Rigidbody>().isKinematic = false;
         }
         else if (Gun.GetComponent<OVRGrabbable>().isGrabbed)
