@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     private int _ImmuneStatus = 100;
     public GameObject TutorialTablet;
     public GameObject LeftHand;
-    public TextMeshProUGUI TutorialScript;
     public bool OnTutorialMode = true;
     public int TutorialIndex = 0;
     public int respo, digestive, immune;
@@ -39,8 +38,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _gameManager = this;
+        NullSafety();
         InvokeRepeating("DecreaseStatus", 0f, 2f);
-        if (OnTutorialMode && TutorialTablet != null)
+        if (OnTutorialMode)
         {
             Invoke("SendNotification", 3.0f);
         }
@@ -48,15 +48,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (_gameManager == null)
-        {
-            Debug.Log("Renew GameManager");
-            _gameManager = this;
-        }
-        if (LeftHand == null)
-        {
-            LeftHand = GameObject.Find("LeftHandAnchor");
-        }
+        NullSafety();
         respo = RespirationStatus;
         digestive = DigestionStatus;
         immune = ImmuneStatus;
@@ -71,19 +63,36 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void NullSafety()
+    {
+        if (_gameManager == null)
+        {
+            Debug.Log("Renew GameManager");
+            _gameManager = this;
+        }
+        if (LeftHand == null)
+        {
+            LeftHand = GameObject.Find("LeftHandAnchor");
+        }
+        if (TutorialTablet == null)
+        {
+            TutorialTablet = GameObject.Find("TutorialTablet");
+        }
+    }
+
     private void Tutorial()
     {
         switch (TutorialIndex)
         {
             case 0:
-                TutorialScript.text = "Hi Player";
+                TutorialTablet.GetComponent<TutorialTablet>().ChangeScript("Hi Player");
                 break;
             case 1:
-                TutorialScript.text = "You can Watch Activities on screen";
+                TutorialTablet.GetComponent<TutorialTablet>().ChangeScript("You can Watch Activities on screen");
                 EventManager._eventManager.setCurrentEvent(0);
                 break;
             case 2:
-                TutorialScript.text = "Leave this tablet and Press X to display control Tablet";
+                TutorialTablet.GetComponent<TutorialTablet>().ChangeScript("Leave this tablet and Press X to display control Tablet");
                 LeftHand.GetComponent<TabletVisibilty>().enabled = true;
                 break;
             default:
@@ -135,28 +144,40 @@ public class GameManager : MonoBehaviour
             _ImmuneStatus -= 1;
 
     }
+
+    /// <summary>
+    /// This Function Increase/Decrease specific States by specific Amount.
+    /// </summary>
+    /// <param name="state">  
+    /// 0 => RespirationStatus
+    /// 1 => DigestionStatus
+    /// 2 => ImmuneStatus
+    /// </param>
+    /// <param name="amount">
+    /// +Amount => to increase
+    /// -Amount => to decrease
+    /// </param>
     public void ChangeStatus(int state, int amount)
     {
         switch (state)
         {
             case 0:
-                _respirationStatus += amount;
-                if (RespirationStatus < 0)
+                if (_respirationStatus + amount < 0)
                     _respirationStatus = 0;
-                if (RespirationStatus > 100)
-                    _respirationStatus = 100;
+                else
+                    _respirationStatus = Mathf.Max(_respirationStatus + amount, 100);
                 break;
             case 1:
-                _digestionStatus += amount;
-                if (DigestionStatus < 0)
+                if (_digestionStatus + amount < 0)
                     _digestionStatus = 0;
-                if (DigestionStatus > 100)
-                    _digestionStatus = 100;
+                else
+                    _digestionStatus = Mathf.Max(_digestionStatus + amount, 100);
                 break;
             case 2:
-                _ImmuneStatus += amount;
-                if (ImmuneStatus > 100)
-                    _ImmuneStatus = 100;
+                if (_ImmuneStatus + amount < 0)
+                    _ImmuneStatus = 0;
+                else
+                    _ImmuneStatus = Mathf.Max(_ImmuneStatus + amount, 100);
                 break;
             default:
                 break;
