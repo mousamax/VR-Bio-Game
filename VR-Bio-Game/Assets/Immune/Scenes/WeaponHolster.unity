@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414735, b: 0.1210785, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -143,7 +143,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &20791430 stripped
@@ -166,7 +166,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &23367073 stripped
@@ -1176,7 +1176,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &140821334
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &169029222
@@ -2295,7 +2295,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &360407374
@@ -2403,14 +2403,9 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
---- !u!1 &375446864 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1516080259209473454, guid: bd7c5ca142401a74a8089aa46d99e028, type: 3}
-  m_PrefabInstance: {fileID: 228404422}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &377166278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2702,7 +2697,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &428019941 stripped
@@ -2725,7 +2720,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &447415333
@@ -2846,7 +2841,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &478425120
@@ -2967,7 +2962,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &489710150 stripped
@@ -3000,7 +2995,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &528828998 stripped
@@ -3023,7 +3018,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &538400580 stripped
@@ -3046,7 +3041,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &550149338
@@ -3263,7 +3258,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &589317617
@@ -3451,7 +3446,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &607638577 stripped
@@ -4830,7 +4825,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &824281673
@@ -4914,7 +4909,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &866471291 stripped
@@ -5168,7 +5163,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &917037947 stripped
@@ -5191,7 +5186,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &919132289 stripped
@@ -5302,19 +5297,6 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
---- !u!65 &930735563
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930735561}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.08802089, y: 0.10396525, z: 0.2551725}
-  m_Center: {x: 0.000000024214387, y: -0.02155684, z: -0.34584948}
 --- !u!4 &930735564 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4494892430502541708, guid: cc836208ace1ec04aa8c58026206c586, type: 3}
@@ -6061,7 +6043,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &997215903
@@ -6405,7 +6387,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1113601876
@@ -6527,7 +6509,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1165521502
@@ -6920,7 +6902,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1207572269
@@ -7159,7 +7141,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1218844033
@@ -7282,7 +7264,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1260698841
@@ -7362,9 +7344,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootClip: {fileID: 8300000, guid: 3dbe5f98be1e86d42aea01bce9012154, type: 3}
   bulletParent: {fileID: 1724027882}
-  nozzle: {fileID: 375446864}
+  nozzle: {fileID: 1267689582}
   weaponPlace: {fileID: 1679615326}
-  Gun: {fileID: 1290803963}
+  Gun: {fileID: 1267689581}
 --- !u!136 &1260698845
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7403,9 +7385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d4d975c3500114aa5b5487eb7bc1f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gun: {fileID: 1290803963}
-  Sword: {fileID: 1580762753}
-  Pill: {fileID: 935381203}
+  Gun: {fileID: 1267689581}
+  Sword: {fileID: 930735561}
+  Pill: {fileID: 1295629361}
   weaponPlace: {fileID: 1679615330}
   SwordPlace: {fileID: 1985079262}
   GunPlace: {fileID: 715057152}
@@ -7675,19 +7657,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8448662231829695269, guid: bd7c5ca142401a74a8089aa46d99e028, type: 3}
   m_PrefabInstance: {fileID: 1267689579}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1267689582
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!1 &1267689582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1516080259209473454, guid: bd7c5ca142401a74a8089aa46d99e028, type: 3}
+  m_PrefabInstance: {fileID: 1267689579}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267689581}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.15, y: 0.23, z: 0.1}
-  m_Center: {x: 0, y: -0.05, z: 0.06}
 --- !u!54 &1267689583
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7741,7 +7715,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1278822994
@@ -7990,6 +7964,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1465662052}
     m_Modifications:
+    - target: {fileID: -2454353997650134917, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
+      propertyPath: explosionEffect
+      value: 
+      objectReference: {fileID: 1043045113}
+    - target: {fileID: -2454353997650134917, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
+      propertyPath: explosionAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 46d5dd655142e6449b02696f941a8230, type: 3}
+    - target: {fileID: -2454353997650134917, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
+      propertyPath: pillInitialPosition
+      value: 
+      objectReference: {fileID: 1912404942}
     - target: {fileID: 672515860094952320, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -8094,7 +8080,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1343478329
@@ -8288,7 +8274,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1372716103
@@ -8479,7 +8465,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1451134529 stripped
@@ -8502,7 +8488,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &1460529884 stripped
@@ -8966,7 +8952,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1505014753
@@ -9222,7 +9208,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1580762751
@@ -9487,7 +9473,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1584269840
@@ -10236,7 +10222,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1798432855
@@ -10357,7 +10343,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1834115676
@@ -10420,7 +10406,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1872811674
@@ -10546,7 +10532,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &1890998635 stripped
@@ -10574,7 +10560,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1901638656
@@ -11049,7 +11035,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1954313592
@@ -11649,7 +11635,7 @@ MonoBehaviour:
   collisionPrefabGreen: {fileID: 1931065386}
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 1580762753}
+  Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
   swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &2057041139
