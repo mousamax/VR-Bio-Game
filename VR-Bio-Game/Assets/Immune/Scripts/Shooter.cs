@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    [SerializeField] AudioClip shootClip;
 
     public GameObject bulletParent;
     public GameObject nozzle;
@@ -39,7 +38,7 @@ public class Shooter : MonoBehaviour
             {
                 Vector3 position = nozzle.transform.position;
                 Quaternion rotation = nozzle.transform.rotation;
-                gunAudioSource.PlayOneShot(shootClip);
+                gunAudioSource.Play();
 
                 bullet.SetActive(true);
                 bullet.transform.position = position;

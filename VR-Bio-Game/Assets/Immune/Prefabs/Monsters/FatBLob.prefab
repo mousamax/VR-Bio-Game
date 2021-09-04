@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1562787359488378213}
   - component: {fileID: 1562787359491278151}
   - component: {fileID: 1562787359490279303}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tongue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 2475237316502645865}
   - component: {fileID: -1624940933209753537}
   - component: {fileID: 9176165516904338939}
-  m_Layer: 13
+  m_Layer: 6
   m_Name: FatBLob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 1562787359488022855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 1562787359488378223}
   - {fileID: 1562787359488378221}
@@ -117,6 +117,7 @@ Transform:
   - {fileID: 1562787359488378217}
   - {fileID: 1562787359488378213}
   - {fileID: 8996452291019264162}
+  - {fileID: 8520337329403157217}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -173,7 +174,7 @@ GameObject:
   - component: {fileID: 1562787359488378217}
   - component: {fileID: 1562787359491278153}
   - component: {fileID: 1562787359490279305}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EyelidTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +255,7 @@ GameObject:
   - component: {fileID: 1562787359488378219}
   - component: {fileID: 1562787359491278155}
   - component: {fileID: 1562787359490279307}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EyelidBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +336,7 @@ GameObject:
   - component: {fileID: 1562787359488378221}
   - component: {fileID: 1562787359491278157}
   - component: {fileID: 1562787359490279309}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +417,7 @@ GameObject:
   - component: {fileID: 1562787359488378223}
   - component: {fileID: 1562787359491278159}
   - component: {fileID: 1562787359490279311}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Blob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,6 +487,133 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &4446468247165931991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8520337329403157217}
+  - component: {fileID: 8957247384193163907}
+  m_Layer: 6
+  m_Name: IdlePlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8520337329403157217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4446468247165931991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1562787359488378215}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &8957247384193163907
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4446468247165931991}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: d145ef7ec5c612648aba1716a7f53ac9, type: 2}
+  m_audioClip: {fileID: 8300000, guid: e8ed11207c86d614cbf486a93a782359, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 10
+  MaxDistance: 22
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7247222773727290610
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +625,7 @@ GameObject:
   - component: {fileID: 8996452291019264162}
   - component: {fileID: 8857402329354579622}
   - component: {fileID: 4828893934257111920}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5266,7 +5394,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 4ed0754ebef534b4289d533daff98fa9, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -6,9 +6,9 @@ public class PillProjectile : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] float m_Thurst = 10;
-    [SerializeField] AudioClip explosionAudioClip;
     Rigidbody rigidbody;
     AudioSource pillAudioSource;
+    Weapons wep;
 
 
     public GameObject pillInitialPosition;
@@ -17,7 +17,9 @@ public class PillProjectile : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        wep = GetComponent<Weapons>();
         rigidbody.useGravity = false;
+        rigidbody.isKinematic = true;
         pillAudioSource = GetComponent<AudioSource>();
     }
 
@@ -33,22 +35,34 @@ public class PillProjectile : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        collisionLogic();
-        resetPill();
+
+        if ( wep.isSelected() && (collision.gameObject.layer == 6 || collision.gameObject.layer == 7))
+        {
+            collisionLogic();
+            resetPill();
+        }
 
     }
     private void resetPill()
     {
         rigidbody.velocity = Vector3.zero;
         rigidbody.angularVelocity = Vector3.zero;
-        this.transform.position = pillInitialPosition.transform.position;
-        this.transform.rotation = pillInitialPosition.transform.rotation;
-        this.GetComponent<Rigidbody>().useGravity = false;
+
+        //FOR 3D GAMING
+        //this.transform.position = pillInitialPosition.transform.position;
+        //this.transform.rotation = pillInitialPosition.transform.rotation;
+
+        //FOR VR
+        this.transform.position = new Vector3(0, 1, 0);
+        this.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        rigidbody.isKinematic = true ;
+        rigidbody.useGravity = false;
         GetComponent<Weapons>().Select(false);
     }
     private void collisionLogic()
     {
-        pillAudioSource.PlayOneShot(explosionAudioClip);
+        pillAudioSource.Play();
         GameObject explosion;
         explosion = explosionEffect.gameObject;
         Vector3 position = transform.position;

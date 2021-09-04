@@ -14,9 +14,9 @@ public class WeaponChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PillResetPosition();
-        SwordResetPosition();
-        GunResetPosition();
+        //PillResetPosition();
+        //SwordResetPosition();
+        //GunResetPosition();
     }
 
     // Update is called once per frame
@@ -51,23 +51,24 @@ public class WeaponChange : MonoBehaviour
         //FOR VR PLAYING MODE
         if (Pill.GetComponent<OVRGrabbable>().isGrabbed)
         {
-            GunResetPosition();
-            SwordResetPosition();
+            //GunResetPosition();
+            //SwordResetPosition();
             Pill.GetComponent<Weapons>().Select(true);
             Pill.GetComponent<Rigidbody>().useGravity = true;
+            Pill.GetComponent<Rigidbody>().isKinematic = false;
         }
         else if (Gun.GetComponent<OVRGrabbable>().isGrabbed)
         {
-            PillResetPosition();
-            SwordResetPosition();
+            //PillResetPosition();
+            //SwordResetPosition();
             Gun.GetComponent<Weapons>().Select(true);
             Gun.GetComponent<Rigidbody>().useGravity = true;
 
         }
         else if (Sword.GetComponent<OVRGrabbable>().isGrabbed)
         {
-            PillResetPosition();
-            GunResetPosition();
+            //PillResetPosition();
+            //GunResetPosition();
             Sword.GetComponent<Weapons>().Select(true);
             Sword.GetComponent<Rigidbody>().useGravity = true;
 

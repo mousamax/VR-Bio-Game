@@ -11,7 +11,6 @@ public class MonsterHit : MonoBehaviour
     public GameObject Sword;
     public Score score;
 
-    [SerializeField] AudioClip swordClip;
     AudioSource swordAudioSource;
 
     void Start()
@@ -48,9 +47,9 @@ public class MonsterHit : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Bullet")
             reduceHealth(20);
-        else if (collision.gameObject.tag == "Sword")
+        else if (collision.gameObject.tag == "Sword" && collision.gameObject.GetComponent<Weapons>().isSelected())
         {
-            swordAudioSource.PlayOneShot(swordClip);
+            swordAudioSource.Play();
             reduceHealth(150);
         }
     }

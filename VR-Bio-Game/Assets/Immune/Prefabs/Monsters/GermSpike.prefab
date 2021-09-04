@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 815908054}
   - component: {fileID: 815908053}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: IdlePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 1293402504}
   - component: {fileID: 1293402503}
   - component: {fileID: 1293402502}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: HitPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 5579288656047760515}
   - component: {fileID: 1782631989675477922}
   - component: {fileID: -4842589535322814193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GermSpike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,6 +364,82 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
       propertyPath: m_Name
       value: GermSpikeModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100036, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
       propertyPath: m_RootOrder

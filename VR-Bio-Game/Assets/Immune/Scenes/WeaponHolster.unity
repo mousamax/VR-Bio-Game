@@ -145,7 +145,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &20791430 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2742523207603312984, guid: 915fe546260118049b762904dfebcb29, type: 3}
@@ -168,7 +167,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &23367073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8608183087981362249, guid: 9739d8df7e2a11d48ad7856e11f317e8, type: 3}
@@ -660,7 +658,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 84210308}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -961,7 +959,7 @@ GameObject:
   - component: {fileID: 117870948}
   - component: {fileID: 117870947}
   - component: {fileID: 117870946}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1178,7 +1176,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &140821334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1279,7 +1276,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &169029222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1864,7 +1860,7 @@ GameObject:
   - component: {fileID: 272227235}
   - component: {fileID: 272227234}
   - component: {fileID: 272227238}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: External
   m_Icon: {fileID: 0}
@@ -2297,7 +2293,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &360407374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2305,9 +2300,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1219837929}
     m_Modifications:
+    - target: {fileID: 1809716927414879197, guid: 5e8bfac0a1d67dd408d216db93d536c9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1809716929317022920, guid: 5e8bfac0a1d67dd408d216db93d536c9, type: 3}
       propertyPath: m_Name
       value: LightParticlesCorridors (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809716929317022920, guid: 5e8bfac0a1d67dd408d216db93d536c9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1809716929317022920, guid: 5e8bfac0a1d67dd408d216db93d536c9, type: 3}
       propertyPath: m_IsActive
@@ -2405,7 +2408,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &377166278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2699,7 +2701,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &428019941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1562787359488022855, guid: 95e26c9fe52b38b4e9f6e9ea27a573cc, type: 3}
@@ -2722,7 +2723,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &447415333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2843,7 +2843,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &478425120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2964,7 +2963,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &489710150 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8608183087981362249, guid: f9f42b8131ca3604bb0a226c8c193bf4, type: 3}
@@ -2997,7 +2995,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &528828998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8070109232193553997, guid: b69d0b8816f84114c9be31c649a51a6f, type: 3}
@@ -3020,7 +3017,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &538400580 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1562787359488022855, guid: 95e26c9fe52b38b4e9f6e9ea27a573cc, type: 3}
@@ -3043,7 +3039,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &550149338
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,7 +3255,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &589317617
 GameObject:
   m_ObjectHideFlags: 0
@@ -3448,7 +3442,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &607638577 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8608183087981362249, guid: f9f42b8131ca3604bb0a226c8c193bf4, type: 3}
@@ -3625,9 +3618,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1219837929}
     m_Modifications:
+    - target: {fileID: 1809716927414879197, guid: 5e8bfac0a1d67dd408d216db93d536c9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1809716929317022920, guid: 5e8bfac0a1d67dd408d216db93d536c9, type: 3}
       propertyPath: m_Name
       value: LightParticlesCorridors (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809716929317022920, guid: 5e8bfac0a1d67dd408d216db93d536c9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1809716929317022920, guid: 5e8bfac0a1d67dd408d216db93d536c9, type: 3}
       propertyPath: m_IsActive
@@ -3872,6 +3873,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6382695358914252222, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6850249293686296486, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3929,12 +3934,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461312, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461312, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
       value: Corridor
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461314, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461314, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
       value: Corridor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461316, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461316, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
@@ -3945,36 +3962,72 @@ PrefabInstance:
       value: CorridorLong
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461318, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461318, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
       value: Corridor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461320, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461320, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
       value: Corridor
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461322, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461322, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
       value: Corridor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461324, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461324, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
       value: Corridor
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461326, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461326, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
       value: Corridor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461336, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461336, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
       value: Corridor
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461338, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461338, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
       value: Corridor
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461340, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461340, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
       value: Corridor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850249293686461342, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6850249293686461342, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_TagString
@@ -3984,9 +4037,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8518156372704842322, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8518156374598597958, guid: b839185e8530797479d5b4df13785446, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518156374598597959, guid: b839185e8530797479d5b4df13785446, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1118464438046886389, guid: b839185e8530797479d5b4df13785446, type: 3}
@@ -4827,7 +4888,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &824281673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4911,7 +4971,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &866471291 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5887468529784248447, guid: 3c95d22e993654e429d8de5aa01ec18a, type: 3}
@@ -5165,7 +5224,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &917037947 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8070109232193553997, guid: b69d0b8816f84114c9be31c649a51a6f, type: 3}
@@ -5188,7 +5246,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &919132289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5887468529784248447, guid: 3c95d22e993654e429d8de5aa01ec18a, type: 3}
@@ -6045,7 +6102,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &997215903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6389,7 +6445,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1113601876
 GameObject:
   m_ObjectHideFlags: 0
@@ -6511,7 +6566,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1165521502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6904,7 +6958,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1207572269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7143,7 +7196,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1218844033
 GameObject:
   m_ObjectHideFlags: 0
@@ -7266,7 +7318,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1260698841
 GameObject:
   m_ObjectHideFlags: 0
@@ -7342,7 +7393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee47bf915ef7fcf44b695c53650a53dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootClip: {fileID: 8300000, guid: 3dbe5f98be1e86d42aea01bce9012154, type: 3}
   bulletParent: {fileID: 1724027882}
   nozzle: {fileID: 1267689582}
   weaponPlace: {fileID: 1679615326}
@@ -7357,10 +7407,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.7
-  m_Height: 3
+  m_Radius: 0.5
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 4.35, z: -56.2}
+  m_Center: {x: 0, y: 3.5, z: -56.2}
 --- !u!114 &1260698846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7403,10 +7453,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1eb3edcf3b6a3de46be18d4233f570b1, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7717,7 +7767,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1278822994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8036,6 +8085,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PillProjectile
       objectReference: {fileID: 0}
+    - target: {fileID: 3089532698898589659, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089532698898589659, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
 --- !u!1 &1295629361 stripped
@@ -8082,7 +8139,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1343478329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8276,7 +8332,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1372716103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8467,7 +8522,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1451134529 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
@@ -8490,7 +8544,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &1460529884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8608183087981362249, guid: 9739d8df7e2a11d48ad7856e11f317e8, type: 3}
@@ -8954,7 +9007,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1505014753
 GameObject:
   m_ObjectHideFlags: 0
@@ -9210,7 +9262,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1580762751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9475,7 +9526,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1584269840
 GameObject:
   m_ObjectHideFlags: 0
@@ -10224,7 +10274,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1798432855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10345,7 +10394,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1 &1834115676
 GameObject:
   m_ObjectHideFlags: 0
@@ -10408,7 +10456,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1872811674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10534,7 +10581,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!4 &1890998635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8608183087981362249, guid: f9f42b8131ca3604bb0a226c8c193bf4, type: 3}
@@ -10562,7 +10608,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1901638656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11037,7 +11082,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &1954313592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11241,9 +11285,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1219837929}
     m_Modifications:
+    - target: {fileID: 1809716927414879197, guid: 5e8bfac0a1d67dd408d216db93d536c9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1809716929317022920, guid: 5e8bfac0a1d67dd408d216db93d536c9, type: 3}
       propertyPath: m_Name
       value: LightParticlesCorridors (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809716929317022920, guid: 5e8bfac0a1d67dd408d216db93d536c9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1809716929317022920, guid: 5e8bfac0a1d67dd408d216db93d536c9, type: 3}
       propertyPath: m_IsActive
@@ -11637,7 +11689,6 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   score: {fileID: 1260698846}
-  swordClip: {fileID: 8300000, guid: 4b16e2e1890b5684ab383ef21b15c08e, type: 3}
 --- !u!1001 &2057041139
 PrefabInstance:
   m_ObjectHideFlags: 0
