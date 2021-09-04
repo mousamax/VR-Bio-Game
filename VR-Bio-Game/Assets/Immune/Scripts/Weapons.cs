@@ -22,4 +22,9 @@ public class Weapons : MonoBehaviour
     {
         return selected;
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag=="Ground")
+            selected = false;
+    }
 }

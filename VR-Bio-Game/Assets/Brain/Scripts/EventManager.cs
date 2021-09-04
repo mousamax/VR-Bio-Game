@@ -9,7 +9,8 @@ public class EventManager : MonoBehaviour
     {
         Exercises = 0,
         Eat = 1,
-        Disease = 2,
+        TrafficJam = 2,
+        EatProkly = 3,
         None = 4
     }
 
@@ -73,15 +74,23 @@ public class EventManager : MonoBehaviour
         {
             case 0:
                 _currentEvent = Events.Exercises;
-                GameManager._gameManager.ChangeStatus(0, -30);
+                GameManager._gameManager.ChangeStatus(0, -20);
+                GameManager._gameManager.ChangeStatus(1, 10);
+                GameManager._gameManager.ChangeStatus(2, 15);
                 break;
             case 1:
                 _currentEvent = Events.Eat;
                 GameManager._gameManager.ChangeStatus(1, -30);
                 break;
             case 2:
-                _currentEvent = Events.Disease;
-                GameManager._gameManager.ChangeStatus(2, -30);
+                _currentEvent = Events.TrafficJam;
+                GameManager._gameManager.ChangeStatus(0, -15);
+                GameManager._gameManager.ChangeStatus(2, -20);
+                break;
+            case 3:
+                _currentEvent = Events.EatProkly;
+                GameManager._gameManager.ChangeStatus(1, -20);
+                GameManager._gameManager.ChangeStatus(2, 20);
                 break;
             default:
                 break;
