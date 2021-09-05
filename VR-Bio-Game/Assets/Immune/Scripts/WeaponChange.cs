@@ -11,6 +11,9 @@ public class WeaponChange : MonoBehaviour
     public Transform SwordPlace;
     public Transform GunPlace;
     public Transform PillPlace;
+    public Transform leftHolister;
+    public Transform rightHolister;
+    public Transform trackingSpace;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,34 +28,33 @@ public class WeaponChange : MonoBehaviour
         // Press P to summon the pill at the weapon place
         if (Input.GetKeyDown(KeyCode.P))
         {
-            GunResetPosition(false);
-            SwordResetPosition(false);
             Pill.transform.position = weaponPlace.position;
             Pill.transform.rotation = weaponPlace.rotation;
             Pill.GetComponent<Weapons>().Select(true);
-
         }
-        else if (Input.GetKeyDown(KeyCode.G))
-        {
+        else
             PillResetPosition(false);
-            SwordResetPosition(false);
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+
             Gun.transform.position = weaponPlace.position;
             Gun.transform.rotation = weaponPlace.rotation * Quaternion.Euler(0, 180, 0);
             Gun.GetComponent<Weapons>().Select(true);
         }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            PillResetPosition(false) ;
+        else
             GunResetPosition(false);
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+
             Sword.transform.position = weaponPlace.position;
             Sword.transform.rotation = weaponPlace.rotation;
             Sword.GetComponent<Weapons>().Select(true);
         }
+        else
+            SwordResetPosition(false);
         //FOR VR PLAYING MODE
         if (Pill.GetComponent<OVRGrabbable>().isGrabbed)
         {
-            GunResetPosition(true);
-            SwordResetPosition(true);
             Pill.GetComponent<Weapons>().Select(true);
             Pill.GetComponent<Rigidbody>().useGravity = false;
             Pill.GetComponent<Rigidbody>().isKinematic = false;
@@ -61,23 +63,16 @@ public class WeaponChange : MonoBehaviour
             PillResetPosition(true); ;
          if (Gun.GetComponent<OVRGrabbable>().isGrabbed)
         {
-            PillResetPosition(true);
-            SwordResetPosition(true);
             Gun.GetComponent<Weapons>().Select(true);
             Gun.GetComponent<Rigidbody>().useGravity = false;
-
         }
          else
             GunResetPosition(true);
         if (Sword.GetComponent<OVRGrabbable>().isGrabbed)
         {
             Debug.Log("The sword is grabbed");
-            PillResetPosition(true);
-            GunResetPosition(true);
             Sword.GetComponent<Weapons>().Select(true);
-            Sword.GetComponent<Rigidbody>().useGravity = true;
             Sword.GetComponent<Rigidbody>().isKinematic = false;
-
         }
         else
             SwordResetPosition(true);
@@ -89,7 +84,7 @@ public class WeaponChange : MonoBehaviour
             Pill.transform.position = PillPlace.position;
         else
         {
-            Pill.transform.position = new Vector3(0, 1, 0);
+            Pill.transform.position = trackingSpace.position;
             Pill.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         Pill.GetComponent<Weapons>().Select(false);
@@ -101,7 +96,7 @@ public class WeaponChange : MonoBehaviour
             Sword.transform.position = SwordPlace.position;
         else
         {
-            Sword.transform.position = new Vector3(0, 0, 0);
+            Sword.transform.position = leftHolister.position;
             Sword.transform.rotation = Quaternion.Euler(79, 0, 0);
         }
         Sword.GetComponent<Weapons>().Select(false);
@@ -115,7 +110,7 @@ public class WeaponChange : MonoBehaviour
             Gun.transform.position = GunPlace.position;
         else
         {
-            Gun.transform.position = new Vector3(0, 0, 0);
+            Gun.transform.position = rightHolister.position;
             Gun.transform.rotation = Quaternion.Euler(-90, 180, 0);
         }
         Gun.GetComponent<Weapons>().Select(false);

@@ -40,7 +40,7 @@ public class PillProjectile : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("The pill collided with" + collision.gameObject.tag);
-        if ( wep.isSelected()==true && (collision.gameObject.layer == 6 || collision.gameObject.layer == 7))
+        if (wep.isSelected()==true && (collision.gameObject.layer == 6 || collision.gameObject.layer == 7))
         {
             collisionLogic();
             resetPill();
