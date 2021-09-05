@@ -32,7 +32,10 @@ public class PillProjectile : MonoBehaviour
             rigidbody.AddForce(0, m_Thurst, m_Thurst * 2, ForceMode.Impulse);
             rigidbody.useGravity = true;
         }
-        if(gameObject.GetComponent<Weapons>().isSelected()==true`)
+        if(gameObject.GetComponent<Weapons>().isSelected()==true && GetComponent<OVRGrabbable>().isGrabbed==false)
+        {
+            rigidbody.useGravity = true;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {

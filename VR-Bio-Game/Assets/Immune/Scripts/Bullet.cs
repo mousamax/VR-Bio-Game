@@ -33,6 +33,7 @@ public class Bullet : MonoBehaviour
 
                     blue.SetActive(true);
                     blue.transform.position = position;
+                    blue.transform.Translate(new Vector3(0, 0, 5));
                     blue.transform.rotation = rotation;
                     break;
                 }

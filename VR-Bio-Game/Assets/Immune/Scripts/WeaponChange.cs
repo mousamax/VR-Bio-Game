@@ -62,15 +62,17 @@ public class WeaponChange : MonoBehaviour
             PillResetPosition(true);
             SwordResetPosition(true);
             Gun.GetComponent<Weapons>().Select(true);
-            Gun.GetComponent<Rigidbody>().useGravity = true;
+            Gun.GetComponent<Rigidbody>().useGravity = false;
 
         }
         else if (Sword.GetComponent<OVRGrabbable>().isGrabbed)
         {
+            Debug.Log("The sword is grabbed");
             PillResetPosition(true);
             GunResetPosition(true);
             Sword.GetComponent<Weapons>().Select(true);
             Sword.GetComponent<Rigidbody>().useGravity = true;
+            Sword.GetComponent<Rigidbody>().isKinematic = false;
 
         }
     }
@@ -88,7 +90,7 @@ public class WeaponChange : MonoBehaviour
             Sword.transform.position = SwordPlace.position;
         Sword.GetComponent<Weapons>().Select(false);
         Sword.GetComponent<Rigidbody>().useGravity = false;
-
+        Sword.GetComponent<Rigidbody>().isKinematic = true;
 
     }
     private void GunResetPosition(bool VR)
