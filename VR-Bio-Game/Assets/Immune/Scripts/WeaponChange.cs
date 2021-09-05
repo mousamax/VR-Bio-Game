@@ -59,12 +59,11 @@ public class WeaponChange : MonoBehaviour
             Pill.GetComponent<Rigidbody>().useGravity = false;
             Pill.GetComponent<Rigidbody>().isKinematic = false;
         }
-        else
-            PillResetPosition(true); ;
          if (Gun.GetComponent<OVRGrabbable>().isGrabbed)
         {
             Gun.GetComponent<Weapons>().Select(true);
             Gun.GetComponent<Rigidbody>().useGravity = false;
+            PillResetPosition(true);
         }
          else
             GunResetPosition(true);
@@ -73,6 +72,8 @@ public class WeaponChange : MonoBehaviour
             Debug.Log("The sword is grabbed");
             Sword.GetComponent<Weapons>().Select(true);
             Sword.GetComponent<Rigidbody>().isKinematic = false;
+            PillResetPosition(true);
+
         }
         else
             SwordResetPosition(true);
@@ -84,7 +85,8 @@ public class WeaponChange : MonoBehaviour
             Pill.transform.position = PillPlace.position;
         else
         {
-            Pill.transform.position = new Vector3 (trackingSpace.position.x, trackingSpace.position.y+1, trackingSpace.position.z);
+            //Pill.transform.position = new Vector3 (trackingSpace.position.x, trackingSpace.position.y+1, trackingSpace.position.z);
+            Pill.transform.position = trackingSpace.position;
             Pill.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         Pill.GetComponent<Weapons>().Select(false);
