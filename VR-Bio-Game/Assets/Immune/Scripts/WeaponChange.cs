@@ -32,8 +32,8 @@ public class WeaponChange : MonoBehaviour
             Pill.transform.rotation = weaponPlace.rotation;
             Pill.GetComponent<Weapons>().Select(true);
         }
-        else
-            PillResetPosition(false);
+        //else
+        //    PillResetPosition(false);
         if (Input.GetKeyDown(KeyCode.G))
         {
 
@@ -41,8 +41,8 @@ public class WeaponChange : MonoBehaviour
             Gun.transform.rotation = weaponPlace.rotation * Quaternion.Euler(0, 180, 0);
             Gun.GetComponent<Weapons>().Select(true);
         }
-        else
-            GunResetPosition(false);
+        //else
+        //    GunResetPosition(false);
         if (Input.GetKeyDown(KeyCode.S))
         {
 
@@ -50,8 +50,8 @@ public class WeaponChange : MonoBehaviour
             Sword.transform.rotation = weaponPlace.rotation;
             Sword.GetComponent<Weapons>().Select(true);
         }
-        else
-            SwordResetPosition(false);
+        //else
+        //    SwordResetPosition(false);
         //FOR VR PLAYING MODE
         if (Pill.GetComponent<OVRGrabbable>().isGrabbed)
         {
