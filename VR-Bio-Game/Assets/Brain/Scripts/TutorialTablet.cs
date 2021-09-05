@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TipsTablet : MonoBehaviour
+public class TutorialTablet : MonoBehaviour
 {
     public bool isPicked = false;
     public bool isOn = false;
@@ -19,7 +19,7 @@ public class TipsTablet : MonoBehaviour
             CancelInvoke("ScreenColorChange");
             ringtone.enabled = false;
             Color tempcolor;
-            if (ColorUtility.TryParseHtmlString("#FF4848", out tempcolor))
+            if (ColorUtility.TryParseHtmlString("#FFE194", out tempcolor))
             {
                 Screen.color = tempcolor;
             }
