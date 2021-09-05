@@ -28,12 +28,11 @@ public class Bullet : MonoBehaviour
                 if (!blue.activeSelf)
                 {
                     // randomly choose a spawning point and instantiate one of the monsters
-                    Vector3 position = transform.position;
+                    Vector3 position = new Vector3 (transform.position.x, transform.position.y, transform.position.z+10);
                     Quaternion rotation = transform.rotation;
 
                     blue.SetActive(true);
                     blue.transform.position = position;
-                    blue.transform.Translate(new Vector3(0, 0, 10));
                     blue.transform.rotation = rotation;
                     break;
                 }

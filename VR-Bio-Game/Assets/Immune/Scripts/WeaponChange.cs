@@ -84,7 +84,7 @@ public class WeaponChange : MonoBehaviour
             Pill.transform.position = PillPlace.position;
         else
         {
-            Pill.transform.position = trackingSpace.position;
+            Pill.transform.position = new Vector3 (trackingSpace.position.x, trackingSpace.position.y+1, trackingSpace.position.z);
             Pill.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         Pill.GetComponent<Weapons>().Select(false);
