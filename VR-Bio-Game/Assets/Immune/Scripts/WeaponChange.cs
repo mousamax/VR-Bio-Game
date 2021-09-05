@@ -56,8 +56,8 @@ public class WeaponChange : MonoBehaviour
         if (Pill.GetComponent<OVRGrabbable>().isGrabbed)
         {
             Pill.GetComponent<Weapons>().Select(true);
-            Pill.GetComponent<Rigidbody>().useGravity = false;
-            Pill.GetComponent<Rigidbody>().isKinematic = false;
+            //Pill.GetComponent<Rigidbody>().useGravity = false;
+            //Pill.GetComponent<Rigidbody>().isKinematic = false;
         }
          if (Gun.GetComponent<OVRGrabbable>().isGrabbed)
         {

@@ -32,7 +32,7 @@ public class Shooter : MonoBehaviour
             bullet = bulletParent.transform.GetChild(i).gameObject;
             if (!bullet.activeSelf)
             {
-                Vector3 position = new Vector3(nozzle.transform.position.x, nozzle.transform.position.y, nozzle.transform.position.z + 5);
+                Vector3 position = new Vector3(nozzle.transform.position.x, nozzle.transform.position.y, nozzle.transform.position.z + 1.5f);
                 Quaternion rotation = nozzle.transform.rotation;
                 gunAudioSource.Play();
 
