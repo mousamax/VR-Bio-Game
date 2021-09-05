@@ -54,10 +54,12 @@ public class WeaponChange : MonoBehaviour
             GunResetPosition(true);
             SwordResetPosition(true);
             Pill.GetComponent<Weapons>().Select(true);
-            Pill.GetComponent<Rigidbody>().useGravity = true;
+            Pill.GetComponent<Rigidbody>().useGravity = false;
             Pill.GetComponent<Rigidbody>().isKinematic = false;
         }
-        else if (Gun.GetComponent<OVRGrabbable>().isGrabbed)
+        else
+            PillResetPosition(true); ;
+         if (Gun.GetComponent<OVRGrabbable>().isGrabbed)
         {
             PillResetPosition(true);
             SwordResetPosition(true);
@@ -65,7 +67,9 @@ public class WeaponChange : MonoBehaviour
             Gun.GetComponent<Rigidbody>().useGravity = false;
 
         }
-        else if (Sword.GetComponent<OVRGrabbable>().isGrabbed)
+         else
+            GunResetPosition(true);
+        if (Sword.GetComponent<OVRGrabbable>().isGrabbed)
         {
             Debug.Log("The sword is grabbed");
             PillResetPosition(true);
@@ -75,12 +79,19 @@ public class WeaponChange : MonoBehaviour
             Sword.GetComponent<Rigidbody>().isKinematic = false;
 
         }
+        else
+            SwordResetPosition(true);
     }
 
     private void PillResetPosition(bool VR)
     {
         if (!VR)
             Pill.transform.position = PillPlace.position;
+        else
+        {
+            Pill.transform.position = new Vector3(0, 1, 0);
+            Pill.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
         Pill.GetComponent<Weapons>().Select(false);
         Pill.GetComponent<Rigidbody>().useGravity = false;
     }
@@ -88,6 +99,11 @@ public class WeaponChange : MonoBehaviour
     {
         if (!VR)
             Sword.transform.position = SwordPlace.position;
+        else
+        {
+            Sword.transform.position = new Vector3(0, 0, 0);
+            Sword.transform.rotation = Quaternion.Euler(79, 0, 0);
+        }
         Sword.GetComponent<Weapons>().Select(false);
         Sword.GetComponent<Rigidbody>().useGravity = false;
         Sword.GetComponent<Rigidbody>().isKinematic = true;
@@ -97,6 +113,11 @@ public class WeaponChange : MonoBehaviour
     {
         if (!VR)
             Gun.transform.position = GunPlace.position;
+        else
+        {
+            Gun.transform.position = new Vector3(0, 0, 0);
+            Gun.transform.rotation = Quaternion.Euler(-90, 180, 0);
+        }
         Gun.GetComponent<Weapons>().Select(false);
         Gun.GetComponent<Rigidbody>().useGravity = false;
 
