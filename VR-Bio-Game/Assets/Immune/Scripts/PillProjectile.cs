@@ -36,6 +36,7 @@ public class PillProjectile : MonoBehaviour
         if(gameObject.GetComponent<Weapons>().isSelected()==true && GetComponent<OVRGrabbable>().isGrabbed==false)
         {
             rigidbody.useGravity = true;
+            rigidbody.isKinematic = false;
         }
     }
     private void OnCollisionEnter(Collision collision)
