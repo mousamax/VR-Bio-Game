@@ -8324,6 +8324,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1465662052}
     m_Modifications:
     - target: {fileID: -2454353997650134917, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
+      propertyPath: pillPlaceVR
+      value: 
+      objectReference: {fileID: 1465662052}
+    - target: {fileID: -2454353997650134917, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
       propertyPath: explosionEffect
       value: 
       objectReference: {fileID: 1043045113}

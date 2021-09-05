@@ -85,12 +85,12 @@ public class WeaponChange : MonoBehaviour
             Pill.transform.position = PillPlace.position;
         else
         {
-            //Pill.transform.position = new Vector3 (trackingSpace.position.x, trackingSpace.position.y+1, trackingSpace.position.z);
-            Pill.transform.position = trackingSpace.position;
+            Pill.transform.position = new Vector3(trackingSpace.position.x, trackingSpace.position.y + 0.7f, trackingSpace.position.z+0.5f);
             Pill.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         Pill.GetComponent<Weapons>().Select(false);
         Pill.GetComponent<Rigidbody>().useGravity = false;
+        Pill.GetComponent<Rigidbody>().isKinematic = true;
     }
     private void SwordResetPosition(bool VR)
     {

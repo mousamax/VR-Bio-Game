@@ -13,7 +13,7 @@ public class Weapons : MonoBehaviour
 
     private void Update()
     {
-        if (selected == true && GetComponent<OVRGrabbable>().isGrabbed == false)
+        if (selected == true && GetComponent<OVRGrabbable>().isGrabbed == false && tag!="Pill")
             selected = false;
     }
 

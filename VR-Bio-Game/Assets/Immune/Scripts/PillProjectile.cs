@@ -9,6 +9,7 @@ public class PillProjectile : MonoBehaviour
     Rigidbody rigidbody;
     AudioSource pillAudioSource;
     Weapons wep;
+    public Transform pillPlaceVR;
 
 
     public GameObject pillInitialPosition;
@@ -57,8 +58,9 @@ public class PillProjectile : MonoBehaviour
         //this.transform.rotation = pillInitialPosition.transform.rotation;
 
         //FOR VR
-        this.transform.position = new Vector3(0, 1, 0);
-        this.transform.rotation = Quaternion.Euler(0, 0, 0);
+        transform.position = new Vector3(pillPlaceVR.position.x, pillPlaceVR.position.y + 0.7f, pillPlaceVR.position.z + 0.5f);
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+ 
 
         rigidbody.isKinematic = true ;
         rigidbody.useGravity = false;
