@@ -16,17 +16,13 @@ public class Shooter : MonoBehaviour
     {
         gunAudioSource = Gun.GetComponent<AudioSource>();
     }
-
-
     void Update()
     {
-
         if (Gun.GetComponent<Weapons>().isSelected() == true && (Input.GetMouseButtonDown(0) || OVRInput.Get(OVRInput.RawButton.RIndexTrigger)))
         {
             Shoot();
         }
     }
-
     private void Shoot()
     {
 
@@ -36,7 +32,7 @@ public class Shooter : MonoBehaviour
             bullet = bulletParent.transform.GetChild(i).gameObject;
             if (!bullet.activeSelf)
             {
-                Vector3 position = nozzle.transform.position;
+                Vector3 position = new Vector3(nozzle.transform.position.x, nozzle.transform.position.y, nozzle.transform.position.z + 5);
                 Quaternion rotation = nozzle.transform.rotation;
                 gunAudioSource.Play();
 
@@ -45,7 +41,6 @@ public class Shooter : MonoBehaviour
                 bullet.transform.rotation = rotation;
                 break;
             }
-
         }
     }
 }
