@@ -18,28 +18,28 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Get collided with: " + collision.gameObject.tag);
-        if (collision.gameObject.tag == "Player")
-            return;
-        //impact
-        GameObject blue;
-        for (int i = 0; i < 10; i++)
+        if (collision.gameObject.layer == 6 || collision.gameObject.layer == 7)
         {
-            blue = collisionPrefabBlue.transform.GetChild(i).gameObject;
-            if (!blue.activeSelf)
+            //impact
+            GameObject blue;
+            for (int i = 0; i < 10; i++)
             {
-                // randomly choose a spawning point and instantiate one of the monsters
-                Vector3 position = transform.position;
-                Quaternion rotation = transform.rotation;
+                blue = collisionPrefabBlue.transform.GetChild(i).gameObject;
+                if (!blue.activeSelf)
+                {
+                    // randomly choose a spawning point and instantiate one of the monsters
+                    Vector3 position = transform.position;
+                    Quaternion rotation = transform.rotation;
 
-                blue.SetActive(true);
-                blue.transform.position = position;
-                blue.transform.rotation = rotation;
-                break;
+                    blue.SetActive(true);
+                    blue.transform.position = position;
+                    blue.transform.rotation = rotation;
+                    break;
+                }
             }
+            this.transform.position = new Vector3(-70, -70, -70);
+            this.gameObject.SetActive(false);
         }
-        this.transform.position = new Vector3(-70, -70, -70);
-        this.gameObject.SetActive(false);
     }
 }
 

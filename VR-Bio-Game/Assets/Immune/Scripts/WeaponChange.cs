@@ -14,9 +14,9 @@ public class WeaponChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //PillResetPosition();
-        //SwordResetPosition();
-        //GunResetPosition();
+        PillResetPosition(true);
+        SwordResetPosition(true);
+        GunResetPosition(true);
     }
 
     // Update is called once per frame
@@ -25,8 +25,8 @@ public class WeaponChange : MonoBehaviour
         // Press P to summon the pill at the weapon place
         if (Input.GetKeyDown(KeyCode.P))
         {
-            GunResetPosition();
-            SwordResetPosition();
+            GunResetPosition(false);
+            SwordResetPosition(false);
             Pill.transform.position = weaponPlace.position;
             Pill.transform.rotation = weaponPlace.rotation;
             Pill.GetComponent<Weapons>().Select(true);
@@ -34,16 +34,16 @@ public class WeaponChange : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.G))
         {
-            PillResetPosition();
-            SwordResetPosition();
+            PillResetPosition(false);
+            SwordResetPosition(false);
             Gun.transform.position = weaponPlace.position;
             Gun.transform.rotation = weaponPlace.rotation * Quaternion.Euler(0, 180, 0);
             Gun.GetComponent<Weapons>().Select(true);
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            PillResetPosition();
-            GunResetPosition();
+            PillResetPosition(false) ;
+            GunResetPosition(false);
             Sword.transform.position = weaponPlace.position;
             Sword.transform.rotation = weaponPlace.rotation;
             Sword.GetComponent<Weapons>().Select(true);
@@ -51,47 +51,50 @@ public class WeaponChange : MonoBehaviour
         //FOR VR PLAYING MODE
         if (Pill.GetComponent<OVRGrabbable>().isGrabbed)
         {
-            //GunResetPosition();
-            //SwordResetPosition();
+            GunResetPosition(true);
+            SwordResetPosition(true);
             Pill.GetComponent<Weapons>().Select(true);
-            Pill.GetComponent<Rigidbody>().useGravity = false;
+            Pill.GetComponent<Rigidbody>().useGravity = true;
             Pill.GetComponent<Rigidbody>().isKinematic = false;
         }
         else if (Gun.GetComponent<OVRGrabbable>().isGrabbed)
         {
-            //PillResetPosition();
-            //SwordResetPosition();
+            PillResetPosition(true);
+            SwordResetPosition(true);
             Gun.GetComponent<Weapons>().Select(true);
             Gun.GetComponent<Rigidbody>().useGravity = true;
 
         }
         else if (Sword.GetComponent<OVRGrabbable>().isGrabbed)
         {
-            //PillResetPosition();
-            //GunResetPosition();
+            PillResetPosition(true);
+            GunResetPosition(true);
             Sword.GetComponent<Weapons>().Select(true);
             Sword.GetComponent<Rigidbody>().useGravity = true;
 
         }
     }
 
-    private void PillResetPosition()
+    private void PillResetPosition(bool VR)
     {
-        Pill.transform.position = PillPlace.position;
+        if (!VR)
+            Pill.transform.position = PillPlace.position;
         Pill.GetComponent<Weapons>().Select(false);
         Pill.GetComponent<Rigidbody>().useGravity = false;
     }
-    private void SwordResetPosition()
+    private void SwordResetPosition(bool VR)
     {
-        Sword.transform.position = SwordPlace.position;
+        if (!VR)
+            Sword.transform.position = SwordPlace.position;
         Sword.GetComponent<Weapons>().Select(false);
         Sword.GetComponent<Rigidbody>().useGravity = false;
 
 
     }
-    private void GunResetPosition()
+    private void GunResetPosition(bool VR)
     {
-        Gun.transform.position = GunPlace.position;
+        if (!VR)
+            Gun.transform.position = GunPlace.position;
         Gun.GetComponent<Weapons>().Select(false);
         Gun.GetComponent<Rigidbody>().useGravity = false;
 
