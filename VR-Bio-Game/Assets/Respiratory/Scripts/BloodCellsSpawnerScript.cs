@@ -32,7 +32,6 @@ public class BloodCellsSpawnerScript : MonoBehaviour
             int rand = Random.Range(1, 4);
             if (rand + bloodCellsCounter >= maxBloodCells)
                 rand = maxBloodCells - bloodCellsCounter;
-            rand = 4;
             for (int i = 0; i < rand; i++)
             {
                 Vector3 position = StartAt.gameObject.transform.position;
