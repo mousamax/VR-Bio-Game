@@ -7,7 +7,7 @@ public class O2_Spawner : MonoBehaviour
     // Start is called before the first frame update
     private float previousTime;
     private float currentTime;
-    public int minX, maxX, minY, maxY, minZ, maxZ;
+    public float minX, maxX, minY, maxY, minZ, maxZ;
     public GameObject O2;
     public int differenceTime;
     public int O2counter = 0;
@@ -26,9 +26,9 @@ public class O2_Spawner : MonoBehaviour
 
 
             previousTime = Time.time;
-            int x = Random.Range(minX, maxX);
-            int y = Random.Range(minY, maxY);
-            int z = Random.Range(minZ, maxZ);
+            float x = Random.Range(minX, maxX);
+            float y = Random.Range(minY, maxY);
+            float z = Random.Range(minZ, maxZ);
             Vector3 position = new Vector3(x, y, z);
 
             GameObject instantN2 = Instantiate(O2);
