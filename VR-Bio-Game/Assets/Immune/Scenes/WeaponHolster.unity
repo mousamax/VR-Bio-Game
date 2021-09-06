@@ -8399,6 +8399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PillProjectile
       objectReference: {fileID: 0}
+    - target: {fileID: 672515860094952351, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
+      propertyPath: m_TagString
+      value: Pill
+      objectReference: {fileID: 0}
     - target: {fileID: 3089532698898589659, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
       propertyPath: m_Mass
       value: 3
