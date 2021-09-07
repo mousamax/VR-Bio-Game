@@ -40,9 +40,9 @@ public class BloodCellsSpawnerScript : MonoBehaviour
                 //position.y += (float)(i * (float)0.1) + (float)0.1;
                 //position.z += (float)(i * (float)0.2) + (float)0.2;
 
-                position.x += i + 1;
-                position.y += i + 1;
-                position.z += i + 1;
+                position.x += (float)((float)(i * 0.5) + 0.1);
+                position.y += (float)((float)(i * 0.5) + 0.5);
+                position.z += (float)((float)(i * 0.5) + 0.5);
 
 
                 GameObject rbc = Instantiate(RedBloodCell);
