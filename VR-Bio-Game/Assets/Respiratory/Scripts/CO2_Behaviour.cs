@@ -48,6 +48,7 @@ public class CO2_Behaviour : MonoBehaviour
     {
         if (collider.gameObject.tag == "CarbonizedBlood")
         {
+            Debug.Log("Collision Here\n");
             Co2Audio.Play();
             collider.gameObject.GetComponent<Renderer>().material.color = Red;
             collider.gameObject.tag = "Blood";
