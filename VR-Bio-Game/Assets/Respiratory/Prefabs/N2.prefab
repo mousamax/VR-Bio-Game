@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: -8922945872344236790}
   - component: {fileID: -3715883699843179984}
   - component: {fileID: -397926957601385932}
+  - component: {fileID: -6167320338330179903}
   m_Layer: 0
   m_Name: N2
   m_TagString: N2
@@ -192,6 +193,23 @@ MonoBehaviour:
   NewBloodColor:
     serializedVersion: 2
     rgba: 4278979686
+--- !u!114 &-6167320338330179903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4958793949803010706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &5925839941086714136
 GameObject:
   m_ObjectHideFlags: 0

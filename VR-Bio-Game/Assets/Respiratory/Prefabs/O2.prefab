@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3724608245284230898}
   - component: {fileID: 6353553239688791539}
   - component: {fileID: 4992820832902074231}
+  - component: {fileID: 1186347110171243393}
   m_Layer: 0
   m_Name: O2
   m_TagString: O2
@@ -61,7 +62,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6466438157231954534}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.8
@@ -82,6 +83,7 @@ MonoBehaviour:
   LightRed:
     serializedVersion: 2
     rgba: 4285098466
+  OxygenSound: {fileID: 0}
 --- !u!114 &6353553239688791539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +195,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1186347110171243393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6466438157231954534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &6466438157955266646
 GameObject:
   m_ObjectHideFlags: 0
