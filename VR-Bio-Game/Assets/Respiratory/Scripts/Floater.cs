@@ -28,14 +28,17 @@ public class Floater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Spin object around Y-Axis
-        transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
+        if (!GetComponent<OVRGrabbable>().isGrabbed)
+        {
+            // Spin object around Y-Axis
+            transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
 
-        // Float up/down with a Sin()
-        tempPos = posOffset;
-        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+            // Float up/down with a Sin()
+            tempPos = posOffset;
+            tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
 
-        transform.position = tempPos;
+            transform.position = tempPos;
+        }
     }
    
 }
