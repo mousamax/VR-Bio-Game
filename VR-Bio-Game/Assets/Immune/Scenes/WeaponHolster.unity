@@ -1524,7 +1524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192334361}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0.7, z: 0}
+  m_LocalPosition: {x: 0.6, y: 0.7, z: 0.063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1267689580}
@@ -1770,7 +1770,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257685009}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 0.7, z: 0}
+  m_LocalPosition: {x: -0.6, y: 0.7, z: 0.062999725}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 930735564}
@@ -5511,8 +5511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
-  m_snapPosition: 1
-  m_snapOrientation: 0
+  m_snapPosition: 0
+  m_snapOrientation: 1
   m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: 516050755}
@@ -8365,7 +8365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 672515860094952320, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.062999725
       objectReference: {fileID: 0}
     - target: {fileID: 672515860094952320, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8405,11 +8405,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3089532698898589659, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
       propertyPath: m_Mass
-      value: 3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3089532698898589659, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
       propertyPath: m_AngularDrag
-      value: 0.02
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3089532698898589659, guid: ebaad05856d945e40a27ec03cf0df5ed, type: 3}
       propertyPath: m_IsKinematic
