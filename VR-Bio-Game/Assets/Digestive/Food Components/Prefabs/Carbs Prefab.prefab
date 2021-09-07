@@ -2587,7 +2587,7 @@ GameObject:
   - component: {fileID: 1901440597063454105}
   m_Layer: 0
   m_Name: Carbs Prefab
-  m_TagString: Untagged
+  m_TagString: Carbs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
