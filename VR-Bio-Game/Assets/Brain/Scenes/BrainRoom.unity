@@ -322,7 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TutorialTablet: {fileID: 0}
   LeftHand: {fileID: 0}
-  OnTutorialMode: 0
+  OnTutorialMode: 1
   TutorialIndex: 0
   respo: 0
   digestive: 0
@@ -855,6 +855,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1228563043740045329, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228563043740045329, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 39b93e0ec295cfc48a401239b0a3c842, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
 --- !u!1001 &1511044939946688795
@@ -888,6 +896,14 @@ PrefabInstance:
       propertyPath: ButtonTab
       value: 
       objectReference: {fileID: 1898490864}
+    - target: {fileID: 1511044938459372816, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511044938459372816, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bfd7920e2089bc429fb07a43ab29e57, type: 3}
     - target: {fileID: 1511044938459372817, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
       propertyPath: m_Name
       value: TutorialTablet
@@ -1021,6 +1037,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -9.296
       objectReference: {fileID: 0}
+    - target: {fileID: 3804210364105998191, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5064207411678035789, guid: 47737e76edda29845a844848cbb122ac, type: 3}
       propertyPath: m_Name
       value: CostumeBrainRoom
@@ -1072,6 +1092,10 @@ PrefabInstance:
     - target: {fileID: 5064207411678520173, guid: 47737e76edda29845a844848cbb122ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9092016067733623834, guid: 47737e76edda29845a844848cbb122ac, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47737e76edda29845a844848cbb122ac, type: 3}

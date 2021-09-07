@@ -34,8 +34,11 @@ public class TutorialTablet : MonoBehaviour
         }
         else
         {
-            isOn = false;
-            Screen.color = Color.black;
+            if (!ringtone.enabled)
+            {
+                isOn = false;
+                Screen.color = Color.black;
+            }
             gameObject.GetComponent<TabletFloater>().enabled = true;
         }
     }
