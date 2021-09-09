@@ -6,69 +6,55 @@ public class PillProjectile : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] float m_Thurst = 10;
+    [SerializeField] AudioClip explosionAudioClip;
     Rigidbody rigidbody;
+    AudioSource pillAudioSource;
+
+
+    public GameObject pillInitialPosition;
     public GameObject explosionEffect;
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.useGravity = false;
-
+        pillAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //Press A to throw the pill farward and activate the gravity
-        if (Input.GetKeyDown(KeyCode.A) && gameObject.GetComponent<Weapons>().isSelected()==true )
+        if (Input.GetKeyDown(KeyCode.A) && gameObject.GetComponent<Weapons>().isSelected() == true)
         {
-            Debug.Log("A is pressed");
             rigidbody.AddForce(0, m_Thurst, m_Thurst * 2, ForceMode.Impulse);
             rigidbody.useGravity = true;
-            // Debug.Log("Pill is Projected");
-        }
-
-        if(transform.position.y < -5)
-        {
-            collisionLogic(true);
-            resetPill();
         }
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("collision with: "+ collision.gameObject.tag);
-        //if (collision.gameObject.tag == "untagged")
-        //    return;
-        collisionLogic(false);  
+        collisionLogic();
         resetPill();
-        
+
     }
     private void resetPill()
     {
-        this.transform.position = new Vector3(-70, -70, -70);
         rigidbody.velocity = Vector3.zero;
         rigidbody.angularVelocity = Vector3.zero;
-        // Debug.Log("Pill will disappear");
-        this.gameObject.SetActive(false);
+        this.transform.position = pillInitialPosition.transform.position;
+        this.transform.rotation = pillInitialPosition.transform.rotation;
+        this.GetComponent<Rigidbody>().useGravity = false;
+        GetComponent<Weapons>().Select(false);
     }
-    private void collisionLogic(bool notGround)
+    private void collisionLogic()
     {
-        //Debug.Log("pill collided with: "+collision.gameObject.tag);
+        pillAudioSource.PlayOneShot(explosionAudioClip);
         GameObject explosion;
-        for (int i = 0; i < 5; i++)
-        {
-            explosion = explosionEffect.transform.GetChild(i).gameObject;
-            if (!explosion.activeSelf)
-            {
-                Vector3 position = transform.position;
-                if (notGround)
-                    position.y = (float) -4;
-                Quaternion rotation = transform.rotation;
-                explosion.SetActive(true);
-                explosion.transform.position = position;
-                explosion.transform.rotation = rotation;
-                // Debug.Log("Pill is exploded");
-                break;
-            }
-        }
+        explosion = explosionEffect.gameObject;
+        Vector3 position = transform.position;
+        Quaternion rotation = transform.rotation;
+        explosion.SetActive(true);
+        explosion.transform.position = position;
+        explosion.transform.rotation = rotation;
     }
 }

@@ -37,6 +37,7 @@ public class Bullet : MonoBehaviour
                 blue.transform.rotation = rotation;
                 break;
             }
+            
         }
         this.transform.position = new Vector3(-70, -70, -70);
         this.gameObject.SetActive(false);

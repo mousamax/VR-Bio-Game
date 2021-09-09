@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ public class TutorialTablet : MonoBehaviour
     public AudioSource ringtone;
     public Image Screen;
     public GameObject ScreenContent;
+    public TextMeshProUGUI TutorialScript;
     void Update()
     {
         ScreenContent.SetActive(isOn);
@@ -49,5 +51,10 @@ public class TutorialTablet : MonoBehaviour
     {
         isOn = false;
         Screen.color = Color.black;
+    }
+
+    public void ChangeScript(string script)
+    {
+        TutorialScript.text = script;
     }
 }
