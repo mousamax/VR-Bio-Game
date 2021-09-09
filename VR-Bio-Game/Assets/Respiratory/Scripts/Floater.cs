@@ -18,6 +18,9 @@ public class Floater : MonoBehaviour
     Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
 
+    //flags
+    bool grabbed = false;
+
     // Use this for initialization
     void Start()
     {
@@ -28,14 +31,23 @@ public class Floater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Spin object around Y-Axis
-        transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
+        if (!grabbed)//!GetComponent<OVRGrabbable>().isGrabbed && !grabbed)
+        {
+            // Spin object around Y-Axis
+            transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
 
-        // Float up/down with a Sin()
-        tempPos = posOffset;
-        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+            // Float up/down with a Sin()
+            tempPos = posOffset;
+            tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
 
-        transform.position = tempPos;
+            transform.position = tempPos;
+        }
+        if(GetComponent<OVRGrabbable>().isGrabbed)
+        {
+            grabbed = true;
+            this.GetComponent<Rigidbody>().isKinematic = false;
+            this.GetComponent<Rigidbody>().useGravity = false;
+        }
     }
    
 }
