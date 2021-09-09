@@ -9,12 +9,10 @@ public class O2_Behaviour : MonoBehaviour
     [SerializeField] Color32 LightRed = new Color32(0xe2, 0x69, 0x69, 255);
     public AudioSource OxygenSound;
     // Update is called once per frame
-    void FixedUpdate()
+    void Start()
     {
         OxygenSound = GetComponent<AudioSource>();
     }
-
-
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Blood")
