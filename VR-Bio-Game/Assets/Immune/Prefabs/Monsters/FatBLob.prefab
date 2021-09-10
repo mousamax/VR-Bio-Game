@@ -91,11 +91,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1562787359488378215}
   - component: {fileID: 2475237316502645865}
-  - component: {fileID: -1624940933209753537}
-  - component: {fileID: 9176165516904338939}
+  - component: {fileID: -8368399539585447541}
+  - component: {fileID: 1958174166634405333}
   m_Layer: 6
   m_Name: FatBLob
-  m_TagString: Untagged
+  m_TagString: FatBlob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 1562787359488022855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 1562787359488378223}
   - {fileID: 1562787359488378221}
@@ -133,8 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7197b64b034fa4a4f96789d08baaf84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Thurst: 20
---- !u!54 &-1624940933209753537
+--- !u!54 &-8368399539585447541
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,10 +147,10 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 118
+  m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &9176165516904338939
-BoxCollider:
+--- !u!135 &1958174166634405333
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -161,8 +160,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 5, z: 2}
-  m_Center: {x: 0, y: -1, z: -0.5}
+  m_Radius: 2.2456086
+  m_Center: {x: -0.06042093, y: -1.0797745, z: -1.5558672}
 --- !u!1 &1562787359488022857
 GameObject:
   m_ObjectHideFlags: 0
