@@ -9,23 +9,28 @@ public class Shooter : MonoBehaviour
     public GameObject nozzle;
     public GameObject weaponPlace;
     public GameObject Gun;
+    [SerializeField] float firerate;
+    float timer;
 
     AudioSource gunAudioSource;
 
     private void Start()
     {
         gunAudioSource = Gun.GetComponent<AudioSource>();
+        firerate = 0.25f;
+        timer = 0;
     }
     void Update()
     {
-        if (Gun.GetComponent<Weapons>().isSelected() == true && (Input.GetMouseButtonDown(0) || OVRInput.Get(OVRInput.RawButton.RIndexTrigger)))
+        timer += Time.deltaTime;
+        if (timer>firerate && Gun.GetComponent<Weapons>().isSelected() == true && (Input.GetMouseButtonDown(0) || OVRInput.Get(OVRInput.RawButton.RIndexTrigger)))
         {
             Shoot();
+            timer = 0;
         }
     }
     private void Shoot()
     {
-
         GameObject bullet;
         for (int i = 0; i < 10; i++)
         {

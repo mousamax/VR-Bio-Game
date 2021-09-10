@@ -33,7 +33,7 @@ public class PillProjectile : MonoBehaviour
             rigidbody.AddForce(0, m_Thurst, m_Thurst * 2, ForceMode.Impulse);
             rigidbody.useGravity = true;
         }
-        if(gameObject.GetComponent<Weapons>().isSelected()==true && GetComponent<OVRGrabbable>().isGrabbed==false)
+        if(wep.isSelected()==true && GetComponent<OVRGrabbable>().isGrabbed==false)
         {
             rigidbody.useGravity = true;
             rigidbody.isKinematic = false;
@@ -41,7 +41,7 @@ public class PillProjectile : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("The pill collided with" + collision.gameObject.tag);
+        Debug.Log("The pill collided with" + collision.gameObject.tag + "with the layer: " + collision.gameObject.layer);
         if (wep.isSelected()==true && (collision.gameObject.layer == 6 || collision.gameObject.layer == 7))
         {
             collisionLogic();
