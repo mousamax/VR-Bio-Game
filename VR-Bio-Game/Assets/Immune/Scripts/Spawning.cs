@@ -15,7 +15,7 @@ public class Spawning : MonoBehaviour
     void Start()
     {
         timer = 0;
-        spawningTime = 2;
+        spawningTime = 1.25f;
     }
 
     void Update()
