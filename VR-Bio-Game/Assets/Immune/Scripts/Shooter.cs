@@ -17,7 +17,7 @@ public class Shooter : MonoBehaviour
     private void Start()
     {
         gunAudioSource = Gun.GetComponent<AudioSource>();
-        firerate = 0.25f;
+        firerate = 0.1f;
         timer = 0;
     }
     void Update()
