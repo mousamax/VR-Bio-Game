@@ -61,7 +61,7 @@ public class MonsterHit : MonoBehaviour
     private void playImpact(string s)
     {
         GameObject collision = null;
-        GetComponent<AudioSource>().PlayOneShot(coinClip);
+        AudioSource.PlayClipAtPoint(coinClip, score.gameObject.transform.position);    //.PlayOneShot(coinClip);
         for (int i = 0; i < 5; i++)
         {
             switch (s)
