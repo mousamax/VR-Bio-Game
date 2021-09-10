@@ -79,11 +79,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68c3257a797a194aae4d44b4ab894e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 0.4
   LightRed:
     serializedVersion: 2
     rgba: 4285098466
   OxygenSound: {fileID: 0}
+  offset: 0.05
 --- !u!114 &6353553239688791539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,7 +92,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6466438157231954534}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5599b89d17805de439e24a0f20fbf674, type: 3}
   m_Name: 
