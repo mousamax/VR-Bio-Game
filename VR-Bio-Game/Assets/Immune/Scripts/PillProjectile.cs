@@ -10,6 +10,7 @@ public class PillProjectile : MonoBehaviour
     AudioSource pillAudioSource;
     Weapons wep;
     public Transform pillPlaceVR;
+    int numberOfPillsAmmo = 5;
 
 
     public GameObject pillInitialPosition;
@@ -28,6 +29,8 @@ public class PillProjectile : MonoBehaviour
     void Update()
     {
         //Press A to throw the pill farward and activate the gravity
+        if (numberOfPillsAmmo == 0)
+            this.gameObject.SetActive(false);
         if (Input.GetKeyDown(KeyCode.A) && gameObject.GetComponent<Weapons>().isSelected() == true)
         {
             rigidbody.AddForce(0, m_Thurst, m_Thurst * 2, ForceMode.Impulse);
@@ -38,6 +41,7 @@ public class PillProjectile : MonoBehaviour
             rigidbody.useGravity = true;
             rigidbody.isKinematic = false;
         }
+       
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -69,6 +73,7 @@ public class PillProjectile : MonoBehaviour
     }
     private void collisionLogic()
     {
+        numberOfPillsAmmo--;
         pillAudioSource.Play();
         GameObject explosion;
         explosion = explosionEffect.gameObject;

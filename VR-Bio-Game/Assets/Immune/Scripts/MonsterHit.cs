@@ -12,6 +12,7 @@ public class MonsterHit : MonoBehaviour
     public Score score;
 
     AudioSource swordAudioSource;
+    public AudioClip coinClip;
 
     void Start()
     {
@@ -60,6 +61,8 @@ public class MonsterHit : MonoBehaviour
     private void playImpact(string s)
     {
         GameObject collision = null;
+        GetComponent<AudioSource>().Stop();
+        GetComponent<AudioSource>().PlayOneShot(coinClip);
         for (int i = 0; i < 5; i++)
         {
             switch (s)

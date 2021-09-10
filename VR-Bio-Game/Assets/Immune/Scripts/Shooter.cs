@@ -11,6 +11,7 @@ public class Shooter : MonoBehaviour
     public GameObject Gun;
     [SerializeField] float firerate;
     float timer;
+    int ammo = 200;
 
     AudioSource gunAudioSource;
 
@@ -31,6 +32,9 @@ public class Shooter : MonoBehaviour
     }
     private void Shoot()
     {
+        if (ammo == 0)
+            return;
+        ammo--;
         GameObject bullet;
         for (int i = 0; i < 10; i++)
         {
