@@ -6,7 +6,7 @@ public class PillExplosion : MonoBehaviour
 {
 
     // public GameObject explosionEffect;
-    float radius = 60;
+    float radius = 1000;
     void Start()
     {
         // returns an array of all the colliders with the sphere

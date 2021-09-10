@@ -74,8 +74,8 @@ public class PillProjectile : MonoBehaviour
         explosion = explosionEffect.gameObject;
         Vector3 position = transform.position;
         Quaternion rotation = transform.rotation;
-        explosion.SetActive(true);
         explosion.transform.position = position;
         explosion.transform.rotation = rotation;
+        explosion.SetActive(true);
     }
 }
