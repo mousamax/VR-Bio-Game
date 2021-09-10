@@ -74,6 +74,20 @@ public class PillProjectile : MonoBehaviour
         explosion = explosionEffect.gameObject;
         Vector3 position = transform.position;
         Quaternion rotation = transform.rotation;
+        ////////////////////////
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 1000);
+        Debug.Log("number of colliders is: " + colliders.Length);
+
+        foreach (Collider nearbyObject in colliders)
+        {
+
+            MonsterHit monster = nearbyObject.GetComponent<MonsterHit>();
+            if (monster != null)
+            {
+                monster.reduceHealth(200);
+            }
+        }
+        ///////////////////////////////
         explosion.transform.position = position;
         explosion.transform.rotation = rotation;
         explosion.SetActive(true);
