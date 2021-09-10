@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3610861152274126657}
   - component: {fileID: -5981910695639665565}
   - component: {fileID: 49181759007642948}
-  m_Layer: 14
+  m_Layer: 6
   m_Name: Olive
   m_TagString: Olive
   m_Icon: {fileID: 0}

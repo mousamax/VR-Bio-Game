@@ -26,39 +26,24 @@ namespace DigestiveSystem
 
         private void OnCollisionEnter(Collision collision)
         {
-            Debug.Log("Get collided with: " + collision.gameObject.tag);
-            //if (collision.gameObject.tag == "Player")
-            //    return;
-            ////impact
-            //GameObject blue;
-            //for (int i = 0; i < 10; i++)
+            //Debug.Log("Get collided with: " + collision.gameObject.tag);
+
+            //if(!collision.gameObject.CompareTag("Ground") && !collision.gameObject.CompareTag("Hammer") && collision.gameObject.layer != 10)
             //{
-            //    blue = collisionPrefabBlue.transform.GetChild(i).gameObject;
-            //    if (!blue.activeSelf)
-            //    {
-            //        // randomly choose a spawning point and instantiate one of the monsters
-            //        Vector3 position = transform.position;
-            //        Quaternion rotation = transform.rotation;
 
-            //        blue.SetActive(true);
-            //        blue.transform.position = position;
-            //        blue.transform.rotation = rotation;
-            //        break;
-            //    }
-            //}
-            //this.transform.position = new Vector3(-70, -70, -70);
-            //this.gameObject.SetActive(false);
-            if(!collision.gameObject.CompareTag("Ground") && !collision.gameObject.CompareTag("Hammer") && collision.gameObject.layer != 10)
-            {
-
-                Destroy(collision.gameObject);
+            //    Destroy(collision.gameObject);
                 
 
-            }
+            //}
             if(collision.gameObject.layer == 10)
             {
                 collision.gameObject.SetActive(false);
             }
+            if (collision.gameObject.layer == 6 || collision.gameObject.layer == 7)
+            {
+                Destroy(collision.gameObject);
+            }
+            this.transform.position = new Vector3(-70, -70, -70);
             this.gameObject.SetActive(false);
             //if (collision.gameObject.CompareTag("Protein"))
             //{
