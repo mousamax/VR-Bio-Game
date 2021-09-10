@@ -28,7 +28,6 @@ public class CO2_Behaviour : MonoBehaviour
     {
         if (!grabbed)
         {
-            //FOR CO2 random MOVEMENT
             this.transform.position += this.transform.forward * speed * Time.deltaTime;
         }
         if (GetComponent<OVRGrabbable>().isGrabbed)
@@ -38,19 +37,7 @@ public class CO2_Behaviour : MonoBehaviour
             this.GetComponent<Rigidbody>().useGravity = false;
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        //if (collision.gameObject.tag == "Blood")
-        //{
-        //    Destroy(this.gameObject);
-        //    collision.gameObject.GetComponent<Renderer>().material.color = NewBloodColor;
-        //}
-        //if (collision.gameObject.tag == "Door1" || collision.gameObject.tag == "Door2")
-        //{
-        //    Destroy(this.gameObject);
-        //}
-
-    }
+   
 
 
     private void OnTriggerExit(Collider collider)

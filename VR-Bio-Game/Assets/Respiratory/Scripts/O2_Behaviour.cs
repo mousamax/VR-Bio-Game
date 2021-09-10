@@ -33,11 +33,10 @@ public class O2_Behaviour : MonoBehaviour
             collider.gameObject.tag = "OxygenatedBlood";
             this.tag = "BindedO2";
             this.gameObject.tag = "BindedO2";
-            Debug.Log("BindedO2\n");
             Vector3 o2_pos = collider.gameObject.transform.position;
             Vector3 o2_LookAt = collider.gameObject.transform.forward;
             o2_pos.y += (float)offset;
-            o2_LookAt.y += (float)offset;
+            //o2_LookAt.y += (float)offset;
             this.transform.position = o2_pos;
             this.transform.LookAt(o2_LookAt);
             this.transform.forward = o2_LookAt;

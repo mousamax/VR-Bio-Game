@@ -36,10 +36,6 @@ public class BloodCellsSpawnerScript : MonoBehaviour
             {
                 Vector3 position = StartAt.gameObject.transform.position;
 
-                //position.x += (float)(i * (float)0.1);
-                //position.y += (float)(i * (float)0.1) + (float)0.1;
-                //position.z += (float)(i * (float)0.2) + (float)0.2;
-
                 position.x += (float)((float)(i * 0.5) + 0.1);
                 position.y += (float)((float)(i * 0.5) + 0.5);
                 position.z += (float)((float)(i * 0.5) + 0.5);
