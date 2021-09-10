@@ -18,13 +18,12 @@ namespace DigestiveSystem
             if (this.gameObject.activeSelf)
             {
 
-                transform.Translate(speed * Time.deltaTime, 0, 0);
+                transform.Translate(0, 0, -speed * Time.deltaTime);
 
             }
                 
         }
-
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider collision)
         {
             //Debug.Log("Get collided with: " + collision.gameObject.tag);
 
@@ -35,7 +34,7 @@ namespace DigestiveSystem
                 
 
             //}
-            if(collision.gameObject.layer == 10)
+            if(collision.gameObject.CompareTag("BloodCells"))
             {
                 collision.gameObject.SetActive(false);
             }

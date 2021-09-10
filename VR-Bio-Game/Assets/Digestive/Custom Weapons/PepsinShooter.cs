@@ -24,7 +24,7 @@ namespace DigestiveSystem
         void Update()
         {
             //OVRInput.Get(OVRInput.RawButton.RIndexTrigger)
-            if (Gun.GetComponent<OVRGrabbable>().isGrabbed && (Input.GetMouseButtonDown(0) || OVRInput.Get(OVRInput.RawButton.RIndexTrigger)))
+            if (Input.GetMouseButtonDown(0) || (Gun.GetComponent<OVRGrabbable>().isGrabbed && OVRInput.Get(OVRInput.RawButton.RIndexTrigger)))
             {
                 Shoot();
             }
