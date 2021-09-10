@@ -29,7 +29,7 @@ public class MonsterHit : MonoBehaviour
         }
     }
 
-    private void  OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
         //if (this.gameObject.tag == "FatBlob")
         //    Debug.Log("FatBLob Collided with tag: " + collision.gameObject.tag +" and layer"+ collision.gameObject.layer+ " With x:"+ this.transform.position.x+ " and with y:" + transform.position.y  + " and z:"+transform.position.z);

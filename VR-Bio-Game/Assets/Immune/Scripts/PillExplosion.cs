@@ -6,9 +6,10 @@ public class PillExplosion : MonoBehaviour
 {
 
     // public GameObject explosionEffect;
-    float radius = 1000;
+    float radius;
     void Start()
     {
+        radius = 1000;
         // returns an array of all the colliders with the sphere
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         Debug.Log("number of colliders is: " + colliders.Length);
