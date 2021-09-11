@@ -8,10 +8,9 @@ public class EventManager : MonoBehaviour
     enum Events
     {
         Exercises = 0,
-        Eat = 1,
-        TrafficJam = 2,
-        EatProkly = 3,
-        None = 4
+        TrafficJam = 1,
+        EatProkly = 2,
+        None = 3
     }
 
     public static EventManager _eventManager;
@@ -78,16 +77,16 @@ public class EventManager : MonoBehaviour
                 GameManager._gameManager.ChangeStatus(1, 10);
                 GameManager._gameManager.ChangeStatus(2, 15);
                 break;
+            // case 1:
+            //     _currentEvent = Events.Eat;
+            //     GameManager._gameManager.ChangeStatus(1, -30);
+            //     break;
             case 1:
-                _currentEvent = Events.Eat;
-                GameManager._gameManager.ChangeStatus(1, -30);
-                break;
-            case 2:
                 _currentEvent = Events.TrafficJam;
                 GameManager._gameManager.ChangeStatus(0, -15);
                 GameManager._gameManager.ChangeStatus(2, -20);
                 break;
-            case 3:
+            case 2:
                 _currentEvent = Events.EatProkly;
                 GameManager._gameManager.ChangeStatus(1, -20);
                 GameManager._gameManager.ChangeStatus(2, 20);
