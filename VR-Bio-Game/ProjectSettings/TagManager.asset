@@ -28,6 +28,8 @@ TagManager:
   - Moving_O2
   - Ground
   - PlayerFingers
+  - O2
+  - CarbonizedBlood
   - Hamburger
   - Hammer
   - Cherry
@@ -52,6 +54,8 @@ TagManager:
   - Weapon
   - Water
   - UI
+  - Monster
+  - Env
   - Food
   - 
   - 

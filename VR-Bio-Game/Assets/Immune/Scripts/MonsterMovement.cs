@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MonsterMovement : MonoBehaviour
 {
-    public float m_Thurst = -1.5f;
+    float m_Thurst = 4.0f;
 
     void Update()
     {
