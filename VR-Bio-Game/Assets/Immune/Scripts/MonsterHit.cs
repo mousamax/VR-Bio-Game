@@ -11,8 +11,8 @@ public class MonsterHit : MonoBehaviour
     public GameObject Sword;
     public Score score;
 
-    [SerializeField] AudioClip swordClip;
     AudioSource swordAudioSource;
+    public AudioClip coinClip;
 
     void Start()
     {
@@ -32,6 +32,8 @@ public class MonsterHit : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //if (this.gameObject.tag == "FatBlob")
+        //    Debug.Log("FatBLob Collided with tag: " + collision.gameObject.tag +" and layer"+ collision.gameObject.layer+ " With x:"+ this.transform.position.x+ " and with y:" + transform.position.y  + " and z:"+transform.position.z);
         if (collision.gameObject.tag == "External")
         {
             this.transform.position = new Vector3(-70, -70, -70);
@@ -48,9 +50,9 @@ public class MonsterHit : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Bullet")
             reduceHealth(20);
-        else if (collision.gameObject.tag == "Sword")
+        else if (collision.gameObject.tag == "Sword" && collision.gameObject.GetComponent<Weapons>().isSelected())
         {
-            swordAudioSource.PlayOneShot(swordClip);
+            swordAudioSource.Play();
             reduceHealth(150);
         }
     }
@@ -59,6 +61,8 @@ public class MonsterHit : MonoBehaviour
     private void playImpact(string s)
     {
         GameObject collision = null;
+        swordAudioSource.PlayOneShot(coinClip);
+        //AudioSource.PlayClipAtPoint(coinClip, score.gameObject.transform.position);   
         for (int i = 0; i < 5; i++)
         {
             switch (s)

@@ -28,6 +28,25 @@ TagManager:
   - Moving_O2
   - Ground
   - PlayerFingers
+  - O2
+  - CarbonizedBlood
+  - Hamburger
+  - Hammer
+  - Cherry
+  - O2
+  - Watermelon
+  - Olive
+  - Banana
+  - Cheese
+  - Hotdog
+  - Magazine
+  - CarbonizedBlood
+  - Protein
+  - Undefined
+  - Fats
+  - Carbs
+  - BloodCells
+  - BindedO2
   layers:
   - Default
   - TransparentFX
@@ -35,8 +54,10 @@ TagManager:
   - Weapon
   - Water
   - UI
-  - 
-  - 
+  - Monster
+  - Env
+  - Food
+  - Components
   - 
   - 
   - DistanceGrab
