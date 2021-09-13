@@ -14,11 +14,11 @@ public class MagazineSnapper : MonoBehaviour
     {//!this.GetComponent<OVRGrabbable>().isGrabbed && 
         if (collision.gameObject.CompareTag("Gun") && !OldMagazine)
         {
+            this.transform.GetComponent<Rigidbody>().isKinematic = true;
             
             this.gameObject.transform.parent = collision.gameObject.transform;
             this.gameObject.transform.position = MagazinePosition.transform.position;
             this.gameObject.transform.rotation = MagazinePosition.transform.rotation;
-            this.transform.GetComponent<Rigidbody>().isKinematic = true;
             var magaziner = collision.gameObject.GetComponent<PepsinShooter>();
             magaziner._bulletIndex = 0;
             magaziner.CanShoot = true;
