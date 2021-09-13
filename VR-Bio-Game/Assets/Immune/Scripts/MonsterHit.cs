@@ -61,7 +61,6 @@ public class MonsterHit : MonoBehaviour
     private void playImpact(string s)
     {
         GameObject collision = null;
-        swordAudioSource.PlayOneShot(coinClip);
         //AudioSource.PlayClipAtPoint(coinClip, score.gameObject.transform.position);   
         for (int i = 0; i < 5; i++)
         {
@@ -93,6 +92,8 @@ public class MonsterHit : MonoBehaviour
     {
         if (isPlayer)
             score.incrementScore(-10);
+        else
+            swordAudioSource.PlayOneShot(coinClip);
         switch (this.tag)
         {
             case "Slime":
