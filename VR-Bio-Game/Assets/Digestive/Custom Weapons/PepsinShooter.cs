@@ -13,6 +13,7 @@ namespace DigestiveSystem
         public bool CanShoot;
                 
         private int _maxBullets;
+        public int MagazineIndex = 1;
         //private static int _bulletIndex = 0;
 
         //AudioSource gunAudioSource;
@@ -30,10 +31,16 @@ namespace DigestiveSystem
 
         void Update()
         {
-            if (Input.GetMouseButtonDown(0) || (this.GetComponent<OVRGrabbable>().isGrabbed && OVRInput.Get(OVRInput.RawButton.RIndexTrigger)))
+            if (Input.GetMouseButtonDown(0) || (this.GetComponent<OVRGrabbable>().isGrabbed && OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)))
             {
                 Shoot();
             }
+            if (OVRInput.GetDown(OVRInput.Button.One) || OVRInput.GetDown(OVRInput.Button.Two))
+            {
+                this.gameObject.transform.GetChild(MagazineIndex).GetComponent<Rigidbody>().isKinematic = false;
+            }
+
+            
         }
 
         private void Shoot()

@@ -10,7 +10,7 @@ public class AmmoActivation : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log("collide with hcl");
+        //Debug.Log("collide with hcl");
         if (!_activated)
         {
             _activated = true;
