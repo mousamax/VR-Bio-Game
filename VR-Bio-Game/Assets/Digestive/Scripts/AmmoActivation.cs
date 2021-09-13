@@ -10,6 +10,14 @@ namespace DigestiveSystem
         public Color DeactivatedColor;
         public bool activated = false;
 
+        private void Update()
+        {
+            if (activated)
+                this.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = ActivatedColor;
+            else
+                this.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = DeactivatedColor;
+        }
+
         private void OnParticleCollision(GameObject other)
         {
             Debug.Log("collide with hcl");
