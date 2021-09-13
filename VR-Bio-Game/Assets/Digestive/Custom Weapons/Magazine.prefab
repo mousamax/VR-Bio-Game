@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1278315113339496178}
   - component: {fileID: 386586112852806907}
   - component: {fileID: 2874944504601277401}
+  - component: {fileID: 1997542242790382154}
   m_Layer: 9
   m_Name: Magazine
   m_TagString: Magazine
@@ -127,6 +128,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce5ea9f99905d84a80533f15a3e88e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1997542242790382154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4935792349764791029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1001 &8770677822990133937
 PrefabInstance:
   m_ObjectHideFlags: 0

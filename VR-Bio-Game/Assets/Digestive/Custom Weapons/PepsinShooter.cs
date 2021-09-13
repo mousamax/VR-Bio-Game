@@ -30,7 +30,7 @@ namespace DigestiveSystem
 
         void Update()
         {
-            if (Input.GetMouseButtonDown(0) || (this.GetComponent<OVRGrabbable>().isGrabbed && OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)))
+            if (Input.GetMouseButtonDown(0) || (this.GetComponent<OVRGrabbable>().isGrabbed && OVRInput.Get(OVRInput.RawButton.RIndexTrigger)))
             {
                 Shoot();
             }

@@ -6,14 +6,14 @@ public class AmmoActivation : MonoBehaviour
 {
     public Color ActivatedColor;
     public Color DeactivatedColor;
-    private bool _activated = false;
+    public bool activated = false;
 
     private void OnParticleCollision(GameObject other)
     {
         //Debug.Log("collide with hcl");
-        if (!_activated)
+        if (!activated)
         {
-            _activated = true;
+            activated = true;
             var m = this.GetComponent<Renderer>();
             if (m == null)
                 Debug.Log("NULL!");
