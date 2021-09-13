@@ -6,7 +6,7 @@ public class FoodSpawner : MonoBehaviour
 {
     public float SpawningTime = 0f;
     public float StartSpawningAfter = 0f;
-     
+    public GameObject DestroyPosition;
 
     public GameObject[] Food;
     public Transform SpawnPosition;
@@ -22,6 +22,9 @@ public class FoodSpawner : MonoBehaviour
         GameObject _spawnedFood = Instantiate(Food[index]);
         _spawnedFood.transform.position = SpawnPosition.position;
         _spawnedFood.AddComponent<Move_food>();
+        
+        _spawnedFood.AddComponent<FoodDestroyer>();
+        _spawnedFood.GetComponent<FoodDestroyer>().MinimumY = DestroyPosition;
         
         
         

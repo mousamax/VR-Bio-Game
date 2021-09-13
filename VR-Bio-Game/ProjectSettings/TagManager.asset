@@ -47,6 +47,7 @@ TagManager:
   - Carbs
   - BloodCells
   - BindedO2
+  - StomachWall
   layers:
   - Default
   - TransparentFX
@@ -61,8 +62,6 @@ TagManager:
   - 
   - 
   - DistanceGrab
-  - 
-  - 
   - 
   - 
   - 

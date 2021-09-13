@@ -10,8 +10,10 @@ namespace DigestiveSystem
 
         public GameObject bulletParent;
         public GameObject nozzle;
-        //public GameObject weaponPlace;
-        public GameObject Gun;
+        public bool CanShoot;
+                
+        private int _maxBullets;
+        //private static int _bulletIndex = 0;
 
         //AudioSource gunAudioSource;
 
@@ -20,11 +22,15 @@ namespace DigestiveSystem
         //    gunAudioSource = Gun.GetComponent<AudioSource>();
         //}
 
+        private void Start()
+        {
+            _maxBullets = bulletParent.transform.childCount;
+            CanShoot = true;
+        }
 
         void Update()
         {
-            //OVRInput.Get(OVRInput.RawButton.RIndexTrigger)
-            if (Input.GetMouseButtonDown(0) || (Gun.GetComponent<OVRGrabbable>().isGrabbed && OVRInput.Get(OVRInput.RawButton.RIndexTrigger)))
+            if (Input.GetMouseButtonDown(0) || (this.GetComponent<OVRGrabbable>().isGrabbed && OVRInput.Get(OVRInput.RawButton.RIndexTrigger)))
             {
                 Shoot();
             }
@@ -34,35 +40,36 @@ namespace DigestiveSystem
         {
 
             GameObject bullet;
-            for (int i = 0; i < 10; i++)
+            if (CanShoot)
             {
-                bullet = bulletParent.transform.GetChild(i).gameObject;
-                if (!bullet.activeSelf)
+                for (int i = 0; i < _maxBullets; i++)
                 {
-                    Vector3 position = nozzle.transform.position;
-                    Quaternion rotation = nozzle.transform.rotation;
-                    //rotation.eulerAngles.z += 
-                    //gunAudioSource.PlayOneShot(shootClip);
-                    //Rigidbody rb = bullet.GetComponent<Rigidbody>();
-                    //Vector3 m_EulerAngleVelocity = new Vector3(0, 0, 270);
-                    //Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity);
-                    //rb.MoveRotation(rb.rotation * deltaRotation);
-                    bullet.SetActive(true);
-                    bullet.transform.position = position;
-                    bullet.transform.rotation = rotation;
-                    
-                    break;
-                }
-                if (i == 9)
-                {
-                    for (int j = 0; j < 10; j++)
+                    bullet = bulletParent.transform.GetChild(i).gameObject;
+                    if (!bullet.activeSelf)
                     {
-                        bullet = bulletParent.transform.GetChild(j).gameObject;
-                        bullet.SetActive(false);
-                    }
-                }
+                        Vector3 position = nozzle.transform.position;
+                        Quaternion rotation = nozzle.transform.rotation;
+                        //rotation.eulerAngles.z += 
+                        //gunAudioSource.PlayOneShot(shootClip);
+                        //Rigidbody rb = bullet.GetComponent<Rigidbody>();
+                        //Vector3 m_EulerAngleVelocity = new Vector3(0, 0, 270);
+                        //Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity);
+                        //rb.MoveRotation(rb.rotation * deltaRotation);
+                        bullet.SetActive(true);
+                        bullet.transform.position = position;
+                        bullet.transform.rotation = rotation;
+                        bullet.transform.forward = this.transform.forward;
 
+                        break;
+                    }
+                    if (i == _maxBullets - 1)
+                    {
+                        CanShoot = false;
+                    }
+
+                }
             }
+            
         }
     }
 
