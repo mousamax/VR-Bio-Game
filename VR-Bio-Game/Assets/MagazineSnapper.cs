@@ -8,10 +8,10 @@ public class MagazineSnapper : MonoBehaviour
     private Vector3 _magazinePosition = new Vector3(0.231000215f, 0.618000031f, 0.554999352f);
     private void OnCollisionEnter(Collision collision)
     {
-        //if (collision.gameObject.CompareTag("Gun") && this.gameObject.transform.GetChild(0).GetComponent<AmmoActivation>().activated && collision.gameObject.GetComponent<PepsinShooter>().CanShoot == false)
-        //{
-        //    this.gameObject.transform.parent = collision.gameObject.transform;
-        //    this.gameObject.transform.position = _magazinePosition;
-        //}
+        if (collision.gameObject.CompareTag("Gun") && this.gameObject.transform.GetChild(0).GetComponent<AmmoActivation>().activated && collision.gameObject.GetComponent<PepsinShooter>().CanShoot == false)
+        {
+            this.gameObject.transform.parent = collision.gameObject.transform;
+            this.gameObject.transform.position = _magazinePosition;
+        }
     }
 }
