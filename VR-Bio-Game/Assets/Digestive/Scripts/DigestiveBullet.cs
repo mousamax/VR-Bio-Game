@@ -43,14 +43,15 @@ namespace DigestiveSystem
 
 
             //}
-            //if(collision.gameObject.CompareTag("BloodCells"))
-            //{
-            //    collision.gameObject.SetActive(false);
-            //}
-            //if (collision.gameObject.layer == 6 || collision.gameObject.layer == 7)
-            //{
-            //    Destroy(collision.gameObject);
-            //}
+            if (collision.gameObject.CompareTag("BloodCells"))
+            {
+                this.gameObject.SetActive(false);
+            }
+            if (collision.gameObject.CompareTag("Protein") )
+            {
+                Destroy(collision.gameObject);
+                this.gameObject.SetActive(false);
+            }
             //this.transform.position = new Vector3(-70, -70, -70);
             //this.gameObject.SetActive(false);
 

@@ -940,7 +940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd062034c9768a84dab5850c636e808f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawningTime: 4
+  SpawningTime: 6
   StartSpawningAfter: 3
   DestroyPosition: {fileID: 1363436069}
   Food:
