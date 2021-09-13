@@ -19,8 +19,9 @@ public class EventManager : MonoBehaviour
     public AudioSource EventNotification;
     private bool _isDone;
     private DateTime _nextEventStart;
+    public DateTime NextEventStart;
     public int _eventDuration = 10;
-    public bool finishedjob = true;
+    public int remainTime;
 
     void Awake()
     {
@@ -41,31 +42,33 @@ public class EventManager : MonoBehaviour
         _currentEvent = Events.None;
         _isDone = true;
         _nextEventStart = DateTime.Now.AddSeconds(_eventDuration);
+        remainTime = _eventDuration;
+        NextEventStart = _nextEventStart;
     }
 
     void Update()
     {
+        NextEventStart = _nextEventStart;
         if (_eventManager == null)
         {
             Debug.Log("Renew EventManager");
             _eventManager = this;
         }
-        if (!GameManager._gameManager.OnTutorialMode)
+        if (!Tutorial._Tutorial.OnTutorialMode)
         {
             events = (int)_currentEvent;
-            _isDone = finishedjob;
-            if (DateTime.Now.CompareTo(_nextEventStart) >= 0)
-            {
-                _isDone = true; ;
-            }
-            if (_isDone || _currentEvent == Events.None)
+            remainTime = _nextEventStart.Subtract(DateTime.Now).Seconds;
+            if (DateTime.Now.CompareTo(_nextEventStart) >= 0 || _currentEvent == Events.None)
             {
                 EventNotification.Play();
                 ActiveteAnotherEvent();
                 _isDone = false;
                 _nextEventStart = DateTime.Now.AddSeconds(_eventDuration);
             }
-            finishedjob = _isDone;
+        }
+        else
+        {
+            _nextEventStart = DateTime.Now.AddSeconds(remainTime);
         }
     }
 
