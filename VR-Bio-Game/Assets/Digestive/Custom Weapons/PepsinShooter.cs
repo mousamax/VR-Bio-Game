@@ -10,7 +10,7 @@ namespace DigestiveSystem
 
         public GameObject bulletParent;
         public GameObject nozzle;
-        public bool CanShoot;
+        public bool CanShoot = true;
                 
         private int _maxBullets;
         public int MagazineIndex = 1;
@@ -26,7 +26,6 @@ namespace DigestiveSystem
         private void Start()
         {
             _maxBullets = bulletParent.transform.childCount;
-            CanShoot = true;
         }
 
         void Update()
@@ -35,7 +34,7 @@ namespace DigestiveSystem
             {
                 Shoot();
             }
-            if (OVRInput.GetDown(OVRInput.Button.One) || OVRInput.GetDown(OVRInput.Button.Two))
+            if (!CanShoot && (OVRInput.GetDown(OVRInput.Button.One) || OVRInput.GetDown(OVRInput.Button.Two)) )
             {
                 this.gameObject.transform.GetChild(MagazineIndex).GetComponent<Rigidbody>().isKinematic = false;
             }
