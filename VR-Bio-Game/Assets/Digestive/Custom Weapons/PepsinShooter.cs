@@ -43,7 +43,7 @@ namespace DigestiveSystem
                 child.GetComponent<AmmoActivation>().activated = false;
                 MagazineFound = false;
                 CanShoot = false;
-                
+
             }
 
 
@@ -56,23 +56,22 @@ namespace DigestiveSystem
 
 
             bullet = bulletParent.transform.GetChild(_bulletIndex).gameObject;
-            if (!bullet.activeSelf)
-            {
-                Vector3 position = nozzle.transform.position;
-                Quaternion rotation = nozzle.transform.rotation;
-                //rotation.eulerAngles.z += 
-                //gunAudioSource.PlayOneShot(shootClip);
-                //Rigidbody rb = bullet.GetComponent<Rigidbody>();
-                //Vector3 m_EulerAngleVelocity = new Vector3(0, 0, 270);
-                //Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity);
-                //rb.MoveRotation(rb.rotation * deltaRotation);
-                bullet.transform.position = position;
-                bullet.transform.rotation = rotation;
-                bullet.transform.forward = this.transform.forward;
-                bullet.SetActive(true);
 
-                
-            }
+            Vector3 position = nozzle.transform.position;
+            Quaternion rotation = nozzle.transform.rotation;
+            //rotation.eulerAngles.z += 
+            //gunAudioSource.PlayOneShot(shootClip);
+            //Rigidbody rb = bullet.GetComponent<Rigidbody>();
+            //Vector3 m_EulerAngleVelocity = new Vector3(0, 0, 270);
+            //Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity);
+            //rb.MoveRotation(rb.rotation * deltaRotation);
+            bullet.transform.position = position;
+            bullet.transform.rotation = rotation;
+            bullet.transform.forward = this.transform.forward;
+            bullet.SetActive(true);
+            _bulletIndex++;
+
+
             if (_bulletIndex == _maxBullets - 1)
             {
                 CanShoot = false;
