@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17276813, g: 0.21589187, b: 0.29782563, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -436,6 +436,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1359974848}
     m_Modifications:
+    - target: {fileID: 1641987432182007891, guid: 5c1189a0f973a3c4a9b643b2f22532fd, type: 3}
+      propertyPath: MagazinePosition
+      value: 
+      objectReference: {fileID: 1080700775}
     - target: {fileID: 8454150302355983711, guid: 5c1189a0f973a3c4a9b643b2f22532fd, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -503,6 +507,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1359974848}
     m_Modifications:
+    - target: {fileID: 1641987432182007891, guid: 5c1189a0f973a3c4a9b643b2f22532fd, type: 3}
+      propertyPath: MagazinePosition
+      value: 
+      objectReference: {fileID: 1080700775}
     - target: {fileID: 8454150302355983711, guid: 5c1189a0f973a3c4a9b643b2f22532fd, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6208,6 +6216,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4211988308165155415, guid: 89c9e2c1642d81b4bbbb04d930ac3ad1, type: 3}
   m_PrefabInstance: {fileID: 1040198699}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1080700775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080700776}
+  m_Layer: 9
+  m_Name: Magazine Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080700776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080700775}
+  m_LocalRotation: {x: 0.9950649, y: 0.033799045, z: 0.09242264, w: 0.012704463}
+  m_LocalPosition: {x: 0.23100021, y: 0.61800003, z: 0.55499935}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8260824372803902735}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 178.909, y: -100.651, z: -3.9920044}
 --- !u!4 &1092513331 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5887468529784248447, guid: a1e9ed73ba0980042b711d0ab607a0ce, type: 3}
@@ -6819,6 +6857,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8260824372803902735}
     m_Modifications:
+    - target: {fileID: 1641987432182007891, guid: 5c1189a0f973a3c4a9b643b2f22532fd, type: 3}
+      propertyPath: MagazinePosition
+      value: 
+      objectReference: {fileID: 1080700775}
     - target: {fileID: 2346697319782030712, guid: 5c1189a0f973a3c4a9b643b2f22532fd, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -7766,6 +7808,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1359974848}
     m_Modifications:
+    - target: {fileID: 1641987432182007891, guid: 5c1189a0f973a3c4a9b643b2f22532fd, type: 3}
+      propertyPath: MagazinePosition
+      value: 
+      objectReference: {fileID: 1080700775}
     - target: {fileID: 2346697319782030712, guid: 5c1189a0f973a3c4a9b643b2f22532fd, type: 3}
       propertyPath: m_CollisionDetection
       value: 2

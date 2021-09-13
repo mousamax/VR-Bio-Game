@@ -35,14 +35,19 @@ namespace DigestiveSystem
             {
                 Shoot();
             }
-            if (!CanShoot && (OVRInput.GetDown(OVRInput.Button.One) || OVRInput.GetDown(OVRInput.Button.Two)))
+            if (!CanShoot && Input.GetMouseButtonDown(1) || (OVRInput.GetDown(OVRInput.Button.One) || OVRInput.GetDown(OVRInput.Button.Two)))
             {
-                var child = this.gameObject.transform.GetChild(MagazineIndex);
-                child.GetComponent<Rigidbody>().isKinematic = false;
-                child.transform.SetParent(null);
-                child.GetComponent<AmmoActivation>().activated = false;
-                MagazineFound = false;
-                CanShoot = false;
+                 //this.gameObject.transform.GetChild(MagazineIndex);
+                var child = this.gameObject.transform.Find("Magazine");
+                if (child != null)
+                {
+                    child.GetComponent<Rigidbody>().isKinematic = false;
+                    child.transform.SetParent(null);
+                    child.GetComponent<AmmoActivation>().activated = false;
+                    child.GetComponent<MagazineSnapper>().OldMagazine = true;
+                }
+                    MagazineFound = false;
+                    CanShoot = false;
 
             }
 
