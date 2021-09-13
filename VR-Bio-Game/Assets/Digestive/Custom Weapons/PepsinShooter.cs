@@ -50,6 +50,7 @@ namespace DigestiveSystem
                     bullet.SetActive(true);
                     bullet.transform.position = position;
                     bullet.transform.rotation = rotation;
+                    
                     break;
                 }
                 if (i == 9)
