@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BloodCellsSpawnerScript : MonoBehaviour
 {
+    public static BloodCellsSpawnerScript _BCSS;
+
     private float _previousTime;
     private float _currentTime;
 
