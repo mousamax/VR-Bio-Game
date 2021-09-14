@@ -5,8 +5,10 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int score = 0; //Temporary until merging with game manager
+    //public int score = 0; //Temporary until merging with game manager
     public AudioSource CollisionSound;
+    public GameManager GM;
+    public BloodCellsSpawnerScript BCCSS;
     void Start()
     {
         CollisionSound = GetComponent<AudioSource>();
@@ -22,12 +24,16 @@ public class DoorScript : MonoBehaviour
         CollisionSound.Play();
         if(collider.gameObject.tag == "OxygenatedBlood")
         {
-            score++;
+            //score++;
+            GM.ChangeStatus(0, 5);
+            
         }
         else if(collider.gameObject.tag=="CarbonizedBlood")
         {
-            score--;
+            //score--;
+            GM.ChangeStatus(0, -5);
         }
         Destroy(collider.gameObject);
+        BCCSS.bloodCellsCounter--;
     }
 }

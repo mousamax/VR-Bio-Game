@@ -795,6 +795,7 @@ GameObject:
   - component: {fileID: 937310020}
   - component: {fileID: 937310019}
   - component: {fileID: 937310021}
+  - component: {fileID: 937310022}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -883,6 +884,25 @@ MonoBehaviour:
   DarkRed:
     serializedVersion: 2
     rgba: 4278979686
+--- !u!114 &937310022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937310017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fb8dce42e0c0a4bb2d606c220a5625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TutorialTablet: {fileID: 0}
+  LeftHand: {fileID: 0}
+  OnTutorialMode: 1
+  TutorialIndex: 0
+  respo: 0
+  digestive: 0
+  immune: 0
 --- !u!1001 &1059016041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1159,8 +1179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 232331a53e52d24498b5d72af117e3a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   CollisionSound: {fileID: 0}
+  GM: {fileID: 937310022}
+  BCCSS: {fileID: 937310021}
 --- !u!82 &1454221643
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1657,7 +1678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 53564273051950512, guid: 14ef0d54fd98c0b49b1241a5d38e2bff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.106667
+      value: -14.44
       objectReference: {fileID: 0}
     - target: {fileID: 53564273051950512, guid: 14ef0d54fd98c0b49b1241a5d38e2bff, type: 3}
       propertyPath: m_LocalRotation.w
