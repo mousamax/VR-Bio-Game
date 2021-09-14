@@ -34,6 +34,9 @@ public class BrainTutorial : Tutorial
     public override void TutorialSkip()
     {
         base.TutorialSkip();
+
+        if (LeftHand != null && LeftHand.GetComponent<TabletVisibilty>() != null)
+            LeftHand.GetComponent<TabletVisibilty>().enabled = true;
     }
     public override void TutorialNext()
     {

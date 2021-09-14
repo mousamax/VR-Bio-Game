@@ -36,8 +36,6 @@ public class Tutorial : MonoBehaviour
     virtual public void TutorialSkip()
     {
         OnTutorialMode = false;
-        if (LeftHand != null && LeftHand.GetComponent<TabletVisibilty>() != null)
-            LeftHand.GetComponent<TabletVisibilty>().enabled = true;
     }
     // public void TutorialSkip()
     // {
@@ -55,7 +53,7 @@ public class Tutorial : MonoBehaviour
         OnTutorialMode = true;
     }
 
-    private void NullSafety()
+    virtual public void NullSafety()
     {
         if (_Tutorial == null)
         {
