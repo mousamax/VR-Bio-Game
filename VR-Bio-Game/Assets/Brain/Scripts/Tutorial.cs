@@ -30,7 +30,8 @@ public class Tutorial : MonoBehaviour
     }
     virtual public void TutorialNext()
     {
-        TutorialIndex++;
+        if (OnTutorialMode)
+            TutorialIndex++;
     }
 
     virtual public void TutorialSkip()

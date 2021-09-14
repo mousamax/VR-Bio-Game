@@ -181,9 +181,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 79a0e43db38720b469f4701d3db76bb5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: acd3c026f0c5ebf4abb9f1ed730316d3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -267,6 +267,58 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &244357348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244357350}
+  - component: {fileID: 244357351}
+  m_Layer: 0
+  m_Name: Tutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &244357350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244357348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5.71}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &244357351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244357348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1128f29dc5014b648bd5064ff64eb056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTutorialMode: 1
+  TutorialTablet: {fileID: 0}
+  LeftHand: {fileID: 0}
+  TutorialIndex: 0
+  TutorialScripts: []
+  BrainTutorialScripts:
+  - Hi Player
+  - You can Watch Activities on screen
+  - Leave this tablet and Press X to display control Tablet
 --- !u!1 &332561552
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +371,7 @@ VideoPlayer:
   m_AspectRatio: 4
   m_DataSource: 0
   m_PlaybackSpeed: 1
-  m_AudioOutputMode: 0
+  m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
@@ -964,6 +1016,10 @@ PrefabInstance:
       propertyPath: ButtonTab
       value: 
       objectReference: {fileID: 1898490864}
+    - target: {fileID: 1511044938459372816, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 79a0e43db38720b469f4701d3db76bb5, type: 3}
     - target: {fileID: 1511044938459372817, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
       propertyPath: m_Name
       value: TutorialTablet
@@ -1014,64 +1070,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
---- !u!1001 &2668058165590850309
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2668058165833098209, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-      propertyPath: m_Name
-      value: Tutorial
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668058165833098211, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668058165833098211, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668058165833098211, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668058165833098211, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668058165833098211, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668058165833098211, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668058165833098211, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668058165833098211, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668058165833098211, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668058165833098211, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668058165833098211, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2668058165833098208, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: ba280729bfb96994f8d5702575cd251a, type: 3}
 --- !u!1001 &6450531603014933921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1129,7 +1127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3804210364105998191, guid: 47737e76edda29845a844848cbb122ac, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5064207411678035789, guid: 47737e76edda29845a844848cbb122ac, type: 3}
       propertyPath: m_Name
@@ -1185,7 +1183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9092016067733623834, guid: 47737e76edda29845a844848cbb122ac, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2287157637547146162, guid: 47737e76edda29845a844848cbb122ac, type: 3}
