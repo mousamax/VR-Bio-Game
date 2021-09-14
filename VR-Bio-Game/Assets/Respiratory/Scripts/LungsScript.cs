@@ -6,6 +6,7 @@ public class LungsScript : MonoBehaviour
 {
     // Start is called before the first frame update
     AudioSource Co2_Collision;
+    public GameManager GM;
     void Start()
     {
         Co2_Collision = GetComponent<AudioSource>();
@@ -24,6 +25,7 @@ public class LungsScript : MonoBehaviour
         {
             Destroy(other.gameObject);
             Co2_Collision.Play();
+            GM.ChangeStatus(0, 5);
         }
     }
 }
