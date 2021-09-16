@@ -48,6 +48,7 @@ TagManager:
   - BloodCells
   - BindedO2
   - Infected
+  - Wall
   layers:
   - Default
   - TransparentFX

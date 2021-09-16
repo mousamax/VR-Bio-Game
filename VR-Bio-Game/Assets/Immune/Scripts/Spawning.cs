@@ -16,7 +16,7 @@ public class Spawning : MonoBehaviour
     {
         timer = 0;
         spawningTime = 1f;
-        startGame = true;
+        startGame = false;
     }
 
     void Update()

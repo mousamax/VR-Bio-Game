@@ -34,7 +34,7 @@ public class MonsterHit : MonoBehaviour
     {
         //if (this.gameObject.tag == "FatBlob")
         //    Debug.Log("FatBLob Collided with tag: " + collision.gameObject.tag +" and layer"+ collision.gameObject.layer+ " With x:"+ this.transform.position.x+ " and with y:" + transform.position.y  + " and z:"+transform.position.z);
-        if (collision.gameObject.tag == "External")
+        if (collision.gameObject.layer == 7)
         {
             this.transform.position = new Vector3(-70, -70, -70);
             //score.incrementScore(-5);

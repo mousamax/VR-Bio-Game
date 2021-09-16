@@ -92,7 +92,6 @@ public class PillProjectile : MonoBehaviour
             swordAudioSource.PlayOneShot(coinClip);
         foreach (Collider nearbyObject in colliders)
         {
-
             MonsterHit monster = nearbyObject.GetComponent<MonsterHit>();
             if (monster != null && monster.gameObject.tag != "RedCell") // the pill kills all monsters except redbooldcells
             {
