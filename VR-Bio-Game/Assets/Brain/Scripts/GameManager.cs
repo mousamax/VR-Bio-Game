@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     {
         _gameManager = this;
         NullSafety();
-        InvokeRepeating("DecreaseStatus", 0f, 2f);
+        InvokeRepeating("DecreaseStatus", 0f, 2.5f);
         if (OnTutorialMode)
         {
             Invoke("SendNotification", 3.0f);
@@ -112,10 +112,10 @@ public class GameManager : MonoBehaviour
     public void TutorialSkip()
     {
         LeftHand.GetComponent<TabletVisibilty>().enabled = true;
-        if (TutorialTablet != null)
-        {
-            TutorialTablet.GetComponent<TutorialTablet>().ScreenOff();
-        }
+        // if (TutorialTablet != null)
+        // {
+        //     TutorialTablet.GetComponent<TutorialTablet>().ScreenOff();
+        // }
         OnTutorialMode = false;
     }
 
@@ -128,15 +128,15 @@ public class GameManager : MonoBehaviour
     }
     private void DecreaseStatus()
     {
-        if (RespirationStatus - 2 < 0)
+        if (RespirationStatus - 1 < 0)
             _respirationStatus = 0;
         else
-            _respirationStatus -= 2;
+            _respirationStatus -= 1;
 
-        if (DigestionStatus - 3 < 0)
+        if (DigestionStatus - 1 < 0)
             _digestionStatus = 0;
         else
-            _digestionStatus -= 3;
+            _digestionStatus -= 1;
 
         if (ImmuneStatus - 1 < 0)
             _ImmuneStatus = 0;
@@ -165,19 +165,19 @@ public class GameManager : MonoBehaviour
                 if (_respirationStatus + amount < 0)
                     _respirationStatus = 0;
                 else
-                    _respirationStatus = Mathf.Max(_respirationStatus + amount, 100);
+                    _respirationStatus = Mathf.Min(_respirationStatus + amount, 100);
                 break;
             case 1:
                 if (_digestionStatus + amount < 0)
                     _digestionStatus = 0;
                 else
-                    _digestionStatus = Mathf.Max(_digestionStatus + amount, 100);
+                    _digestionStatus = Mathf.Min(_digestionStatus + amount, 100);
                 break;
             case 2:
                 if (_ImmuneStatus + amount < 0)
                     _ImmuneStatus = 0;
                 else
-                    _ImmuneStatus = Mathf.Max(_ImmuneStatus + amount, 100);
+                    _ImmuneStatus = Mathf.Min(_ImmuneStatus + amount, 100);
                 break;
             default:
                 break;
