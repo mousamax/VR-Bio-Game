@@ -87,7 +87,7 @@ public class PillProjectile : MonoBehaviour
         {
 
             MonsterHit monster = nearbyObject.GetComponent<MonsterHit>();
-            if (monster != null)
+            if (monster != null && monster.gameObject.tag!="RedCell") // the pill kills all monsters except redbooldcells
             {
                 monster.reduceHealth(200);
             }

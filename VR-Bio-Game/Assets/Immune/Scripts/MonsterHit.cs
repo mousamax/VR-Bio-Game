@@ -49,11 +49,17 @@ public class MonsterHit : MonoBehaviour
             killMonster(true);
         }
         else if (collision.gameObject.tag == "Bullet")
-            reduceHealth(20);
+        {
+            if (tag!="FatBlob") // the bullet can kill all the monsters execpt Fatblob
+                reduceHealth(20);
+        }
         else if (collision.gameObject.tag == "Sword" && collision.gameObject.GetComponent<Weapons>().isSelected())
         {
-            swordAudioSource.Play();
-            reduceHealth(150);
+            if (tag == "FatBlob" || tag == "RedCell") // the sword can only kill fatblob and redCell
+            {
+                swordAudioSource.Play();
+                reduceHealth(150);
+            }
         }
     }
 
