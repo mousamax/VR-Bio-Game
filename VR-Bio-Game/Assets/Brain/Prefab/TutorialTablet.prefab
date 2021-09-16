@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 1511044938020828629}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Player
+  m_TagString: PlayerFingers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,7 +193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511044938020828631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.48, z: -2.65}
+  m_LocalPosition: {x: 0, y: -0.3, z: -1.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1511044938459372822}
@@ -597,7 +597,7 @@ MonoBehaviour:
   ringtone: {fileID: 1511044938459372816}
   Screen: {fileID: 1511044939740317639}
   ScreenContent: {fileID: 1511044939451925215}
-  TutorialScript: {fileID: 0}
+  TutorialScript: {fileID: 1511044938914368070}
 --- !u!82 &1511044938459372816
 AudioSource:
   m_ObjectHideFlags: 0
@@ -608,9 +608,9 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fb624d6cb38e2484cb7e1cfdee942154, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2bfd7920e2089bc429fb07a43ab29e57, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -706,7 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca258a816f335d842985d3738057740a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.005
+  amplitude: 0.0005
   frequency: 0.8
   isPicked: 0
   posOffset: {x: 0, y: 0, z: 0}
