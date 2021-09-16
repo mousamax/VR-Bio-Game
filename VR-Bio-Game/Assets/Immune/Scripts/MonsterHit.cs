@@ -26,7 +26,7 @@ public class MonsterHit : MonoBehaviour
         if (health <= 0)
         {
             // Debug.Log("Monster is hit and health is reduced by: " + amount);
-            killMonster(false);
+            killMonster(false,false);
         }
     }
 
@@ -37,8 +37,8 @@ public class MonsterHit : MonoBehaviour
         if (collision.gameObject.tag == "External")
         {
             this.transform.position = new Vector3(-70, -70, -70);
-            score.incrementScore(-5);
-            score.reduceHealth(1);
+            //score.incrementScore(-5);
+            //score.reduceHealth(1);
             resetHealth();
             this.gameObject.SetActive(false);
         }
@@ -46,7 +46,7 @@ public class MonsterHit : MonoBehaviour
         {
             score.reduceHealth(10);
             resetHealth();
-            killMonster(true);
+            killMonster(true,false);
         }
         else if (collision.gameObject.tag == "Bullet")
         {
@@ -55,7 +55,7 @@ public class MonsterHit : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Sword" && collision.gameObject.GetComponent<Weapons>().isSelected())
         {
-            if (tag == "FatBlob" || tag == "RedCell") // the sword can only kill fatblob and redCell
+            if (tag == "FatBlob" || tag == "RedCell" || tag=="Infected") // the sword can only kill fatblob and redCell
             {
                 swordAudioSource.Play();
                 reduceHealth(150);
@@ -94,11 +94,11 @@ public class MonsterHit : MonoBehaviour
         }
     }
 
-    private void killMonster(bool isPlayer)
+    public void killMonster(bool isPlayer,bool isPill)
     {
         if (isPlayer)
             score.incrementScore(-10);
-        else
+        else if (!isPill)
             swordAudioSource.PlayOneShot(coinClip);
         switch (this.tag)
         {
@@ -121,6 +121,11 @@ public class MonsterHit : MonoBehaviour
                 if (!isPlayer)
                     score.incrementScore(5);
                 playImpact("red");
+                break;   
+            case "Infected":
+                if (!isPlayer)
+                    score.incrementScore(20);
+                playImpact("red");
                 break;
         }
         this.transform.position = new Vector3(-70, -70, -70);
@@ -142,6 +147,9 @@ public class MonsterHit : MonoBehaviour
                 break;
             case "RedCell":
                 health = 20;
+                break;   
+            case "Infected":
+                health = 40;
                 break;
         }
     }
