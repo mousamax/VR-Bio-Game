@@ -52,12 +52,12 @@ public class MonsterHit : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Bullet")
         {
-            if (tag != "FatBlob") // the bullet can kill all the monsters execpt Fatblob
+            if (tag != "FatBlob" && tag!= "Infected" && tag!="RedCell") // the bullet can kill slime and spike
                 reduceHealth(20);
         }
         else if (collision.gameObject.tag == "Sword" && collision.gameObject.GetComponent<Weapons>().isSelected())
         {
-            if (tag == "FatBlob" || tag == "RedCell" || tag == "Infected") // the sword can only kill fatblob and redCell
+            if (tag == "FatBlob" || tag == "RedCell" || tag == "Infected") // the sword can only kill fatblob and redCell and infected cells
             {
                 swordAudioSource.Play();
                 reduceHealth(150);

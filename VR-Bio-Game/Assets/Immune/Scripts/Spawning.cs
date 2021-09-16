@@ -10,18 +10,16 @@ public class Spawning : MonoBehaviour
     public GameObject[] monsters;
     public GameObject[] arrSpawningPoint;
 
-    public bool startGame;
 
     void Start()
     {
         timer = 0;
         spawningTime = 1f;
-        startGame = false;
     }
 
     void Update()
     {
-        if (!startGame)
+        if (Tutorial._Tutorial.OnTutorialMode)
             return;
         timer += Time.deltaTime;
         int index;
