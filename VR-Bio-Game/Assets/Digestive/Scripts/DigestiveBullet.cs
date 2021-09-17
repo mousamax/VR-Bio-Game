@@ -51,6 +51,13 @@ namespace DigestiveSystem
             {
                 Destroy(collision.gameObject);
                 this.gameObject.SetActive(false);
+                DigestiveScore.Score += 1;
+            }
+            else if (collision.gameObject.CompareTag("Fats") || collision.gameObject.CompareTag("Carbs"))
+            {
+                Destroy(collision.gameObject);
+                this.gameObject.SetActive(false);
+                DigestiveScore.Score -= 1;
             }
             //this.transform.position = new Vector3(-70, -70, -70);
             //this.gameObject.SetActive(false);

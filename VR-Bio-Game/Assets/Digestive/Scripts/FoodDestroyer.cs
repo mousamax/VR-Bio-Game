@@ -2,18 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoodDestroyer : MonoBehaviour
+namespace DigestiveSystem
 {
-
-    public GameObject MinimumY;
-
-
-    // Update is called once per frame
-    void Update()
+    public class FoodDestroyer : MonoBehaviour
     {
-        if (this.gameObject.transform.position.y < MinimumY.transform.position.y)
+
+        public GameObject MinimumY;
+        
+
+        // Update is called once per frame
+        void Update()
         {
-            Destroy(this.gameObject);
+            if (this.gameObject.transform.position.y < MinimumY.transform.position.y && !this.CompareTag("Protein"))
+            {
+                Destroy(this.gameObject);
+                DigestiveScore.Score += 1;
+            }
+            if (this.gameObject.transform.position.y < MinimumY.transform.position.y && this.CompareTag("Protein"))
+            {
+                Destroy(this.gameObject);
+                DigestiveScore.Score -= 1;
+            }
         }
     }
 }
