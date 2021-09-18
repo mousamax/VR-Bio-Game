@@ -24,12 +24,12 @@ public class TeleportButtonLogic : MonoBehaviour
             else if (this.gameObject.name == "DigestionButton")
             {
                 ButtonTab.Play();
-                // SceneLoader._sceneLoader.LoadScene("BrainRoom 1");
+                SceneLoader._sceneLoader.LoadScene("FinalScene");
             }
             else if (this.gameObject.name == "ImmuneButton")
             {
                 ButtonTab.Play();
-                SceneLoader._sceneLoader.LoadScene("ImmuneSystem");
+                SceneLoader._sceneLoader.LoadScene("WeaponHolster");
             }
         }
     }

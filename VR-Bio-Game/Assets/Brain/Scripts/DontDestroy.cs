@@ -6,12 +6,15 @@ public class DontDestroy : MonoBehaviour
 {
     void Awake()
     {
-        // GameObject[] objs = GameObject.FindGameObjectsWithTag(this.tag);
+        DontDestroyOnLoad(this);
 
-        // if (objs.Length > 1)
-        // {
-        //     Destroy(this.gameObject);
-        // }
-        // DontDestroyOnLoad(this.gameObject);
+        if (Tutorial._Tutorial == null)
+        {
+            Tutorial._Tutorial = this.GetComponent<Tutorial>();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
