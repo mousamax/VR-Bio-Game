@@ -39,16 +39,16 @@ public class MonsterHit : MonoBehaviour
             this.transform.position = new Vector3(-70, -70, -70);
             //score.incrementScore(-5);
             //score.reduceHealth(1);
-            GameManager._gameManager.ChangeStatus(2, -5); // if a monster slipped away 
+            GameManager._gameManager.ChangeStatus(2, -1); // if a monster slipped away 
             resetHealth();
             this.gameObject.SetActive(false);
         }
         else if (collision.gameObject.tag == "Player")
         {
             //score.reduceHealth(10);
-            GameManager._gameManager.ChangeStatus(2, -10); // if a monster hits the player 
+            GameManager._gameManager.ChangeStatus(2, -1); // if a monster hits the player 
             resetHealth();
-            killMonster(true, false);
+            killMonster(true, false,collision.gameObject);
         }
         else if (collision.gameObject.tag == "Bullet")
         {
@@ -96,10 +96,10 @@ public class MonsterHit : MonoBehaviour
         }
     }
 
-    public void killMonster(bool isPlayer, bool isPill)
+    public void killMonster(bool isPlayer, bool isPill,GameObject collisionGameObject = null)
     {
         if (!isPill)
-            swordAudioSource.PlayOneShot(coinClip);
+            AudioSource.PlayClipAtPoint(coinClip, collisionGameObject.transform.position);
         switch (this.tag)
         {
             case "Slime":
@@ -109,12 +109,12 @@ public class MonsterHit : MonoBehaviour
                 break;
             case "Spike":
                 if (!isPlayer)
-                    GameManager._gameManager.ChangeStatus(2, 2);
+                    GameManager._gameManager.ChangeStatus(2, 3);
                 playImpact("green");
                 break;
             case "FatBlob":
                 if (!isPlayer)
-                    GameManager._gameManager.ChangeStatus(2, 4);
+                    GameManager._gameManager.ChangeStatus(2, 5);
                 playImpact("gold");
                 break;
             case "RedCell":
@@ -124,7 +124,7 @@ public class MonsterHit : MonoBehaviour
                 break;
             case "Infected":
                 if (!isPlayer)
-                    GameManager._gameManager.ChangeStatus(2, 1);
+                    GameManager._gameManager.ChangeStatus(2, 5);
                 playImpact("red");
                 break;
         }
@@ -143,7 +143,7 @@ public class MonsterHit : MonoBehaviour
                 health = 70;
                 break;
             case "FatBlob":
-                health = 150;
+                health = 110;
                 break;
             case "RedCell":
                 health = 20;
