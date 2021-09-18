@@ -144,7 +144,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &20791430 stripped
 GameObject:
@@ -167,7 +166,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &23059058
 GameObject:
@@ -223,7 +221,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!82 &23059061
 AudioSource:
@@ -1720,7 +1717,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &140821334
 PrefabInstance:
@@ -1821,7 +1817,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &169029222
 PrefabInstance:
@@ -2892,7 +2887,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!20 &344347669 stripped
 Camera:
@@ -3013,7 +3007,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &377166278
 PrefabInstance:
@@ -3565,7 +3558,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &428019941 stripped
 GameObject:
@@ -3588,7 +3580,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &447415333
 PrefabInstance:
@@ -3676,7 +3667,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &470837175
 GameObject:
@@ -3941,7 +3931,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!4 &489710150 stripped
 Transform:
@@ -3974,7 +3963,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &509061730
 GameObject:
@@ -4030,7 +4018,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!82 &509061733
 AudioSource:
@@ -4287,7 +4274,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &538400580 stripped
 GameObject:
@@ -4310,7 +4296,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &550610376
 PrefabInstance:
@@ -4435,7 +4420,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &589317617
 GameObject:
@@ -4623,7 +4607,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!4 &607638577 stripped
 Transform:
@@ -4941,7 +4924,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!82 &644327798
 AudioSource:
@@ -6381,7 +6363,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!82 &727664008
 AudioSource:
@@ -6830,7 +6811,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &824281673
 PrefabInstance:
@@ -6914,7 +6894,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &845377864
 GameObject:
@@ -7110,7 +7089,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!82 &858637568
 AudioSource:
@@ -7547,7 +7525,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &917037947 stripped
 GameObject:
@@ -7570,7 +7547,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!4 &919132289 stripped
 Transform:
@@ -7780,7 +7756,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!82 &935859256
 AudioSource:
@@ -8495,7 +8470,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &996305367
 GameObject:
@@ -8551,7 +8525,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!82 &996305370
 AudioSource:
@@ -9272,7 +9245,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &1107411681
 PrefabInstance:
@@ -9939,7 +9911,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &1165521502
 PrefabInstance:
@@ -10244,7 +10215,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &1207572269
 PrefabInstance:
@@ -10483,7 +10453,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &1218844033
 GameObject:
@@ -10606,7 +10575,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &1260698841
 GameObject:
@@ -11097,7 +11065,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &1278822994
 PrefabInstance:
@@ -11328,7 +11295,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &1343478329
 PrefabInstance:
@@ -11526,7 +11492,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &1372716103
 PrefabInstance:
@@ -11988,7 +11953,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &1451134529 stripped
 GameObject:
@@ -12011,7 +11975,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!4 &1460529884 stripped
 Transform:
@@ -12415,7 +12378,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &1505014753
 GameObject:
@@ -12675,7 +12637,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 1260698848}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &1581959228 stripped
 GameObject:
@@ -12698,7 +12659,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &1584269840
 GameObject:
@@ -13778,7 +13738,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &1777958228
 GameObject:
@@ -14043,7 +14002,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &1834115676
 GameObject:
@@ -14106,7 +14064,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &1872811674
 PrefabInstance:
@@ -14236,7 +14193,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &1884205074
 GameObject:
@@ -14292,7 +14248,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!82 &1884205077
 AudioSource:
@@ -14458,7 +14413,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &1901638656
 PrefabInstance:
@@ -14915,7 +14869,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &1954313592
 PrefabInstance:
@@ -16083,7 +16036,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!82 &2033698157
 AudioSource:
@@ -16337,7 +16289,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &2057041139
 PrefabInstance:
@@ -17867,7 +17818,6 @@ MonoBehaviour:
   collisionPrefabRed: {fileID: 196110505}
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
-  playerAudioSource: {fileID: 0}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!114 &7354955998033831436
 MonoBehaviour:
