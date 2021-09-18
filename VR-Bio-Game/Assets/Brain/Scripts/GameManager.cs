@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,8 +12,11 @@ public class GameManager : MonoBehaviour
     private int _respirationStatus = 100;
     private int _digestionStatus = 100;
     private int _ImmuneStatus = 100;
+    private DateTime _nextStateDecrease;
+    public float StateDecreaseCoolTime = 2.5f;
     public GameObject TutorialTablet;
     public int respo, digestive, immune;
+
 
     public int RespirationStatus { get => _respirationStatus; }
     public int DigestionStatus { get => _digestionStatus; }
@@ -36,7 +40,7 @@ public class GameManager : MonoBehaviour
     {
         _gameManager = this;
         NullSafety();
-        InvokeRepeating("DecreaseStatus", 0f, 2.5f);
+        _nextStateDecrease = DateTime.Now.AddSeconds(StateDecreaseCoolTime);
         if (Tutorial._Tutorial.OnTutorialMode)
         {
             Invoke("SendNotification", 3.0f);
@@ -49,6 +53,14 @@ public class GameManager : MonoBehaviour
         respo = RespirationStatus;
         digestive = DigestionStatus;
         immune = ImmuneStatus;
+        if (!Tutorial._Tutorial.OnTutorialMode)
+        {
+            if (DateTime.Now.CompareTo(_nextStateDecrease) >= 0)
+            {
+                DecreaseStatus();
+                _nextStateDecrease = DateTime.Now.AddSeconds(StateDecreaseCoolTime);
+            }
+        }
     }
 
     private void NullSafety()
