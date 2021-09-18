@@ -11,9 +11,6 @@ GameObject:
   - component: {fileID: 3541909912428823528}
   - component: {fileID: 3541909912432214594}
   - component: {fileID: 3541909912431116418}
-  - component: {fileID: 4028795967883521595}
-  - component: {fileID: 8455526653053171005}
-  - component: {fileID: 8455526653053170994}
   m_Layer: 9
   m_Name: Liquid
   m_TagString: Untagged
@@ -84,44 +81,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4028795967883521595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3541909912429191112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37712d9a28e70f44d9724f6fd77b46c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActivatedColor: {r: 0.24313727, g: 0.91372555, b: 0.9333334, a: 0}
-  DeactivatedColor: {r: 0.11764707, g: 0.3137255, b: 0.32156864, a: 0}
---- !u!65 &8455526653053171005
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3541909912429191112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1092926, y: 0.109747425, z: 0.112097695}
-  m_Center: {x: 0.000015402213, y: 0.00026952662, z: -0.0037825499}
---- !u!114 &8455526653053170994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3541909912429191112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37712d9a28e70f44d9724f6fd77b46c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActivatedColor: {r: 0, g: 1, b: 0.94610643, a: 1}
-  DeactivatedColor: {r: 0.11650052, g: 0.3111803, b: 0.3207547, a: 0}
