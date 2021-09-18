@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     {
         _gameManager = this;
         NullSafety();
-        InvokeRepeating("DecreaseStatus", 0f, 2f);
+        InvokeRepeating("DecreaseStatus", 0f, 2.5f);
         if (OnTutorialMode)
         {
             Invoke("SendNotification", 3.0f);
