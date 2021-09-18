@@ -47,6 +47,7 @@ TagManager:
   - Carbs
   - BloodCells
   - BindedO2
+  - StomachWall
   - Infected
   - Wall
   layers:
