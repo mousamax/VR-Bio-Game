@@ -9,7 +9,7 @@ public class MonsterHit : MonoBehaviour
     public GameObject collisionPrefabRed;
     public GameObject collisionPrefabGold;
     public GameObject Sword;
-    public Score score;
+    //public Score score;
 
     AudioSource swordAudioSource;
     public AudioClip coinClip;
@@ -26,7 +26,7 @@ public class MonsterHit : MonoBehaviour
         if (health <= 0)
         {
             // Debug.Log("Monster is hit and health is reduced by: " + amount);
-            killMonster(false);
+            killMonster(false, false);
         }
     }
 
@@ -34,26 +34,34 @@ public class MonsterHit : MonoBehaviour
     {
         //if (this.gameObject.tag == "FatBlob")
         //    Debug.Log("FatBLob Collided with tag: " + collision.gameObject.tag +" and layer"+ collision.gameObject.layer+ " With x:"+ this.transform.position.x+ " and with y:" + transform.position.y  + " and z:"+transform.position.z);
-        if (collision.gameObject.tag == "External")
+        if (collision.gameObject.layer == 7)
         {
             this.transform.position = new Vector3(-70, -70, -70);
-            score.incrementScore(-5);
-            score.reduceHealth(1);
+            //score.incrementScore(-5);
+            //score.reduceHealth(1);
+            GameManager._gameManager.ChangeStatus(2, -5); // if a monster slipped away 
             resetHealth();
             this.gameObject.SetActive(false);
         }
         else if (collision.gameObject.tag == "Player")
         {
-            score.reduceHealth(10);
+            //score.reduceHealth(10);
+            GameManager._gameManager.ChangeStatus(2, -10); // if a monster hits the player 
             resetHealth();
-            killMonster(true);
+            killMonster(true, false);
         }
         else if (collision.gameObject.tag == "Bullet")
-            reduceHealth(20);
+        {
+            if (tag != "FatBlob" && tag!= "Infected" && tag!="RedCell") // the bullet can kill slime and spike
+                reduceHealth(20);
+        }
         else if (collision.gameObject.tag == "Sword" && collision.gameObject.GetComponent<Weapons>().isSelected())
         {
-            swordAudioSource.Play();
-            reduceHealth(150);
+            if (tag == "FatBlob" || tag == "RedCell" || tag == "Infected") // the sword can only kill fatblob and redCell and infected cells
+            {
+                swordAudioSource.Play();
+                reduceHealth(150);
+            }
         }
     }
 
@@ -61,7 +69,6 @@ public class MonsterHit : MonoBehaviour
     private void playImpact(string s)
     {
         GameObject collision = null;
-        swordAudioSource.PlayOneShot(coinClip);
         //AudioSource.PlayClipAtPoint(coinClip, score.gameObject.transform.position);   
         for (int i = 0; i < 5; i++)
         {
@@ -89,30 +96,35 @@ public class MonsterHit : MonoBehaviour
         }
     }
 
-    private void killMonster(bool isPlayer)
+    public void killMonster(bool isPlayer, bool isPill)
     {
-        if (isPlayer)
-            score.incrementScore(-10);
+        if (!isPill)
+            swordAudioSource.PlayOneShot(coinClip);
         switch (this.tag)
         {
             case "Slime":
                 if (!isPlayer)
-                    score.incrementScore(20);
+                    GameManager._gameManager.ChangeStatus(2, 2);
                 playImpact("green");
                 break;
             case "Spike":
                 if (!isPlayer)
-                    score.incrementScore(20);
+                    GameManager._gameManager.ChangeStatus(2, 2);
                 playImpact("green");
                 break;
             case "FatBlob":
                 if (!isPlayer)
-                    score.incrementScore(50);
+                    GameManager._gameManager.ChangeStatus(2, 4);
                 playImpact("gold");
                 break;
             case "RedCell":
                 if (!isPlayer)
-                    score.incrementScore(5);
+                    GameManager._gameManager.ChangeStatus(2, -2);
+                playImpact("red");
+                break;
+            case "Infected":
+                if (!isPlayer)
+                    GameManager._gameManager.ChangeStatus(2, 1);
                 playImpact("red");
                 break;
         }
@@ -135,6 +147,9 @@ public class MonsterHit : MonoBehaviour
                 break;
             case "RedCell":
                 health = 20;
+                break;
+            case "Infected":
+                health = 40;
                 break;
         }
     }
