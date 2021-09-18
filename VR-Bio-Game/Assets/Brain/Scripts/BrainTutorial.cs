@@ -18,7 +18,8 @@ public class BrainTutorial : Tutorial
     //          to make sure that it fits the text box size
     public string[] BrainTutorialScripts = new string[] {
         "You can Watch Activities on screen",
-        "Leave this tablet and Press X to display control Tablet"
+        "Leave this tablet and Press X to display control Tablet",
+        "Start?"
     };
     private string[] ExercisesEventScripts = new string[] {
         "Playing ice hockey as rookie",
@@ -36,8 +37,9 @@ public class BrainTutorial : Tutorial
         "but it's highly healthy",
         "It improves the function of your immune system,",
         "but it sounds like you've eaten a lot and need to digest the meal",
-        "You should go to the Stomach Room."
+        "You should go to the Stomach Room"
     };
+    private static bool isUsedBefore = false;
 
     private int CurrentEventIndex = 0;
     private int CurrentActiveEvent = -1;
@@ -56,7 +58,7 @@ public class BrainTutorial : Tutorial
             if (CurrentActiveEvent != EventManager._eventManager.getCurrentEvent())
             { CurrentEventIndex = 0; CurrentActiveEvent = EventManager._eventManager.getCurrentEvent(); }
 
-            switch (EventManager._eventManager.getCurrentEvent())
+            switch (CurrentActiveEvent)
             {
                 case 0:
                     CurrentEventIndex = Mathf.Min(CurrentEventIndex, ExercisesEventScripts.Length - 1);
@@ -72,6 +74,10 @@ public class BrainTutorial : Tutorial
                     break;
             }
         }
+        if (isUsedBefore && !LeftHand.GetComponent<TabletVisibilty>().enabled)
+        {
+            LeftHand.GetComponent<TabletVisibilty>().enabled = true;
+        }
     }
     public override void TutorialSkip()
     {
@@ -79,6 +85,8 @@ public class BrainTutorial : Tutorial
 
         if (LeftHand != null && LeftHand.GetComponent<TabletVisibilty>() != null)
             LeftHand.GetComponent<TabletVisibilty>().enabled = true;
+
+        isUsedBefore = true;
     }
     public override void TutorialNext()
     {
