@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 293803159487504080, guid: d92ee845ac9836846abe6f99c8192f99, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 293803159487504080, guid: d92ee845ac9836846abe6f99c8192f99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -487,7 +487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5458d6a4975f44f8850e9d71e81365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GM: {fileID: 937310022}
 --- !u!65 &626257954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1060,10 +1059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fb8dce42e0c0a4bb2d606c220a5625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StateDecreaseCoolTime: 2.5
   TutorialTablet: {fileID: 0}
-  LeftHand: {fileID: 0}
-  OnTutorialMode: 1
-  TutorialIndex: 0
   respo: 0
   digestive: 0
   immune: 0
@@ -1185,19 +1182,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1511044938459372822, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1511044938459372822, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.59
+      value: -8.88
       objectReference: {fileID: 0}
     - target: {fileID: 1511044938459372822, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 1511044938459372822, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 69.68
+      value: 68.99
       objectReference: {fileID: 0}
     - target: {fileID: 1511044938459372822, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1527,7 +1524,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionSound: {fileID: 0}
-  GM: {fileID: 937310022}
   BCCSS: {fileID: 937310021}
 --- !u!82 &1454221643
 AudioSource:
@@ -1939,15 +1935,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.574
+      value: -9.37
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.722
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 70.352
+      value: 69.04
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2097,3 +2093,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14ef0d54fd98c0b49b1241a5d38e2bff, type: 3}
+--- !u!4 &7587330609161651836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7587330609161651838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5.71}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7587330609161651838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7587330609161651836}
+  - component: {fileID: 7587330609161651839}
+  m_Layer: 0
+  m_Name: Tutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &7587330609161651839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7587330609161651838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f8c1f1bfb3c2af4bb0e0bae0a8a0466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTutorialMode: 1
+  TutorialTablet: {fileID: 0}
+  LeftHand: {fileID: 0}
+  TutorialIndex: 0
+  TutorialScripts: []
+  RespirationTutorialScripts:
+  - Hi
+  - filter the air
