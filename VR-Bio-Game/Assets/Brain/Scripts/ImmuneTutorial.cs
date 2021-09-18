@@ -32,7 +32,20 @@ public class ImmuneTutorial : Tutorial
     new void Start()
     {
         base.Start();
-        TutorialScripts = ImmuneTutorialScripts;
+        TutorialScripts = new string[] {
+    "Some pathogens have invaded you body\n You need to kill them before they become invincible",
+    "You are now in control of your immune system \n the pathogens have already took control over your first two lines of defense",
+    "You have 3 types of weapons",
+    "The sword simulates our T cells. once it encounters a foreign body, it releases cytotoxic factors. \n causing all infected cells to be self-destructed.",
+    "BE CAREFUL! only cells infected by pathogens are affected.",
+    "The gun fires antibodies and kills the targeted pathogens.",
+    "The pills help boost your immune system and git rid of pathogens and infected cells for a while.",
+    "Once the virus enters your body, it does not have a host yet.\n this your chance to neutralize them with antiboies. such pathogens may look like: ",
+    "If the virus attaches itself to a host, they become harder to kill.\n now you have to kill the infected cells, such cells look like: ",
+    "BEWARE! killing healthy cells deteriorates your health and reduces your score.",
+    "Let's go!"
+    };
+
     }
     new void Update()
     {

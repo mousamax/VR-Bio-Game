@@ -46,7 +46,11 @@ public class BrainTutorial : Tutorial
     new void Start()
     {
         base.Start();
-        TutorialScripts = BrainTutorialScripts;
+        TutorialScripts = new string[] {
+        "You can Watch Activities on screen",
+        "Leave this tablet and Press X to display control Tablet",
+        "Start?"
+    };
         CurrentActiveEvent = EventManager._eventManager.getCurrentEvent();
 
     }
