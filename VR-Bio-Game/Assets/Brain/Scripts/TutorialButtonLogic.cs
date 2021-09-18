@@ -12,13 +12,13 @@ public class TutorialButtonLogic : MonoBehaviour
         {
             Debug.Log("next");
             ButtonTab.Play();
-            GameManager._gameManager.TutorialNext();
+            Tutorial._Tutorial.TutorialNext();
         }
         else if (this.gameObject.name == "SkipButton" && other.tag == "PlayerFingers")
         {
             Debug.Log("skip");
             ButtonTab.Play();
-            GameManager._gameManager.TutorialSkip();
+            Tutorial._Tutorial.TutorialSkip();
         }
     }
 }
