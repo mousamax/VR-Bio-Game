@@ -7,12 +7,15 @@ public class PillProjectile : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] float m_Thurst = 10;
     Rigidbody rigidbody;
-    AudioSource pillAudioSource;
     Weapons wep;
-    public Transform pillPlaceVR;
+    AudioSource pillAudioSource;
+    AudioSource swordAudioSource;
+
     int numberOfPillsAmmo = 5;
 
-
+    public AudioClip coinClip;
+    public Transform pillPlaceVR;
+    public GameObject sword;
     public GameObject pillInitialPosition;
     public GameObject explosionEffect;
 
@@ -23,6 +26,7 @@ public class PillProjectile : MonoBehaviour
         rigidbody.useGravity = false;
         rigidbody.isKinematic = true;
         pillAudioSource = GetComponent<AudioSource>();
+        swordAudioSource = sword.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,22 +35,24 @@ public class PillProjectile : MonoBehaviour
         //Press A to throw the pill farward and activate the gravity
         if (numberOfPillsAmmo == 0)
             this.gameObject.SetActive(false);
+        else
+            this.gameObject.SetActive(true);
         if (Input.GetKeyDown(KeyCode.A) && gameObject.GetComponent<Weapons>().isSelected() == true)
         {
             rigidbody.AddForce(0, m_Thurst, m_Thurst * 2, ForceMode.Impulse);
             rigidbody.useGravity = true;
         }
-        if(wep.isSelected()==true && GetComponent<OVRGrabbable>().isGrabbed==false)
+        if (wep.isSelected() == true && GetComponent<OVRGrabbable>().isGrabbed == false)
         {
             rigidbody.useGravity = true;
             rigidbody.isKinematic = false;
         }
-       
+
     }
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("The pill collided with" + collision.gameObject.tag + "with the layer: " + collision.gameObject.layer);
-        if (wep.isSelected()==true && (collision.gameObject.layer == 6 || collision.gameObject.layer == 7))
+        if (wep.isSelected() == true && (collision.gameObject.layer == 6 || collision.gameObject.layer == 7))
         {
             collisionLogic();
             resetPill();
@@ -65,9 +71,9 @@ public class PillProjectile : MonoBehaviour
         //FOR VR
         transform.position = new Vector3(pillPlaceVR.position.x, pillPlaceVR.position.y + 0.7f, pillPlaceVR.position.z + 0.5f);
         transform.rotation = Quaternion.Euler(0, 0, 0);
- 
 
-        rigidbody.isKinematic = true ;
+
+        rigidbody.isKinematic = true;
         rigidbody.useGravity = false;
         GetComponent<Weapons>().Select(false);
     }
@@ -82,14 +88,14 @@ public class PillProjectile : MonoBehaviour
         ////////////////////////
         Collider[] colliders = Physics.OverlapSphere(transform.position, 1000);
         Debug.Log("number of colliders is: " + colliders.Length);
-
+        if (colliders.Length != 0)
+            swordAudioSource.PlayOneShot(coinClip);
         foreach (Collider nearbyObject in colliders)
         {
-
             MonsterHit monster = nearbyObject.GetComponent<MonsterHit>();
-            if (monster != null)
+            if (monster != null && monster.gameObject.tag != "RedCell") // the pill kills all monsters except redbooldcells
             {
-                monster.reduceHealth(200);
+                monster.killMonster(false, true);
             }
         }
         ///////////////////////////////
