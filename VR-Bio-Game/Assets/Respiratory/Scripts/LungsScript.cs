@@ -24,6 +24,7 @@ public class LungsScript : MonoBehaviour
         {
             Destroy(other.gameObject);
             Co2_Collision.Play();
+            GameManager._gameManager.ChangeStatus(0, 1);
         }
     }
 }
