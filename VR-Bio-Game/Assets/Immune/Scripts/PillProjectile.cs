@@ -89,7 +89,7 @@ public class PillProjectile : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, 1000);
         Debug.Log("number of colliders is: " + colliders.Length);
         if (colliders.Length != 0)
-            swordAudioSource.PlayOneShot(coinClip);
+            AudioSource.PlayClipAtPoint(coinClip, sword.transform.position + new Vector3(0.5f, 0, 0));
         foreach (Collider nearbyObject in colliders)
         {
             MonsterHit monster = nearbyObject.GetComponent<MonsterHit>();

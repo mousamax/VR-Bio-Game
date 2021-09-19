@@ -48,7 +48,7 @@ public class MonsterHit : MonoBehaviour
             //score.reduceHealth(10);
             GameManager._gameManager.ChangeStatus(2, -1); // if a monster hits the player 
             resetHealth();
-            killMonster(true, false,collision.gameObject);
+            killMonster(true, false);
         }
         else if (collision.gameObject.tag == "Bullet")
         {
@@ -96,14 +96,14 @@ public class MonsterHit : MonoBehaviour
         }
     }
 
-    public void killMonster(bool isPlayer, bool isPill,GameObject collisionGameObject = null)
+    public void killMonster(bool isPlayer, bool isPill)
     {
         if (transform.Find("Canvas") && transform.Find("Canvas").Find("Score"))
         {
-            transform.Find("Canvas").Find("Score").gameObject.GetComponent<TextMesh>().text = "+5";
+            transform.Find("Canvas").Find("Score").gameObject.GetComponent<TextMesh>().text = "+10";
         }
-        if (!isPill)
-            AudioSource.PlayClipAtPoint(coinClip, collisionGameObject.transform.position);
+        //if (!isPill)
+            AudioSource.PlayClipAtPoint(coinClip, Sword.transform.position + new Vector3(0.5f,0,0));
         switch (this.tag)
         {
             case "Slime":
