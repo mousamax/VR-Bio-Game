@@ -24,12 +24,12 @@ public class DoorScript : MonoBehaviour
         if(collider.gameObject.tag == "OxygenatedBlood")
         {
             //score++;
-            GameManager._gameManager.ChangeStatus(0, 1);            
+            GameManager._gameManager.ChangeStatus(0, 5);            
         }
         else if(collider.gameObject.tag=="CarbonizedBlood")
         {
             //score--;
-            GameManager._gameManager.ChangeStatus(0, -1);
+            GameManager._gameManager.ChangeStatus(0, -2);
         }
         Destroy(collider.gameObject);
         BloodCellsSpawnerScript._BCSS.bloodCellsCounter--;
