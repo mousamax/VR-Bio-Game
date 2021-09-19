@@ -47,11 +47,13 @@ public class BrainTutorial : Tutorial
     {
         base.Start();
         TutorialScripts = new string[] {
+        "This is the Brain Room, you can consider it as the looby",
         "You can Watch Activities on screen",
         "Leave this tablet and Press X to display control Tablet",
+        "You can also watch the three state on control tablets",
         "Start?"
     };
-        CurrentActiveEvent = EventManager._eventManager.getCurrentEvent();
+        CurrentActiveEvent = (int)EventManager._eventManager.GetCurrentEvent();
 
     }
     new void Update()
@@ -59,8 +61,8 @@ public class BrainTutorial : Tutorial
         base.Update();
         if (!OnTutorialMode)
         {
-            if (CurrentActiveEvent != EventManager._eventManager.getCurrentEvent())
-            { CurrentEventIndex = 0; CurrentActiveEvent = EventManager._eventManager.getCurrentEvent(); }
+            if (CurrentActiveEvent != (int)EventManager._eventManager.GetCurrentEvent())
+            { CurrentEventIndex = 0; CurrentActiveEvent = (int)EventManager._eventManager.GetCurrentEvent(); }
 
             switch (CurrentActiveEvent)
             {
@@ -77,6 +79,11 @@ public class BrainTutorial : Tutorial
                     TutorialTablet.GetComponent<TutorialTablet>().ChangeScript(EatProklyEventScripts[CurrentEventIndex]);
                     break;
             }
+        }
+        else if (OnTutorialMode && TutorialScripts[TutorialIndex] == "Leave this tablet and Press X to display control Tablet")
+        {
+            if (LeftHand != null && LeftHand.GetComponent<TabletVisibilty>() != null)
+                LeftHand.GetComponent<TabletVisibilty>().enabled = true;
         }
         if (isUsedBefore && !LeftHand.GetComponent<TabletVisibilty>().enabled)
         {

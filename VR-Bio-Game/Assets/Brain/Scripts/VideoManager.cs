@@ -17,7 +17,7 @@ public class VideoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int eventIndicator = EventManager._eventManager.getCurrentEvent();
+        int eventIndicator = (int)EventManager._eventManager.GetCurrentEvent();
         if (eventIndicator == EventManager._eventManager.getNoneEvent())
         {
             _videoPlayer.clip = null;
