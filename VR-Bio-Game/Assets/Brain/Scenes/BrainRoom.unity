@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events: 0
   EventNotification: {fileID: 669428}
-  _eventDuration: 20
+  _eventDuration: 90
   remainTime: 0
 --- !u!4 &669427
 Transform:
