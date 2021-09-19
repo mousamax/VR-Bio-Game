@@ -7297,7 +7297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 892857556}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InfectedBloodCell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10070,7 +10070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
       propertyPath: m_TagString

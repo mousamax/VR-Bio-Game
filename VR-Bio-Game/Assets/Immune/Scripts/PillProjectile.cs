@@ -9,7 +9,6 @@ public class PillProjectile : MonoBehaviour
     Rigidbody rigidbody;
     Weapons wep;
     AudioSource pillAudioSource;
-    AudioSource swordAudioSource;
 
     int numberOfPillsAmmo = 5;
 
@@ -26,7 +25,6 @@ public class PillProjectile : MonoBehaviour
         rigidbody.useGravity = false;
         rigidbody.isKinematic = true;
         pillAudioSource = GetComponent<AudioSource>();
-        swordAudioSource = sword.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,7 +49,7 @@ public class PillProjectile : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("The pill collided with" + collision.gameObject.tag + "with the layer: " + collision.gameObject.layer);
+        //Debug.Log("The pill collided with" + collision.gameObject.tag + "with the layer: " + collision.gameObject.layer);
         if (wep.isSelected() == true && (collision.gameObject.layer == 6 || collision.gameObject.layer == 7))
         {
             collisionLogic();
