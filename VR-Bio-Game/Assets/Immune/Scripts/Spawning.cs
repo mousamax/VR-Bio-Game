@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Spawning : MonoBehaviour
 {
-    [SerializeField] protected float timer; // the time counter
-    [SerializeField] protected float spawningTime; // the time to spawn 
+    [SerializeField] protected float timer = 0; // the time counter
+    [SerializeField] protected float spawningTime = 1f; // the time to spawn 
 
     public GameObject[] monsters;
     public GameObject[] arrSpawningPoint;
@@ -13,8 +13,6 @@ public class Spawning : MonoBehaviour
 
     void Start()
     {
-        timer = 0;
-        spawningTime = 1f;
     }
 
     void Update()
