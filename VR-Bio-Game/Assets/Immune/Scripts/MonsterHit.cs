@@ -98,6 +98,10 @@ public class MonsterHit : MonoBehaviour
 
     public void killMonster(bool isPlayer, bool isPill,GameObject collisionGameObject = null)
     {
+        if (transform.Find("Canvas") && transform.Find("Canvas").Find("Score"))
+        {
+            transform.Find("Canvas").Find("Score").gameObject.GetComponent<TextMesh>().text = "+5";
+        }
         if (!isPill)
             AudioSource.PlayClipAtPoint(coinClip, collisionGameObject.transform.position);
         switch (this.tag)
