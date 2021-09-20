@@ -62,4 +62,10 @@ public class BloodCellsSpawnerScript : MonoBehaviour
             _previousTime = Time.time;
         }
     }
+
+    public void DecrementCount()
+    {
+        //bloodCellsCounter--;
+        Debug.Log("Decrement\n");
+    }
 }
