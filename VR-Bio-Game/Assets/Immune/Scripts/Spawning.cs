@@ -17,6 +17,7 @@ public class Spawning : MonoBehaviour
 
     void Update()
     {
+        CheckDifficulty();
         if (Tutorial._Tutorial.OnTutorialMode)
             return;
         timer += Time.deltaTime;
@@ -43,6 +44,24 @@ public class Spawning : MonoBehaviour
 
             }
             timer = 0;
+        }
+    }
+
+    private void CheckDifficulty()
+    {
+        if (EventManager._eventManager.GetCurrentEvent() == Events.TrafficJam)
+        {
+            switch (EventManager._eventManager.GetEventDifficulty())
+            {
+                case Difficulty.Easy:
+                    break;
+                case Difficulty.Normal:
+                    break;
+                case Difficulty.Hard:
+                    break;
+                case Difficulty.Nightmare:
+                    break;
+            }
         }
     }
 }
