@@ -16,13 +16,14 @@ public class BloodCellsSpawnerScript : MonoBehaviour
     public GameObject LookAt;
     public GameObject StartAt;
     public int maxBloodCells = 10;
-    public int bloodCellsCounter = 0;
+    public static int bloodCellsCounter = 0;
     public float offset = 0.4f;
     [SerializeField] Color32 DarkRed = new Color32(0x66, 0x0c, 0x0c, 255);
     private void Start()
     {
         _previousTime = Time.time;
         Random.InitState(System.Environment.TickCount);
+        _BCSS = this;
     }
     // Update is called once per frame
     void Update()
@@ -63,9 +64,5 @@ public class BloodCellsSpawnerScript : MonoBehaviour
         }
     }
 
-    public void DecrementCount()
-    {
-        //bloodCellsCounter--;
-        Debug.Log("Decrement\n");
-    }
+   
 }
