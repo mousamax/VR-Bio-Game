@@ -661,6 +661,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: Sword
+      value: 
+      objectReference: {fileID: 930735561}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabRed
+      value: 
+      objectReference: {fileID: 196110505}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGold
+      value: 
+      objectReference: {fileID: 617330312}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGreen
+      value: 
+      objectReference: {fileID: 1931065386}
     - target: {fileID: 2661756142257781570, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -803,6 +819,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: Sword
+      value: 
+      objectReference: {fileID: 930735561}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabRed
+      value: 
+      objectReference: {fileID: 196110505}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGold
+      value: 
+      objectReference: {fileID: 617330312}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGreen
+      value: 
+      objectReference: {fileID: 1931065386}
     - target: {fileID: 2661756142257781570, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -3537,28 +3569,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &420882342 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
-  m_PrefabInstance: {fileID: 66268035}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &420882343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 420882342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4361dd56901a6794e99561235573431c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionPrefabGreen: {fileID: 1931065386}
-  collisionPrefabRed: {fileID: 196110505}
-  collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 930735561}
-  coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &428019941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1562787359488022855, guid: 95e26c9fe52b38b4e9f6e9ea27a573cc, type: 3}
@@ -3646,28 +3656,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9f42b8131ca3604bb0a226c8c193bf4, type: 3}
---- !u!1 &453100113 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
-  m_PrefabInstance: {fileID: 1911558515}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &453100114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453100113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4361dd56901a6794e99561235573431c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionPrefabGreen: {fileID: 1931065386}
-  collisionPrefabRed: {fileID: 196110505}
-  collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 930735561}
-  coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &470837175
 GameObject:
   m_ObjectHideFlags: 0
@@ -3819,6 +3807,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: Sword
+      value: 
+      objectReference: {fileID: 930735561}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabRed
+      value: 
+      objectReference: {fileID: 196110505}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGold
+      value: 
+      objectReference: {fileID: 617330312}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGreen
+      value: 
+      objectReference: {fileID: 1931065386}
     - target: {fileID: 2661756142257781570, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -4399,28 +4403,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1562787359488378215, guid: 95e26c9fe52b38b4e9f6e9ea27a573cc, type: 3}
   m_PrefabInstance: {fileID: 550610376}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &559959158 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
-  m_PrefabInstance: {fileID: 1378918786}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &559959159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559959158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4361dd56901a6794e99561235573431c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionPrefabGreen: {fileID: 1931065386}
-  collisionPrefabRed: {fileID: 196110505}
-  collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 930735561}
-  coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &589317617
 GameObject:
   m_ObjectHideFlags: 0
@@ -6790,28 +6772,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5887468529784248447, guid: 3c95d22e993654e429d8de5aa01ec18a, type: 3}
   m_PrefabInstance: {fileID: 1207572269}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &823238693 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
-  m_PrefabInstance: {fileID: 1263950510}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &823238694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823238693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4361dd56901a6794e99561235573431c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionPrefabGreen: {fileID: 1931065386}
-  collisionPrefabRed: {fileID: 196110505}
-  collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 930735561}
-  coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &824281673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7337,7 +7297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 892857556}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InfectedBloodCell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8449,28 +8409,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7162997211635013435, guid: b69d0b8816f84114c9be31c649a51a6f, type: 3}
   m_PrefabInstance: {fileID: 993397438}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &995309320 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
-  m_PrefabInstance: {fileID: 478425120}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &995309321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995309320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4361dd56901a6794e99561235573431c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionPrefabGreen: {fileID: 1931065386}
-  collisionPrefabRed: {fileID: 196110505}
-  collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 930735561}
-  coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &996305367
 GameObject:
   m_ObjectHideFlags: 0
@@ -9224,28 +9162,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8608183087981362249, guid: f9f42b8131ca3604bb0a226c8c193bf4, type: 3}
   m_PrefabInstance: {fileID: 1052676748}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1071536454 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
-  m_PrefabInstance: {fileID: 2125930973}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1071536455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071536454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4361dd56901a6794e99561235573431c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionPrefabGreen: {fileID: 1931065386}
-  collisionPrefabRed: {fileID: 196110505}
-  collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 930735561}
-  coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &1107411681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9890,28 +9806,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1164650325 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
-  m_PrefabInstance: {fileID: 1691404835}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1164650326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164650325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4361dd56901a6794e99561235573431c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionPrefabGreen: {fileID: 1931065386}
-  collisionPrefabRed: {fileID: 196110505}
-  collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 930735561}
-  coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &1165521502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10098,6 +9992,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: Sword
+      value: 
+      objectReference: {fileID: 930735561}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabRed
+      value: 
+      objectReference: {fileID: 196110505}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGold
+      value: 
+      objectReference: {fileID: 617330312}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGreen
+      value: 
+      objectReference: {fileID: 1931065386}
     - target: {fileID: 2661756142257781570, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10812,6 +10722,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: Sword
+      value: 
+      objectReference: {fileID: 930735561}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabRed
+      value: 
+      objectReference: {fileID: 196110505}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGold
+      value: 
+      objectReference: {fileID: 617330312}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGreen
+      value: 
+      objectReference: {fileID: 1931065386}
     - target: {fileID: 2661756142257781570, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -11044,28 +10970,6 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
---- !u!1 &1271787871 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
-  m_PrefabInstance: {fileID: 2058130558}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1271787872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271787871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4361dd56901a6794e99561235573431c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionPrefabGreen: {fileID: 1931065386}
-  collisionPrefabRed: {fileID: 196110505}
-  collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 930735561}
-  coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1001 &1278822994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11574,6 +11478,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: Sword
+      value: 
+      objectReference: {fileID: 930735561}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabRed
+      value: 
+      objectReference: {fileID: 196110505}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGold
+      value: 
+      objectReference: {fileID: 617330312}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGreen
+      value: 
+      objectReference: {fileID: 1931065386}
     - target: {fileID: 2661756142257781570, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -11944,28 +11864,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448965185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4361dd56901a6794e99561235573431c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionPrefabGreen: {fileID: 1931065386}
-  collisionPrefabRed: {fileID: 196110505}
-  collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 930735561}
-  coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
---- !u!1 &1451134529 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
-  m_PrefabInstance: {fileID: 45378401}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1451134530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451134529}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4361dd56901a6794e99561235573431c, type: 3}
@@ -12616,28 +12514,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1562787359488378215, guid: 95e26c9fe52b38b4e9f6e9ea27a573cc, type: 3}
   m_PrefabInstance: {fileID: 1547547149}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1579911418 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2661756142257781597, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
-  m_PrefabInstance: {fileID: 1166491782}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1579911419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579911418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4361dd56901a6794e99561235573431c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionPrefabGreen: {fileID: 1931065386}
-  collisionPrefabRed: {fileID: 196110505}
-  collisionPrefabGold: {fileID: 617330312}
-  Sword: {fileID: 930735561}
-  coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
 --- !u!1 &1581959228 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2742523207603312984, guid: 915fe546260118049b762904dfebcb29, type: 3}
@@ -13057,6 +12933,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: Sword
+      value: 
+      objectReference: {fileID: 930735561}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabRed
+      value: 
+      objectReference: {fileID: 196110505}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGold
+      value: 
+      objectReference: {fileID: 617330312}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGreen
+      value: 
+      objectReference: {fileID: 1931065386}
     - target: {fileID: 2661756142257781570, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -14527,6 +14419,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: Sword
+      value: 
+      objectReference: {fileID: 930735561}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabRed
+      value: 
+      objectReference: {fileID: 196110505}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGold
+      value: 
+      objectReference: {fileID: 617330312}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGreen
+      value: 
+      objectReference: {fileID: 1931065386}
     - target: {fileID: 2661756142257781570, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -16379,6 +16287,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: Sword
+      value: 
+      objectReference: {fileID: 930735561}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabRed
+      value: 
+      objectReference: {fileID: 196110505}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGold
+      value: 
+      objectReference: {fileID: 617330312}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGreen
+      value: 
+      objectReference: {fileID: 1931065386}
     - target: {fileID: 2661756142257781570, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -16890,6 +16814,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: Sword
+      value: 
+      objectReference: {fileID: 930735561}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabRed
+      value: 
+      objectReference: {fileID: 196110505}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGold
+      value: 
+      objectReference: {fileID: 617330312}
+    - target: {fileID: 2493103566722319686, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
+      propertyPath: collisionPrefabGreen
+      value: 
+      objectReference: {fileID: 1931065386}
     - target: {fileID: 2661756142257781570, guid: df2695a895640ab4f9471b49dae2b94d, type: 3}
       propertyPath: m_RootOrder
       value: 4

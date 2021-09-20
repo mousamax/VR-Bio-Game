@@ -17,7 +17,7 @@ public class ImmuneTutorial : Tutorial
     //  [Note]: try writing each statement you add at the text in the Tutorial Tablet 
     //          to make sure that it fits the text box size
     public string[] ImmuneTutorialScripts = new string[] {
-    "Some pathogens have invaded you body\n You need to kill them before they become invincible",
+    "Some pathogens have invaded your body\n You need to kill them before they become invincible",
     "You are now in control of your immune system \n the pathogens have already took control over your first two lines of defense",
     "You have 3 types of weapons",
     "1-The sword simulates our T cells. once it encounters a foreign body, it releases cytotoxic factors. \n causing all infected cells to be self-destructed.",

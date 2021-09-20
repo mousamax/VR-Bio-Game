@@ -9,7 +9,6 @@ public class PillProjectile : MonoBehaviour
     Rigidbody rigidbody;
     Weapons wep;
     AudioSource pillAudioSource;
-    AudioSource swordAudioSource;
 
     int numberOfPillsAmmo = 5;
 
@@ -26,7 +25,6 @@ public class PillProjectile : MonoBehaviour
         rigidbody.useGravity = false;
         rigidbody.isKinematic = true;
         pillAudioSource = GetComponent<AudioSource>();
-        swordAudioSource = sword.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,7 +49,7 @@ public class PillProjectile : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("The pill collided with" + collision.gameObject.tag + "with the layer: " + collision.gameObject.layer);
+        //Debug.Log("The pill collided with" + collision.gameObject.tag + "with the layer: " + collision.gameObject.layer);
         if (wep.isSelected() == true && (collision.gameObject.layer == 6 || collision.gameObject.layer == 7))
         {
             collisionLogic();
@@ -89,7 +87,7 @@ public class PillProjectile : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, 1000);
         Debug.Log("number of colliders is: " + colliders.Length);
         if (colliders.Length != 0)
-            swordAudioSource.PlayOneShot(coinClip);
+            AudioSource.PlayClipAtPoint(coinClip, sword.transform.position + new Vector3(0.5f, 0, 0));
         foreach (Collider nearbyObject in colliders)
         {
             MonsterHit monster = nearbyObject.GetComponent<MonsterHit>();
