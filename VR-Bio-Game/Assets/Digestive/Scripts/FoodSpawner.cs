@@ -15,21 +15,47 @@ namespace DigestiveSystem
         // Start is called before the first frame update
         void Start()
         {
+            CheckDifficulty();
             InvokeRepeating("SpawnFood", StartSpawningAfter, SpawningTime);
             Random.InitState(System.Environment.TickCount);
         }
         void SpawnFood()
         {
-            int index = Random.Range(0, Food.Length - 1);
-            GameObject _spawnedFood = Instantiate(Food[index]);
-            _spawnedFood.transform.position = SpawnPosition.position;
-            _spawnedFood.AddComponent<Move_food>();
+            if (!Tutorial._Tutorial.OnTutorialMode)
+            {
+                int index = Random.Range(0, Food.Length - 1);
+                GameObject _spawnedFood = Instantiate(Food[index]);
+                _spawnedFood.transform.position = SpawnPosition.position;
+                _spawnedFood.AddComponent<Move_food>();
 
-            _spawnedFood.AddComponent<FoodDestroyer>();
-            _spawnedFood.GetComponent<FoodDestroyer>().MinimumY = DestroyPosition;
+                _spawnedFood.AddComponent<FoodDestroyer>();
+                _spawnedFood.GetComponent<FoodDestroyer>().MinimumY = DestroyPosition;
+            }
 
 
 
+        }
+
+        void CheckDifficulty()
+        {
+            if (EventManager._eventManager.GetCurrentEvent() == Events.EatProkly)
+            {
+                switch (EventManager._eventManager.GetEventDifficulty())
+                {
+                    case Difficulty.Easy:
+                        SpawningTime = 8;
+                        break;
+                    case Difficulty.Normal:
+                        SpawningTime = 6;
+                        break;
+                    case Difficulty.Hard:
+                        SpawningTime = 3;
+                        break;
+                    case Difficulty.Nightmare:
+                        SpawningTime = 2.5f;
+                        break;
+                }
+            }
         }
     }
 }

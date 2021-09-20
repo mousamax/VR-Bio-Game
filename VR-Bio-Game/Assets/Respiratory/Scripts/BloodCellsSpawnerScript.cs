@@ -21,6 +21,7 @@ public class BloodCellsSpawnerScript : MonoBehaviour
     [SerializeField] Color32 DarkRed = new Color32(0x66, 0x0c, 0x0c, 255);
     private void Start()
     {
+        CheckDifficulty();
         _previousTime = Time.time;
         Random.InitState(System.Environment.TickCount);
     }
@@ -30,7 +31,6 @@ public class BloodCellsSpawnerScript : MonoBehaviour
         _currentTime = Time.time;
         if (_currentTime - _previousTime >= _differenceTime && bloodCellsCounter < maxBloodCells)
         {
-
             int rand = Random.Range(1, 4);
             if (rand + bloodCellsCounter >= maxBloodCells)
                 rand = maxBloodCells - bloodCellsCounter;
@@ -60,6 +60,29 @@ public class BloodCellsSpawnerScript : MonoBehaviour
             }
 
             _previousTime = Time.time;
+        }
+    }
+
+    void CheckDifficulty()
+    {
+        if (EventManager._eventManager.GetCurrentEvent() == Events.Exercises ||
+        EventManager._eventManager.GetCurrentEvent() == Events.TrafficJam)
+        {
+            switch (EventManager._eventManager.GetEventDifficulty())
+            {
+                case Difficulty.Easy:
+                    _differenceTime = 8;
+                    break;
+                case Difficulty.Normal:
+                    _differenceTime = 6;
+                    break;
+                case Difficulty.Hard:
+                    _differenceTime = 3;
+                    break;
+                case Difficulty.Nightmare:
+                    _differenceTime = 2;
+                    break;
+            }
         }
     }
 }
