@@ -43,7 +43,7 @@ namespace DigestiveSystem
                 switch (EventManager._eventManager.GetEventDifficulty())
                 {
                     case Difficulty.Easy:
-                        SpawningTime = 10;
+                        SpawningTime = 8;
                         break;
                     case Difficulty.Normal:
                         SpawningTime = 6;
