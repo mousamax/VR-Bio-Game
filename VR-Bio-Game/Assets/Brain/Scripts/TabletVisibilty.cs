@@ -15,6 +15,8 @@ public class TabletVisibilty : MonoBehaviour
     public TextMeshProUGUI RespirationText;
     public TextMeshProUGUI DigestionText;
     public TextMeshProUGUI ImmuneText;
+    public TextMeshProUGUI CurrentEventName;
+    public TextMeshProUGUI CurrentEventDifficulty;
     public Image RespirationSlider;
     public Image DigestionSlider;
     public Image ImmuneSlider;
@@ -32,6 +34,8 @@ public class TabletVisibilty : MonoBehaviour
             RespirationSlider = GameObject.Find("RespirationLowerLayer").GetComponent<Image>();
             DigestionSlider = GameObject.Find("DigestionLowerLayer").GetComponent<Image>();
             ImmuneSlider = GameObject.Find("ImmuneLowerLayer").GetComponent<Image>();
+            CurrentEventName = GameObject.Find("CurrentEvent").GetComponent<TextMeshProUGUI>();
+            CurrentEventDifficulty = GameObject.Find("CurrentEventDifficulty").GetComponent<TextMeshProUGUI>();
             tablet.gameObject.SetActive(false);
         }
         try
@@ -42,6 +46,8 @@ public class TabletVisibilty : MonoBehaviour
             RespirationSlider.fillAmount = GameManager._gameManager.RespirationStatus / 100.0f;
             DigestionSlider.fillAmount = GameManager._gameManager.DigestionStatus / 100.0f;
             ImmuneSlider.fillAmount = GameManager._gameManager.ImmuneStatus / 100.0f;
+            CurrentEventName.text = EventManager._eventManager.GetCurrentEvent().ToString();
+            CurrentEventDifficulty.text = EventManager._eventManager.GetEventDifficulty().ToString();
         }
         catch (System.Exception) { }
 
