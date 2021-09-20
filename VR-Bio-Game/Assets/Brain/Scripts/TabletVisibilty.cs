@@ -34,12 +34,16 @@ public class TabletVisibilty : MonoBehaviour
             ImmuneSlider = GameObject.Find("ImmuneLowerLayer").GetComponent<Image>();
             tablet.gameObject.SetActive(false);
         }
-        RespirationText.text = GameManager._gameManager.RespirationStatus.ToString();
-        DigestionText.text = GameManager._gameManager.DigestionStatus.ToString();
-        ImmuneText.text = GameManager._gameManager.ImmuneStatus.ToString();
-        RespirationSlider.fillAmount = GameManager._gameManager.RespirationStatus / 100.0f;
-        DigestionSlider.fillAmount = GameManager._gameManager.DigestionStatus / 100.0f;
-        ImmuneSlider.fillAmount = GameManager._gameManager.ImmuneStatus / 100.0f;
+        try
+        {
+            RespirationText.text = GameManager._gameManager.RespirationStatus.ToString();
+            DigestionText.text = GameManager._gameManager.DigestionStatus.ToString();
+            ImmuneText.text = GameManager._gameManager.ImmuneStatus.ToString();
+            RespirationSlider.fillAmount = GameManager._gameManager.RespirationStatus / 100.0f;
+            DigestionSlider.fillAmount = GameManager._gameManager.DigestionStatus / 100.0f;
+            ImmuneSlider.fillAmount = GameManager._gameManager.ImmuneStatus / 100.0f;
+        }
+        catch (System.Exception) { }
 
         if (Input.GetButtonDown("Fire1") || OVRInput.GetDown(OVRInput.RawButton.X))
         {
