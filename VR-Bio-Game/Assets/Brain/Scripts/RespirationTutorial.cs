@@ -18,7 +18,9 @@ public class RespirationTutorial : Tutorial
     //          to make sure that it fits the text box size
     public string[] RespirationTutorialScripts = new string[] {
         "Hi",
-        "filter the air",
+        "Your task is to filter the air",
+        "Remove CO2 molecules from red blood cells and throw them on the lungs",
+        "Grab O2 molecules and put them on red blood cells"
     };
     new void Start()
     {
