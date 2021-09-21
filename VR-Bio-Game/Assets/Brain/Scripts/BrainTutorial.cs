@@ -40,7 +40,7 @@ public class BrainTutorial : Tutorial
         "You should go to the Stomach Room"
     };
     private static bool isUsedBefore = false;
-
+    private static bool isTutorialDone = false;
     private int CurrentEventIndex = 0;
     private int CurrentActiveEvent = -1;
     new void Start()
@@ -59,6 +59,7 @@ public class BrainTutorial : Tutorial
     new void Update()
     {
         base.Update();
+        OnTutorialMode = isTutorialDone ? false : OnTutorialMode;
         if (!OnTutorialMode)
         {
             if (CurrentActiveEvent != (int)EventManager._eventManager.GetCurrentEvent())
@@ -98,6 +99,7 @@ public class BrainTutorial : Tutorial
             LeftHand.GetComponent<TabletVisibilty>().enabled = true;
 
         isUsedBefore = true;
+        isTutorialDone = true;
     }
     public override void TutorialNext()
     {

@@ -32,6 +32,8 @@ public class ImmuneTutorial : Tutorial
     "BEWARE! killing healthy cells deteriorates your health and reduces your score.",
     "Let's go!"
     };
+    private static bool isTutorialDone = false;
+
     new void Start()
     {
         base.Start();
@@ -53,11 +55,13 @@ public class ImmuneTutorial : Tutorial
     new void Update()
     {
         base.Update();
+        OnTutorialMode = isTutorialDone ? false : OnTutorialMode;
     }
 
     public override void TutorialSkip()
     {
         base.TutorialSkip();
+        isTutorialDone = true;
 
         // remove the next line override the method however you want
         Debug.Log("Immune Tutorial");
