@@ -20,6 +20,7 @@ public class RespirationTutorial : Tutorial
         "Hi",
         "filter the air",
     };
+    private static bool isTutorialDone = false;
     new void Start()
     {
         base.Start();
@@ -28,11 +29,13 @@ public class RespirationTutorial : Tutorial
     new void Update()
     {
         base.Update();
+        OnTutorialMode = isTutorialDone ? false : OnTutorialMode;
     }
 
     public override void TutorialSkip()
     {
         base.TutorialSkip();
+        isTutorialDone = true;
 
         // remove the next line override the method however you want
         Debug.Log("Respiration Tutorial");

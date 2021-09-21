@@ -14,8 +14,12 @@ public class GameManager : MonoBehaviour
     private int _ImmuneStatus = 100;
     private DateTime _nextStateDecrease;
     public float StateDecreaseCoolTime = 2.5f;
+
+    public int DecreaseStatusRate = 1;
     public GameObject TutorialTablet;
     public int respo, digestive, immune;
+    public static DateTime GameStartTime;
+    public int PlayMinutes;
 
 
     public int RespirationStatus { get => _respirationStatus; }
@@ -30,6 +34,7 @@ public class GameManager : MonoBehaviour
         if (_gameManager == null)
         {
             _gameManager = this;
+            GameStartTime = DateTime.Now;
         }
         else
         {
@@ -53,6 +58,7 @@ public class GameManager : MonoBehaviour
         respo = RespirationStatus;
         digestive = DigestionStatus;
         immune = ImmuneStatus;
+        PlayMinutes = DateTime.Now.Subtract(GameStartTime).Minutes;
         if (!Tutorial._Tutorial.OnTutorialMode)
         {
             if (DateTime.Now.CompareTo(_nextStateDecrease) >= 0)
@@ -84,20 +90,20 @@ public class GameManager : MonoBehaviour
     }
     private void DecreaseStatus()
     {
-        if (RespirationStatus - 1 < 0)
+        if (RespirationStatus - DecreaseStatusRate < 0)
             _respirationStatus = 0;
         else
-            _respirationStatus -= 1;
+            _respirationStatus -= DecreaseStatusRate;
 
-        if (DigestionStatus - 1 < 0)
+        if (DigestionStatus - DecreaseStatusRate < 0)
             _digestionStatus = 0;
         else
-            _digestionStatus -= 1;
+            _digestionStatus -= DecreaseStatusRate;
 
-        if (ImmuneStatus - 1 < 0)
+        if (ImmuneStatus - DecreaseStatusRate < 0)
             _ImmuneStatus = 0;
         else
-            _ImmuneStatus -= 1;
+            _ImmuneStatus -= DecreaseStatusRate;
 
     }
 

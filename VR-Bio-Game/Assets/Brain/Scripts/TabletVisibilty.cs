@@ -20,6 +20,9 @@ public class TabletVisibilty : MonoBehaviour
     public Image RespirationSlider;
     public Image DigestionSlider;
     public Image ImmuneSlider;
+
+    private int midStateRange = 60;
+    private int minStateRange = 30;
     void Update()
     {
         if (tablet == null)
@@ -48,6 +51,22 @@ public class TabletVisibilty : MonoBehaviour
             ImmuneSlider.fillAmount = GameManager._gameManager.ImmuneStatus / 100.0f;
             CurrentEventName.text = EventManager._eventManager.GetCurrentEvent().ToString();
             CurrentEventDifficulty.text = EventManager._eventManager.GetEventDifficulty().ToString();
+
+            Color tempcolor;    //4BCF54
+            if (GameManager._gameManager.RespirationStatus < minStateRange && ColorUtility.TryParseHtmlString("#CF4C4C", out tempcolor))
+                RespirationText.color = tempcolor;
+            else if (GameManager._gameManager.RespirationStatus < midStateRange && ColorUtility.TryParseHtmlString("#FFB319", out tempcolor))
+                RespirationText.color = tempcolor;
+
+            if (GameManager._gameManager.DigestionStatus < minStateRange && ColorUtility.TryParseHtmlString("#CF4C4C", out tempcolor))
+                DigestionText.color = tempcolor;
+            else if (GameManager._gameManager.DigestionStatus < midStateRange && ColorUtility.TryParseHtmlString("#FFB319", out tempcolor))
+                DigestionText.color = tempcolor;
+
+            if (GameManager._gameManager.ImmuneStatus < minStateRange && ColorUtility.TryParseHtmlString("#CF4C4C", out tempcolor))
+                ImmuneText.color = tempcolor;
+            else if (GameManager._gameManager.ImmuneStatus < midStateRange && ColorUtility.TryParseHtmlString("#FFB319", out tempcolor))
+                ImmuneText.color = tempcolor;
         }
         catch (System.Exception) { }
 
