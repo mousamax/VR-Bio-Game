@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject TutorialTablet;
     public int respo, digestive, immune;
     public static DateTime GameStartTime;
-    public int PlayMinutes;
+    public int SurvivalTime;
 
 
     public int RespirationStatus { get => _respirationStatus; }
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         respo = RespirationStatus;
         digestive = DigestionStatus;
         immune = ImmuneStatus;
-        PlayMinutes = DateTime.Now.Subtract(GameStartTime).Minutes;
+        SurvivalTime = DateTime.Now.Subtract(GameStartTime).Minutes;
         if (!Tutorial._Tutorial.OnTutorialMode)
         {
             if (DateTime.Now.CompareTo(_nextStateDecrease) >= 0)
