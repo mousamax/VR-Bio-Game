@@ -33,8 +33,8 @@ public class CO2_Behaviour : MonoBehaviour
         if (GetComponent<OVRGrabbable>().isGrabbed)
         {
             grabbed = true;
-            this.GetComponent<Rigidbody>().isKinematic = false;
-            this.GetComponent<Rigidbody>().useGravity = false;
+            //this.GetComponent<Rigidbody>().isKinematic = false;
+            //this.GetComponent<Rigidbody>().useGravity = false;
         }
     }
    
