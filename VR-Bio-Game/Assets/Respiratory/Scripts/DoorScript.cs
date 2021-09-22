@@ -7,7 +7,7 @@ public class DoorScript : MonoBehaviour
     // Start is called before the first frame update
     //public int score = 0; //Temporary until merging with game manager
     public AudioSource CollisionSound;
-    public BloodCellsSpawnerScript BCCSS;
+    //public BloodCellsSpawnerScript BCCSS;
     void Start()
     {
         CollisionSound = GetComponent<AudioSource>();
@@ -20,6 +20,7 @@ public class DoorScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collider)
     {
+        BloodCellsSpawnerScript.bloodCellsCounter--;
         CollisionSound.Play();
         if(collider.gameObject.tag == "OxygenatedBlood")
         {
@@ -29,9 +30,14 @@ public class DoorScript : MonoBehaviour
         else if(collider.gameObject.tag=="CarbonizedBlood")
         {
             //score--;
-            GameManager._gameManager.ChangeStatus(0, -2);
+           GameManager._gameManager.ChangeStatus(0, -2);
         }
         Destroy(collider.gameObject);
-        BloodCellsSpawnerScript._BCSS.bloodCellsCounter--;
+
+    }
+
+    private void test()
+    {
+        Debug.Log("test");
     }
 }
