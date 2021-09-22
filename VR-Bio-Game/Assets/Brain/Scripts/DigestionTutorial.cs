@@ -19,6 +19,8 @@ public class DigestionTutorial : Tutorial
         "Hi",
         "do stuff to food",
     };
+    private static bool isTutorialDone = false;
+
     new void Start()
     {
         base.Start();
@@ -27,11 +29,13 @@ public class DigestionTutorial : Tutorial
     new void Update()
     {
         base.Update();
+        OnTutorialMode = isTutorialDone ? false : OnTutorialMode;
     }
 
     public override void TutorialSkip()
     {
         base.TutorialSkip();
+        isTutorialDone = true;
 
         // remove the next line override the method however you want
         Debug.Log("Digestion Tutorial");

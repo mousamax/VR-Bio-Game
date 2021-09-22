@@ -40,27 +40,30 @@ public class BrainTutorial : Tutorial
         "You should go to the Stomach Room"
     };
     private static bool isUsedBefore = false;
-
+    private static bool isTutorialDone = false;
     private int CurrentEventIndex = 0;
     private int CurrentActiveEvent = -1;
     new void Start()
     {
         base.Start();
         TutorialScripts = new string[] {
+        "This is the Brain Room, you can consider it as the looby",
         "You can Watch Activities on screen",
         "Leave this tablet and Press X to display control Tablet",
+        "You can also watch the three state on control tablets",
         "Start?"
     };
-        CurrentActiveEvent = EventManager._eventManager.getCurrentEvent();
+        CurrentActiveEvent = (int)EventManager._eventManager.GetCurrentEvent();
 
     }
     new void Update()
     {
         base.Update();
+        OnTutorialMode = isTutorialDone ? false : OnTutorialMode;
         if (!OnTutorialMode)
         {
-            if (CurrentActiveEvent != EventManager._eventManager.getCurrentEvent())
-            { CurrentEventIndex = 0; CurrentActiveEvent = EventManager._eventManager.getCurrentEvent(); }
+            if (CurrentActiveEvent != (int)EventManager._eventManager.GetCurrentEvent())
+            { CurrentEventIndex = 0; CurrentActiveEvent = (int)EventManager._eventManager.GetCurrentEvent(); }
 
             switch (CurrentActiveEvent)
             {
@@ -78,6 +81,11 @@ public class BrainTutorial : Tutorial
                     break;
             }
         }
+        else if (OnTutorialMode && TutorialScripts[TutorialIndex] == "Leave this tablet and Press X to display control Tablet")
+        {
+            if (LeftHand != null && LeftHand.GetComponent<TabletVisibilty>() != null)
+                LeftHand.GetComponent<TabletVisibilty>().enabled = true;
+        }
         if (isUsedBefore && !LeftHand.GetComponent<TabletVisibilty>().enabled)
         {
             LeftHand.GetComponent<TabletVisibilty>().enabled = true;
@@ -91,6 +99,7 @@ public class BrainTutorial : Tutorial
             LeftHand.GetComponent<TabletVisibilty>().enabled = true;
 
         isUsedBefore = true;
+        isTutorialDone = true;
     }
     public override void TutorialNext()
     {

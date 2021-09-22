@@ -2,17 +2,22 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public enum Events
+{
+    Exercises = 0,
+    TrafficJam = 1,
+    EatProkly = 2,
+    None = 3
+}
+public enum Difficulty
+{
+    Easy = 0,
+    Normal = 1,
+    Hard = 2,
+    Nightmare = 3
+}
 public class EventManager : MonoBehaviour
 {
-    enum Events
-    {
-        Exercises = 0,
-        TrafficJam = 1,
-        EatProkly = 2,
-        None = 3
-    }
-
     public static EventManager _eventManager;
     private Events _currentEvent;
     public int events;
@@ -21,6 +26,11 @@ public class EventManager : MonoBehaviour
     private DateTime _nextEventStart;
     public DateTime NextEventStart;
     public int _eventDuration = 10;
+    public EventDiff[] EventsDifficulty = new EventDiff[]{
+        new EventDiff(),
+        new EventDiff(),
+        new EventDiff(),
+    };
     public int remainTime;
 
     void Awake()
@@ -62,6 +72,11 @@ public class EventManager : MonoBehaviour
             {
                 EventNotification.Play();
                 ActiveteAnotherEvent();
+
+                Debug.Log("first Event Counter: " + EventsDifficulty[0].EventCounter + " first Event Difficulty: " + EventsDifficulty[0].EventDifficulty);
+                Debug.Log("Second Event Counter: " + EventsDifficulty[1].EventCounter + " Second Event Difficulty: " + EventsDifficulty[1].EventDifficulty);
+                Debug.Log("Third Event Counter: " + EventsDifficulty[2].EventCounter + " Third Event Difficulty: " + EventsDifficulty[2].EventDifficulty);
+
                 _isDone = false;
                 _nextEventStart = DateTime.Now.AddSeconds(_eventDuration);
             }
@@ -95,6 +110,16 @@ public class EventManager : MonoBehaviour
             default:
                 break;
         }
+
+        EventsDifficulty[(int)_currentEvent].EventCounter++;
+        if (EventsDifficulty[(int)_currentEvent].EventDifficulty != Difficulty.Nightmare)
+        {
+            EventsDifficulty[(int)_currentEvent].EventDifficulty =
+            EventsDifficulty[(int)_currentEvent].EventCounter > 10 ? EventsDifficulty[(int)_currentEvent].EventDifficulty = Difficulty.Nightmare :
+            EventsDifficulty[(int)_currentEvent].EventCounter > 6 ? EventsDifficulty[(int)_currentEvent].EventDifficulty = Difficulty.Hard :
+            EventsDifficulty[(int)_currentEvent].EventCounter > 3 ? EventsDifficulty[(int)_currentEvent].EventDifficulty = Difficulty.Normal :
+            EventsDifficulty[(int)_currentEvent].EventDifficulty;
+        }
     }
 
     public void setIsDone(bool val)
@@ -106,10 +131,10 @@ public class EventManager : MonoBehaviour
         return _isDone;
     }
 
-    public int getCurrentEvent()
-    {
-        return (int)_currentEvent;
-    }
+    // public int GetCurrentEvent()
+    // {
+    //     return (int)_currentEvent;
+    // }
     public void setCurrentEvent(int ev)
     {
         _currentEvent = (Events)ev;
@@ -117,5 +142,25 @@ public class EventManager : MonoBehaviour
     public int getNoneEvent()
     {
         return (int)Events.None;
+    }
+
+    public Difficulty GetEventDifficulty()
+    {
+        return EventsDifficulty[(int)_currentEvent].EventDifficulty;
+    }
+    public Events GetCurrentEvent()
+    {
+        return _currentEvent;
+    }
+}
+public class EventDiff
+{
+    public int EventCounter;
+    public Difficulty EventDifficulty;
+
+    public EventDiff()
+    {
+        EventCounter = 0;
+        EventDifficulty = Difficulty.Easy;
     }
 }
