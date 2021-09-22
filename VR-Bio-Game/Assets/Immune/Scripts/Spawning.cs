@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Spawning : MonoBehaviour
 {
-    [SerializeField] protected float timer = 0; // the time counter
-    [SerializeField] protected float spawningTime = 1f; // the time to spawn 
+    [SerializeField] protected float timer; // the time counter
+    [SerializeField] protected float spawningTime; // the time to spawn 
 
     public GameObject[] monsters;
     public GameObject[] arrSpawningPoint;
@@ -13,6 +13,8 @@ public class Spawning : MonoBehaviour
 
     void Start()
     {
+        timer = 0;
+        CheckDifficulty();
     }
 
     void Update()
@@ -43,6 +45,28 @@ public class Spawning : MonoBehaviour
 
             }
             timer = 0;
+        }
+    }
+
+    private void CheckDifficulty()
+    {
+        if (EventManager._eventManager.GetCurrentEvent() == Events.TrafficJam)
+        {
+            switch (EventManager._eventManager.GetEventDifficulty())
+            {
+                case Difficulty.Easy:
+                    spawningTime = 1.5f;
+                    break;
+                case Difficulty.Normal:
+                    spawningTime = 1f;
+                    break;
+                case Difficulty.Hard:
+                    spawningTime = 0.75f;
+                    break;
+                case Difficulty.Nightmare:
+                    spawningTime = 0.5f;
+                    break;
+            }
         }
     }
 }

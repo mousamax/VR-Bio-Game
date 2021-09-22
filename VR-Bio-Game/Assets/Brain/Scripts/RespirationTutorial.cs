@@ -22,6 +22,7 @@ public class RespirationTutorial : Tutorial
         "Remove CO2 molecules from red blood cells and throw them on the lungs",
         "Grab O2 molecules and put them on red blood cells"
     };
+    private static bool isTutorialDone = false;
     new void Start()
     {
         base.Start();
@@ -30,11 +31,13 @@ public class RespirationTutorial : Tutorial
     new void Update()
     {
         base.Update();
+        OnTutorialMode = isTutorialDone ? false : OnTutorialMode;
     }
 
     public override void TutorialSkip()
     {
         base.TutorialSkip();
+        isTutorialDone = true;
 
         // remove the next line override the method however you want
         Debug.Log("Respiration Tutorial");
