@@ -11994,6 +11994,8 @@ MonoBehaviour:
   RespirationText: {fileID: 0}
   DigestionText: {fileID: 0}
   ImmuneText: {fileID: 0}
+  CurrentEventName: {fileID: 0}
+  CurrentEventDifficulty: {fileID: 0}
   RespirationSlider: {fileID: 0}
   DigestionSlider: {fileID: 0}
   ImmuneSlider: {fileID: 0}
@@ -17731,10 +17733,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2505978412512756684}
   - component: {fileID: 2202257573982032981}
-  - component: {fileID: 7354955998033831436}
   - component: {fileID: 2247669357237317078}
   - component: {fileID: 163713982789737895}
   - component: {fileID: 7229715223217898964}
+  - component: {fileID: 7229715223217898965}
   m_Layer: 6
   m_Name: InfectedBloodCell
   m_TagString: Infected
@@ -17759,7 +17761,7 @@ MonoBehaviour:
   collisionPrefabGold: {fileID: 617330312}
   Sword: {fileID: 930735561}
   coinClip: {fileID: 8300000, guid: e981a4d794650994a830fb58d5d5256e, type: 3}
---- !u!114 &7354955998033831436
+--- !u!114 &7229715223217898965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17768,6 +17770,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7229715223217898963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 7197b64b034fa4a4f96789d08baaf84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
