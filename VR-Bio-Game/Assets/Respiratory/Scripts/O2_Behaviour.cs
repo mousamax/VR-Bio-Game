@@ -28,6 +28,9 @@ public class O2_Behaviour : MonoBehaviour
     {
         if (collider.gameObject.tag == "Blood")
         {
+            Rigidbody rb = this.GetComponent<Rigidbody>();
+            rb.isKinematic = true;
+            rb.useGravity = false;
             OxygenSound.Play();
             collider.gameObject.GetComponent<Renderer>().material.color = LightRed;
             collider.gameObject.tag = "OxygenatedBlood";
