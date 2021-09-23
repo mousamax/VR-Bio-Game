@@ -9,7 +9,7 @@ public class MonsterHit : MonoBehaviour
     public GameObject collisionPrefabRed;
     public GameObject collisionPrefabGold;
     public GameObject Sword;
-    //public Score score;
+    public GameObject score;
 
     AudioSource swordAudioSource;
     public AudioClip coinClip;
@@ -95,13 +95,16 @@ public class MonsterHit : MonoBehaviour
             }
         }
     }
-
+    public void DisplayScore()
+    {
+        if (score != null)
+        {
+            GameObject ScoreGameObject = Instantiate(score, transform.position, transform.rotation);
+            ScoreGameObject.transform.Find("Canvas").Find("ScoreText").gameObject.GetComponent<TextMesh>().text = "+10";
+        }
+    }
     public void killMonster(bool isPlayer, bool isPill)
     {
-        if (transform.Find("Canvas") && transform.Find("Canvas").Find("Score"))
-        {
-            transform.Find("Canvas").Find("Score").gameObject.GetComponent<TextMesh>().text = "+10";
-        }
         //if (!isPill)
             AudioSource.PlayClipAtPoint(coinClip, Sword.transform.position + new Vector3(0.5f,0,0));
         switch (this.tag)
@@ -109,6 +112,7 @@ public class MonsterHit : MonoBehaviour
             case "Slime":
                 if (!isPlayer)
                     GameManager._gameManager.ChangeStatus(2, 2);
+                DisplayScore();
                 playImpact("green");
                 break;
             case "Spike":
