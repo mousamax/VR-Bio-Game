@@ -22,7 +22,7 @@ public class LungsScript : MonoBehaviour
     {
         if (other.gameObject.tag == "CO2")
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
             Co2_Collision.Play();
             GameManager._gameManager.ChangeStatus(0, 5);
         }
