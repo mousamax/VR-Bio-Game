@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
         {
             Invoke("SendNotification", 3.0f);
         }
-        InvokeRepeating("testscore", 0, 3.0f);
     }
 
     void Update()
