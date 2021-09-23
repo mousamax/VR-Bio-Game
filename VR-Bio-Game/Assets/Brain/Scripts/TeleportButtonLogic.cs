@@ -31,6 +31,10 @@ public class TeleportButtonLogic : MonoBehaviour
                 ButtonTab.Play();
                 SceneLoader._sceneLoader.LoadScene("WeaponHolster");
             }
+            else if (this.gameObject.name == "PlayAgainButton")
+            {
+                GameManager._gameManager.ResetWholeGame();
+            }
         }
     }
 }

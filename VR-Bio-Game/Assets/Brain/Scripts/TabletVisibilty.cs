@@ -9,6 +9,7 @@ public class TabletVisibilty : MonoBehaviour
     public Transform tablet;
     public Transform CameraRotation;
     public GameObject ActivePoint;
+    public GameObject InGameCanvas, GameOverCanvas;
     public bool isPicked = false;
     private bool visibility = false;
 
@@ -17,6 +18,7 @@ public class TabletVisibilty : MonoBehaviour
     public TextMeshProUGUI ImmuneText;
     public TextMeshProUGUI CurrentEventName;
     public TextMeshProUGUI CurrentEventDifficulty;
+    public TextMeshProUGUI SurvivalTimeText;
     public Image RespirationSlider;
     public Image DigestionSlider;
     public Image ImmuneSlider;
@@ -39,34 +41,47 @@ public class TabletVisibilty : MonoBehaviour
             ImmuneSlider = GameObject.Find("ImmuneLowerLayer").GetComponent<Image>();
             CurrentEventName = GameObject.Find("CurrentEvent").GetComponent<TextMeshProUGUI>();
             CurrentEventDifficulty = GameObject.Find("CurrentEventDifficulty").GetComponent<TextMeshProUGUI>();
+            SurvivalTimeText = GameObject.Find("SurvivalTime").GetComponent<TextMeshProUGUI>();
             tablet.gameObject.SetActive(false);
         }
         try
         {
-            RespirationText.text = GameManager._gameManager.RespirationStatus.ToString();
-            DigestionText.text = GameManager._gameManager.DigestionStatus.ToString();
-            ImmuneText.text = GameManager._gameManager.ImmuneStatus.ToString();
-            RespirationSlider.fillAmount = GameManager._gameManager.RespirationStatus / 100.0f;
-            DigestionSlider.fillAmount = GameManager._gameManager.DigestionStatus / 100.0f;
-            ImmuneSlider.fillAmount = GameManager._gameManager.ImmuneStatus / 100.0f;
-            CurrentEventName.text = EventManager._eventManager.GetCurrentEvent().ToString();
-            CurrentEventDifficulty.text = EventManager._eventManager.GetEventDifficulty().ToString();
+            if (GameManager._gameManager.IsGameOver)
+            {
+                InGameCanvas.gameObject.SetActive(false);
+                GameOverCanvas.gameObject.SetActive(true);
+                SurvivalTimeText.text = GameManager._gameManager.SurvivalTime.ToString();
+            }
+            else
+            {
+                GameOverCanvas.gameObject.SetActive(false);
+                InGameCanvas.gameObject.SetActive(true);
+                RespirationText.text = GameManager._gameManager.RespirationStatus.ToString();
+                DigestionText.text = GameManager._gameManager.DigestionStatus.ToString();
+                ImmuneText.text = GameManager._gameManager.ImmuneStatus.ToString();
+                RespirationSlider.fillAmount = GameManager._gameManager.RespirationStatus / 100.0f;
+                DigestionSlider.fillAmount = GameManager._gameManager.DigestionStatus / 100.0f;
+                ImmuneSlider.fillAmount = GameManager._gameManager.ImmuneStatus / 100.0f;
+                CurrentEventName.text = EventManager._eventManager.GetCurrentEvent().ToString();
+                CurrentEventDifficulty.text = EventManager._eventManager.GetEventDifficulty().ToString();
 
-            Color tempcolor;    //4BCF54
-            if (GameManager._gameManager.RespirationStatus < minStateRange && ColorUtility.TryParseHtmlString("#CF4C4C", out tempcolor))
-                RespirationText.color = tempcolor;
-            else if (GameManager._gameManager.RespirationStatus < midStateRange && ColorUtility.TryParseHtmlString("#FFB319", out tempcolor))
-                RespirationText.color = tempcolor;
+                Color tempcolor;    //4BCF54
+                if (GameManager._gameManager.RespirationStatus < minStateRange && ColorUtility.TryParseHtmlString("#CF4C4C", out tempcolor))
+                    RespirationText.color = tempcolor;
+                else if (GameManager._gameManager.RespirationStatus < midStateRange && ColorUtility.TryParseHtmlString("#FFB319", out tempcolor))
+                    RespirationText.color = tempcolor;
 
-            if (GameManager._gameManager.DigestionStatus < minStateRange && ColorUtility.TryParseHtmlString("#CF4C4C", out tempcolor))
-                DigestionText.color = tempcolor;
-            else if (GameManager._gameManager.DigestionStatus < midStateRange && ColorUtility.TryParseHtmlString("#FFB319", out tempcolor))
-                DigestionText.color = tempcolor;
+                if (GameManager._gameManager.DigestionStatus < minStateRange && ColorUtility.TryParseHtmlString("#CF4C4C", out tempcolor))
+                    DigestionText.color = tempcolor;
+                else if (GameManager._gameManager.DigestionStatus < midStateRange && ColorUtility.TryParseHtmlString("#FFB319", out tempcolor))
+                    DigestionText.color = tempcolor;
 
-            if (GameManager._gameManager.ImmuneStatus < minStateRange && ColorUtility.TryParseHtmlString("#CF4C4C", out tempcolor))
-                ImmuneText.color = tempcolor;
-            else if (GameManager._gameManager.ImmuneStatus < midStateRange && ColorUtility.TryParseHtmlString("#FFB319", out tempcolor))
-                ImmuneText.color = tempcolor;
+                if (GameManager._gameManager.ImmuneStatus < minStateRange && ColorUtility.TryParseHtmlString("#CF4C4C", out tempcolor))
+                    ImmuneText.color = tempcolor;
+                else if (GameManager._gameManager.ImmuneStatus < midStateRange && ColorUtility.TryParseHtmlString("#FFB319", out tempcolor))
+                    ImmuneText.color = tempcolor;
+            }
+
         }
         catch (System.Exception) { }
 
@@ -75,6 +90,12 @@ public class TabletVisibilty : MonoBehaviour
             tablet.rotation = CameraRotation.rotation;
             tablet.position = ActivePoint.transform.position;
             tablet.GetComponent<TabletFloater>().posOffset = tablet.position;
+            if (visibility)
+            {
+                bool temp = GameManager._gameManager.IsGameOver;
+                InGameCanvas.gameObject.SetActive(!temp);
+                GameOverCanvas.gameObject.SetActive(temp);
+            }
             tablet.gameObject.SetActive(!visibility);
             visibility = !visibility;
         }
