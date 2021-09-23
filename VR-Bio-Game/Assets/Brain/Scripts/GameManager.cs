@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public int respo, digestive, immune;
     public static DateTime GameStartTime;
     public int SurvivalTime;
+    public GameObject ScorePrefab;
+    public bool IsGameOver = false;
 
 
     public int RespirationStatus { get => _respirationStatus; }
@@ -50,23 +52,45 @@ public class GameManager : MonoBehaviour
         {
             Invoke("SendNotification", 3.0f);
         }
+        InvokeRepeating("testscore", 0, 3.0f);
     }
 
     void Update()
     {
         NullSafety();
-        respo = RespirationStatus;
-        digestive = DigestionStatus;
-        immune = ImmuneStatus;
-        SurvivalTime = DateTime.Now.Subtract(GameStartTime).Minutes;
-        if (!Tutorial._Tutorial.OnTutorialMode)
+        if (_respirationStatus == 0 && _digestionStatus == 0 && _ImmuneStatus == 0)
+            IsGameOver = true;
+        if (!IsGameOver)
         {
-            if (DateTime.Now.CompareTo(_nextStateDecrease) >= 0)
+            respo = RespirationStatus;
+            digestive = DigestionStatus;
+            immune = ImmuneStatus;
+            SurvivalTime = DateTime.Now.Subtract(GameStartTime).Minutes;
+            if (!Tutorial._Tutorial.OnTutorialMode)
             {
-                DecreaseStatus();
-                _nextStateDecrease = DateTime.Now.AddSeconds(StateDecreaseCoolTime);
+                if (DateTime.Now.CompareTo(_nextStateDecrease) >= 0)
+                {
+                    DecreaseStatus();
+                    _nextStateDecrease = DateTime.Now.AddSeconds(StateDecreaseCoolTime);
+                }
             }
         }
+    }
+
+    public void ResetWholeGame()
+    {
+        EventManager._eventManager.ResetEventManager();
+        ResetGameManager();
+        IsGameOver = false;
+    }
+
+    private void ResetGameManager()
+    {
+        _respirationStatus = 100;
+        _digestionStatus = 100;
+        _ImmuneStatus = 100;
+        _nextStateDecrease = DateTime.Now.AddSeconds(StateDecreaseCoolTime);
+        GameStartTime = DateTime.Now;
     }
 
     private void NullSafety()
@@ -144,5 +168,32 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
+
+    }
+
+    public void InstantiateScore(Transform trans, int amount)
+    {
+        ScorePrefab.transform.Find("Canvas").Find("ScoreText").
+        gameObject.GetComponent<TextMeshProUGUI>().text =
+        amount > 0 ? "+" + amount.ToString() : amount.ToString();
+
+        Color tempcolor;
+        if (amount > 0 && ColorUtility.TryParseHtmlString("#4BCF54", out tempcolor))
+        {
+            ScorePrefab.transform.Find("Canvas").Find("ScoreText").
+                gameObject.GetComponent<TextMeshProUGUI>().color = tempcolor;
+        }
+        else if (ColorUtility.TryParseHtmlString("#CF4C4C", out tempcolor))
+        {
+            ScorePrefab.transform.Find("Canvas").Find("ScoreText").
+                gameObject.GetComponent<TextMeshProUGUI>().color = tempcolor;
+        }
+        Instantiate(ScorePrefab, trans.localPosition, trans.rotation);
+    }
+
+    void testscore()
+    {
+        InstantiateScore(TutorialTablet.transform, 5);
+        InstantiateScore(TutorialTablet.transform, -3);
     }
 }

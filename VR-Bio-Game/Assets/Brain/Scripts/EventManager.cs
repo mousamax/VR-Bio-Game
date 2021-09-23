@@ -20,7 +20,7 @@ public class EventManager : MonoBehaviour
 {
     public static EventManager _eventManager;
     private Events _currentEvent;
-    public int events;
+    public Events CurrentEventView;
     public AudioSource EventNotification;
     private bool _isDone;
     private DateTime _nextEventStart;
@@ -58,32 +58,35 @@ public class EventManager : MonoBehaviour
 
     void Update()
     {
-        NextEventStart = _nextEventStart;
-        if (_eventManager == null)
+        if (!GameManager._gameManager.IsGameOver)
         {
-            Debug.Log("Renew EventManager");
-            _eventManager = this;
-        }
-        if (!Tutorial._Tutorial.OnTutorialMode)
-        {
-            events = (int)_currentEvent;
-            remainTime = _nextEventStart.Subtract(DateTime.Now).Seconds;
-            if (DateTime.Now.CompareTo(_nextEventStart) >= 0 || _currentEvent == Events.None)
+            NextEventStart = _nextEventStart;
+            if (_eventManager == null)
             {
-                EventNotification.Play();
-                ActiveteAnotherEvent();
-
-                Debug.Log("first Event Counter: " + EventsDifficulty[0].EventCounter + " first Event Difficulty: " + EventsDifficulty[0].EventDifficulty);
-                Debug.Log("Second Event Counter: " + EventsDifficulty[1].EventCounter + " Second Event Difficulty: " + EventsDifficulty[1].EventDifficulty);
-                Debug.Log("Third Event Counter: " + EventsDifficulty[2].EventCounter + " Third Event Difficulty: " + EventsDifficulty[2].EventDifficulty);
-
-                _isDone = false;
-                _nextEventStart = DateTime.Now.AddSeconds(_eventDuration);
+                Debug.Log("Renew EventManager");
+                _eventManager = this;
             }
-        }
-        else
-        {
-            _nextEventStart = DateTime.Now.AddSeconds(remainTime);
+            if (!Tutorial._Tutorial.OnTutorialMode)
+            {
+                CurrentEventView = _currentEvent;
+                remainTime = _nextEventStart.Subtract(DateTime.Now).Seconds;
+                if (DateTime.Now.CompareTo(_nextEventStart) >= 0 || _currentEvent == Events.None)
+                {
+                    EventNotification.Play();
+                    ActiveteAnotherEvent();
+
+                    Debug.Log("first Event Counter: " + EventsDifficulty[0].EventCounter + " first Event Difficulty: " + EventsDifficulty[0].EventDifficulty);
+                    Debug.Log("Second Event Counter: " + EventsDifficulty[1].EventCounter + " Second Event Difficulty: " + EventsDifficulty[1].EventDifficulty);
+                    Debug.Log("Third Event Counter: " + EventsDifficulty[2].EventCounter + " Third Event Difficulty: " + EventsDifficulty[2].EventDifficulty);
+
+                    _isDone = false;
+                    _nextEventStart = DateTime.Now.AddSeconds(_eventDuration);
+                }
+            }
+            else
+            {
+                _nextEventStart = DateTime.Now.AddSeconds(remainTime);
+            }
         }
     }
 
@@ -151,6 +154,20 @@ public class EventManager : MonoBehaviour
     public Events GetCurrentEvent()
     {
         return _currentEvent;
+    }
+
+    public void ResetEventManager()
+    {
+        foreach (var item in EventsDifficulty)
+        {
+            item.EventCounter = 0;
+            item.EventDifficulty = Difficulty.Easy;
+        }
+        _currentEvent = Events.None;
+        _isDone = true;
+        _nextEventStart = DateTime.Now.AddSeconds(_eventDuration);
+        remainTime = _eventDuration;
+        NextEventStart = _nextEventStart;
     }
 }
 public class EventDiff

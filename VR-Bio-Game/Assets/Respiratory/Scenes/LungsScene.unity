@@ -178,12 +178,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SystemControlTablet
       objectReference: {fileID: 0}
-    - target: {fileID: 4195308714915507243, guid: d92ee845ac9836846abe6f99c8192f99, type: 3}
-      propertyPath: ButtonTab
-      value: 
-      objectReference: {fileID: 1371354970}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d92ee845ac9836846abe6f99c8192f99, type: 3}
+--- !u!1 &244192827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7513524531763235018, guid: d92ee845ac9836846abe6f99c8192f99, type: 3}
+  m_PrefabInstance: {fileID: 244192826}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &244192828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 293803160608014762, guid: d92ee845ac9836846abe6f99c8192f99, type: 3}
+  m_PrefabInstance: {fileID: 244192826}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &287932432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1704,14 +1710,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1511044937992655154, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
-      propertyPath: ButtonTab
-      value: 
-      objectReference: {fileID: 1371354970}
-    - target: {fileID: 1511044938389495137, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
-      propertyPath: ButtonTab
-      value: 
-      objectReference: {fileID: 1371354970}
     - target: {fileID: 1511044938459372817, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
       propertyPath: m_Name
       value: TutorialTablet
@@ -1903,52 +1901,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
---- !u!1001 &1371354969
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1228563043740045328, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1228563043740045328, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -12.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 1228563043740045328, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 1228563043740045328, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 69.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 1228563043740045328, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6465739
-      objectReference: {fileID: 0}
-    - target: {fileID: 1228563043740045328, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.105822295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1228563043740045328, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7518124
-      objectReference: {fileID: 0}
-    - target: {fileID: 1228563043740045328, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.0743106
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
---- !u!82 &1371354970 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1228563043740045329, guid: 9061bbf1c414d1a42a57ca2dd09ab790, type: 3}
-  m_PrefabInstance: {fileID: 1371354969}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1384794645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,12 +2527,15 @@ MonoBehaviour:
   tablet: {fileID: 0}
   CameraRotation: {fileID: 1906189367}
   ActivePoint: {fileID: 907615021}
+  InGameCanvas: {fileID: 244192828}
+  GameOverCanvas: {fileID: 244192827}
   isPicked: 0
   RespirationText: {fileID: 0}
   DigestionText: {fileID: 0}
   ImmuneText: {fileID: 0}
   CurrentEventName: {fileID: 0}
   CurrentEventDifficulty: {fileID: 0}
+  SurvivalTimeText: {fileID: 0}
   RespirationSlider: {fileID: 0}
   DigestionSlider: {fileID: 0}
   ImmuneSlider: {fileID: 0}
@@ -2606,7 +2561,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7587330609161651838
 GameObject:
