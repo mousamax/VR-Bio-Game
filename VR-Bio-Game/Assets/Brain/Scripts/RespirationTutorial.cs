@@ -26,7 +26,12 @@ public class RespirationTutorial : Tutorial
     new void Start()
     {
         base.Start();
-        TutorialScripts = RespirationTutorialScripts;
+        TutorialScripts = new string[] {
+                "Hi",
+                "Your task is to filter the air",
+                "Remove CO2 molecules from red blood cells and throw them on the lungs",
+                "Grab O2 molecules and put them on red blood cells"
+            };
     }
     new void Update()
     {
