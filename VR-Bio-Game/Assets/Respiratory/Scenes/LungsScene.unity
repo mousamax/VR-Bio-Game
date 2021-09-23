@@ -1041,7 +1041,6 @@ MonoBehaviour:
   LookAt: {fileID: 1454221638}
   StartAt: {fileID: 477112515}
   maxBloodCells: 10
-  bloodCellsCounter: 0
   offset: 0.06
   DarkRed:
     serializedVersion: 2
@@ -1504,7 +1503,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionSound: {fileID: 0}
-  BCCSS: {fileID: 937310021}
 --- !u!82 &1454221643
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1629,7 +1627,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750952740}
   m_LocalRotation: {x: -0.00000006288997, y: -0.7071061, z: -0.000000060744405, w: 0.7071075}
-  m_LocalPosition: {x: -3.28, y: -1.48, z: -19.34}
+  m_LocalPosition: {x: -5.44, y: -2.25, z: -20.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1384794646}
@@ -1912,6 +1910,8 @@ MonoBehaviour:
   RespirationText: {fileID: 0}
   DigestionText: {fileID: 0}
   ImmuneText: {fileID: 0}
+  CurrentEventName: {fileID: 0}
+  CurrentEventDifficulty: {fileID: 0}
   RespirationSlider: {fileID: 0}
   DigestionSlider: {fileID: 0}
   ImmuneSlider: {fileID: 0}
