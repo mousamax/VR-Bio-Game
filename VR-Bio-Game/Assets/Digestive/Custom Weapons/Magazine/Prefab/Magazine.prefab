@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OldMagazine: 0
+  MagazinePosition: {fileID: 0}
 --- !u!114 &8454150302356410744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37712d9a28e70f44d9724f6fd77b46c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActivatedColor: {r: 0, g: 1, b: 0.9903991, a: 0}
+  ActivatedColor: {r: 0, g: 1, b: 0.9564264, a: 0}
   DeactivatedColor: {r: 0.27153793, g: 0.43377173, b: 0.509434, a: 0}
   activated: 0
 --- !u!65 &8454150302356410745
@@ -175,15 +176,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3541909912428823528, guid: 5262ba89a0bb8174fbfbd7496b63f6da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000843937
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 3541909912428823528, guid: 5262ba89a0bb8174fbfbd7496b63f6da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0005574553
+      value: 0.0006
       objectReference: {fileID: 0}
     - target: {fileID: 3541909912428823528, guid: 5262ba89a0bb8174fbfbd7496b63f6da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.007858568
+      value: -0.0066
       objectReference: {fileID: 0}
     - target: {fileID: 3541909912428823528, guid: 5262ba89a0bb8174fbfbd7496b63f6da, type: 3}
       propertyPath: m_LocalRotation.w

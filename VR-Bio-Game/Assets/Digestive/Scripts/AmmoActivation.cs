@@ -18,13 +18,13 @@ namespace DigestiveSystem
         private void Update()
         {
             //Debug.Log(activated.ToString());
-            //if (activated)
-                //this.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = ActivatedColor;
-            //else
-            //{
-            //    this.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = DeactivatedColor;
-            //    this.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.
-            //}
+            if (activated)
+                this.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = ActivatedColor;
+            else
+            {
+                this.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.color = DeactivatedColor;
+                
+            }
         }
 
         private void OnParticleCollision(GameObject other)
@@ -33,11 +33,16 @@ namespace DigestiveSystem
             if (!activated)
             {
                 activated = true;
-                var m = this.gameObject.transform.GetChild(0).GetComponent<Renderer>();
-                if (m == null)
-                    Debug.Log("NULL!");
-                if (m != null)
+                var m = this.gameObject.transform.GetChild(0).gameObject.GetComponent<Renderer>();
+                //if (m == null)
+                    //Debug.Log("NULL!");
+                //else
+                //{ 
                     m.material.color = ActivatedColor;
+                    //Debug.Log("Changed Color");
+                //}
+                
+                
 
             }
         }
