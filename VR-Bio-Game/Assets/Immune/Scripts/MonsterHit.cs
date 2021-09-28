@@ -111,28 +111,42 @@ public class MonsterHit : MonoBehaviour
         {
             case "Slime":
                 if (!isPlayer)
+                {
                     GameManager._gameManager.ChangeStatus(2, 2);
-                DisplayScore();
+                    GameManager._gameManager.InstantiateScore(transform, 2);
+                }
                 playImpact("green");
                 break;
             case "Spike":
                 if (!isPlayer)
+                {
                     GameManager._gameManager.ChangeStatus(2, 3);
+                    GameManager._gameManager.InstantiateScore(transform, 2);
+                }
                 playImpact("green");
                 break;
             case "FatBlob":
                 if (!isPlayer)
+                {
                     GameManager._gameManager.ChangeStatus(2, 5);
+                    GameManager._gameManager.InstantiateScore(transform, 5);
+                }
                 playImpact("gold");
                 break;
             case "RedCell":
                 if (!isPlayer)
+                {
                     GameManager._gameManager.ChangeStatus(2, -2);
+                    GameManager._gameManager.InstantiateScore(transform, -2);
+                }
                 playImpact("red");
                 break;
             case "Infected":
                 if (!isPlayer)
+                {
                     GameManager._gameManager.ChangeStatus(2, 5);
+                    GameManager._gameManager.InstantiateScore(transform, 5);
+                }
                 playImpact("red");
                 break;
         }

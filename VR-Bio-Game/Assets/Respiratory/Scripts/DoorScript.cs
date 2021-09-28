@@ -32,8 +32,9 @@ public class DoorScript : MonoBehaviour
             //score--;
            GameManager._gameManager.ChangeStatus(0, -2);
         }
-        Destroy(collider.gameObject);
-
+        //destroy disables grabbing!!
+        //Destroy(collider.gameObject);
+        collider.gameObject.SetActive(false);
     }
 
     private void test()

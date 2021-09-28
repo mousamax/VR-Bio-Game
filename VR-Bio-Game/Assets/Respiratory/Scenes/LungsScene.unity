@@ -297,7 +297,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3759635406596314947, guid: 00e4a89e9d9eb27408709b84e40545d5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 00e4a89e9d9eb27408709b84e40545d5, type: 3}
 --- !u!4 &287932433 stripped
 Transform:
@@ -1174,7 +1175,6 @@ GameObject:
   - component: {fileID: 867474822}
   - component: {fileID: 867474821}
   - component: {fileID: 867474820}
-  - component: {fileID: 867474819}
   - component: {fileID: 867474824}
   m_Layer: 0
   m_Name: HeartRoom001
@@ -1183,18 +1183,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &867474819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867474818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b41ea93d18eda5640a8882faf502194e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &867474820
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1443,10 +1431,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd11d827dc3d894680762f740b44287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minX: -9.5
-  maxX: -8.3
-  minY: 1
-  maxY: 4
+  minX: -12.23
+  maxX: -4.82
+  minY: 0.88
+  maxY: 3.73
   minZ: 67.87
   maxZ: 70.2
   O2: {fileID: 6466438157231954534, guid: 04a3a1b82680da445be78ed6eed56315, type: 3}
@@ -2228,7 +2216,6 @@ GameObject:
   - component: {fileID: 1750952745}
   - component: {fileID: 1750952744}
   - component: {fileID: 1750952743}
-  - component: {fileID: 1750952742}
   m_Layer: 0
   m_Name: CorridorLong_walls
   m_TagString: Untagged
@@ -2254,18 +2241,6 @@ Transform:
   m_Father: {fileID: 1384794646}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1750952742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750952740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b41ea93d18eda5640a8882faf502194e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1750952743
 MeshCollider:
   m_ObjectHideFlags: 0
