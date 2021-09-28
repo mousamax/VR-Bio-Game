@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
@@ -10,6 +11,7 @@ public class Tutorial : MonoBehaviour
     public GameObject TutorialTablet;
     public GameObject LeftHand;
     public int TutorialIndex = 0;
+    public Image DescriptiveImage;
     [HideInInspector] public string[] TutorialScripts;
     public void Start()
     {
@@ -23,7 +25,7 @@ public class Tutorial : MonoBehaviour
         {
             TutorialTablet.GetComponent<TutorialTablet>().ChangeScript(TutorialScripts[TutorialIndex]);
         }
-        if (OnTutorialMode && TutorialIndex == TutorialScripts.Length - 1)
+        if (OnTutorialMode && TutorialIndex == TutorialScripts.Length)
         {
             TutorialSkip();
         }

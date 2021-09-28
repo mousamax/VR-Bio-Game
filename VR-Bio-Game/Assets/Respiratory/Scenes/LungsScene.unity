@@ -1748,6 +1748,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+--- !u!114 &1171040103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5764973567738765132, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+  m_PrefabInstance: {fileID: 1171040102}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1281385094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2571,7 +2582,13 @@ MonoBehaviour:
   TutorialTablet: {fileID: 0}
   LeftHand: {fileID: 0}
   TutorialIndex: 0
+  DescriptiveImage: {fileID: 1171040103}
   TutorialScripts: []
   RespirationTutorialScripts:
   - Hi
   - filter the air
+  RespirationDescriptiveImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

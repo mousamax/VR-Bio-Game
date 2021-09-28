@@ -314,11 +314,18 @@ MonoBehaviour:
   TutorialTablet: {fileID: 0}
   LeftHand: {fileID: 0}
   TutorialIndex: 0
+  DescriptiveImage: {fileID: 1511044939946688796}
   TutorialScripts: []
   BrainTutorialScripts:
   - Hi Player
   - You can Watch Activities on screen
   - Leave this tablet and Press X to display control Tablet
+  BrainDescriptiveImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &332561552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,8 +1032,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2716927985121667429, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+      propertyPath: m_Name
+      value: Descriptive Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 2716927985121667429, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397190776033735873, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+      propertyPath: m_Name
+      value: Descriptive Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5764973567738765132, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5764973567738765132, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5764973567738765132, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+--- !u!114 &1511044939946688796 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5764973567738765132, guid: f7177ed86be8fd741a3d0fdcc1066cc7, type: 3}
+  m_PrefabInstance: {fileID: 1511044939946688795}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6450531603014933921
 PrefabInstance:
   m_ObjectHideFlags: 0

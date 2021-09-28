@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*********************************************************************************
 this script is used to simplify the Tutorial process to make the gameplay more descriptive.
@@ -23,6 +24,7 @@ public class RespirationTutorial : Tutorial
         "Grab O2 molecules and put them on red blood cells"
     };
     private static bool isTutorialDone = false;
+    public Sprite[] RespirationDescriptiveImages;
     new void Start()
     {
         base.Start();
@@ -37,6 +39,19 @@ public class RespirationTutorial : Tutorial
     {
         base.Update();
         OnTutorialMode = isTutorialDone ? false : OnTutorialMode;
+        if (OnTutorialMode && RespirationDescriptiveImages[TutorialIndex] != null)
+        {
+            DescriptiveImage.sprite = RespirationDescriptiveImages[TutorialIndex];
+            DescriptiveImage.gameObject.SetActive(true);
+        }
+        else if (OnTutorialMode && RespirationDescriptiveImages[TutorialIndex] == null)
+        {
+            DescriptiveImage.gameObject.SetActive(false);
+        }
+        else if (!OnTutorialMode && DescriptiveImage.gameObject.activeSelf)
+        {
+            DescriptiveImage.gameObject.SetActive(false);
+        }
     }
 
     public override void TutorialSkip()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*********************************************************************************
 this script is used to simplify the Tutorial process to make the gameplay more descriptive.
@@ -43,6 +44,7 @@ public class BrainTutorial : Tutorial
     private static bool isTutorialDone = false;
     private int CurrentEventIndex = 0;
     private int CurrentActiveEvent = -1;
+    public Sprite[] BrainDescriptiveImages;
     new void Start()
     {
         base.Start();
@@ -86,9 +88,24 @@ public class BrainTutorial : Tutorial
             if (LeftHand != null && LeftHand.GetComponent<TabletVisibilty>() != null)
                 LeftHand.GetComponent<TabletVisibilty>().enabled = true;
         }
+        
         if (isUsedBefore && !LeftHand.GetComponent<TabletVisibilty>().enabled)
         {
             LeftHand.GetComponent<TabletVisibilty>().enabled = true;
+        }
+        
+        if (OnTutorialMode && BrainDescriptiveImages[TutorialIndex] != null)
+        {
+            DescriptiveImage.sprite = BrainDescriptiveImages[TutorialIndex];
+            DescriptiveImage.gameObject.SetActive(true);
+        }
+        else if (OnTutorialMode && BrainDescriptiveImages[TutorialIndex] == null)
+        {
+            DescriptiveImage.gameObject.SetActive(false);
+        }
+        else if (!OnTutorialMode && DescriptiveImage.gameObject.activeSelf)
+        {
+            DescriptiveImage.gameObject.SetActive(false);
         }
     }
     public override void TutorialSkip()

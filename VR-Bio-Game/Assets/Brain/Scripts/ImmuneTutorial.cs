@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*********************************************************************************
 this script is used to simplify the Tutorial process to make the gameplay more descriptive.
@@ -34,7 +35,7 @@ public class ImmuneTutorial : Tutorial
     "Let's go!"
     };
     private static bool isTutorialDone = false;
-
+    public Sprite[] ImmuneDescriptiveImages;
     new void Start()
     {
         base.Start();
@@ -61,6 +62,19 @@ public class ImmuneTutorial : Tutorial
     {
         base.Update();
         OnTutorialMode = isTutorialDone ? false : OnTutorialMode;
+        if (OnTutorialMode && ImmuneDescriptiveImages[TutorialIndex] != null)
+        {
+            DescriptiveImage.sprite = ImmuneDescriptiveImages[TutorialIndex];
+            DescriptiveImage.gameObject.SetActive(true);
+        }
+        else if (OnTutorialMode && ImmuneDescriptiveImages[TutorialIndex] == null)
+        {
+            DescriptiveImage.gameObject.SetActive(false);
+        }
+        else if (!OnTutorialMode && DescriptiveImage.gameObject.activeSelf)
+        {
+            DescriptiveImage.gameObject.SetActive(false);
+        }
     }
 
     public override void TutorialSkip()
