@@ -826,6 +826,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4150455431310058212, guid: 2a658874192938b44b8e4106bb8024c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150455431310058212, guid: 2a658874192938b44b8e4106bb8024c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150455431310058212, guid: 2a658874192938b44b8e4106bb8024c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 4719751596756669032, guid: 2a658874192938b44b8e4106bb8024c1, type: 3}
       propertyPath: m_Name
       value: Player
@@ -886,6 +898,18 @@ PrefabInstance:
       propertyPath: GameOverCanvas
       value: 
       objectReference: {fileID: 1603646814}
+    - target: {fileID: 8593566969476551262, guid: 2a658874192938b44b8e4106bb8024c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593566969476551262, guid: 2a658874192938b44b8e4106bb8024c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593566969476551262, guid: 2a658874192938b44b8e4106bb8024c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a658874192938b44b8e4106bb8024c1, type: 3}
 --- !u!1 &2063992336

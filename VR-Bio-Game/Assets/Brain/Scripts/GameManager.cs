@@ -187,7 +187,7 @@ public class GameManager : MonoBehaviour
             ScorePrefab.transform.Find("Canvas").Find("ScoreText").
                 gameObject.GetComponent<TextMeshProUGUI>().color = tempcolor;
         }
-        Instantiate(ScorePrefab, trans.localPosition, trans.rotation);
+        Instantiate(ScorePrefab, trans.localPosition, transform.rotation);
     }
 
     void testscore()
