@@ -19,12 +19,9 @@ namespace DigestiveSystem
             //moving the bullet 
             if (this.gameObject.activeSelf)
             {
-
                 //transform.Translate(0, 0, -speed * Time.deltaTime);
                 this.transform.position += this.transform.forward.normalized * speed * Time.deltaTime;
-
             }
-            
             if (_prevoiusTime > 4)
             {
                 this.gameObject.SetActive(false);
@@ -34,54 +31,26 @@ namespace DigestiveSystem
         }
         private void OnTriggerEnter(Collider collision)
         {
-            //Debug.Log("Get collided with: " + collision.gameObject.tag);
-
-            //if(!collision.gameObject.CompareTag("Ground") && !collision.gameObject.CompareTag("Hammer") && collision.gameObject.layer != 10)
-            //{
-
-            //    Destroy(collision.gameObject);
-
-
-            //}
             if (collision.gameObject.CompareTag("BloodCells"))
             {
                 this.gameObject.SetActive(false);
             }
             if (collision.gameObject.CompareTag("Protein") )
             {
-                Destroy(collision.gameObject);
                 this.gameObject.SetActive(false);
                 DigestiveScore.Score += 1;
                 GameManager._gameManager.ChangeStatus(1, 5);
+                GameManager._gameManager.InstantiateScore(collision.gameObject.transform, 5);
+                Destroy(collision.gameObject);
             }
             else if (collision.gameObject.CompareTag("Fats") || collision.gameObject.CompareTag("Carbs"))
             {
-                Destroy(collision.gameObject);
                 this.gameObject.SetActive(false);
                 DigestiveScore.Score -= 1;
                 GameManager._gameManager.ChangeStatus(1, -1);
+                GameManager._gameManager.InstantiateScore(collision.gameObject.transform, -1);
+                Destroy(collision.gameObject);
             }
-            //this.transform.position = new Vector3(-70, -70, -70);
-            //this.gameObject.SetActive(false);
-
-            //if (collision.CompareTag("StomachWall"))
-            //{
-            //    this.gameObject.SetActive(false);
-            //}
-
-
-            //if (collision.gameObject.CompareTag("Protein"))
-            //{
-
-            //}
-            //if (collision.gameObject.CompareTag("Fats"))
-            //{
-
-            //}
-            //if (collision.gameObject.CompareTag("Carbs"))
-            //{
-
-            //}
         }
     }
 }

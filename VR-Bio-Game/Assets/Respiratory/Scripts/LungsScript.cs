@@ -22,6 +22,7 @@ public class LungsScript : MonoBehaviour
     {
         if (other.gameObject.tag == "CO2")
         {
+            GameManager._gameManager.InstantiateScore(other.gameObject.transform, 5);
             //Destroy(other.gameObject); Error: disables grabbing!!
             other.gameObject.SetActive(false);
             Co2_Collision.Play();
